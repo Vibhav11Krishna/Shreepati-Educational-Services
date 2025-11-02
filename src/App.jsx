@@ -27,6 +27,7 @@ import MOfficeShowcase from "./mobile/components/OfficeShowcase";
 import MLogin from "./mobile/pages/Login";
 import MSignUp from "./mobile/pages/SignUp";
 
+
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [loginOpen, setLoginOpen] = useState(false);
