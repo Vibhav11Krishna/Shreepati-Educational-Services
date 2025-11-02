@@ -1,0 +1,159 @@
+import React, { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
+import { FiMenu, FiX } from "react-icons/fi";
+
+const Navbar = ({ openLogin }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const sections = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "services", label: "Services" },
+    { id: "projects", label: "Projects" },
+    { id: "partners", label: "Partners" },
+    { id: "contact", label: "Contact" },
+  ];
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
+  return (
+    <nav className="navbar-mobile">
+      {/* Top Bar */}
+      <div className="nav-header">
+        <div className="logo-text">श्रीपति</div>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+        </button>
+      </div>
+
+      {/* Slide Menu */}
+      <div className={`menu-container ${menuOpen ? "open" : ""}`}>
+        {sections.map((sec) => (
+          <ScrollLink
+            key={sec.id}
+            to={sec.id}
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-60} // Ensures correct alignment with sticky header
+            onClick={closeMenu}
+            className="mobile-link"
+          >
+            {sec.label}
+          </ScrollLink>
+        ))}
+
+        <button
+          onClick={() => {
+            closeMenu();
+            openLogin();
+          }}
+          className="login-btn-mobile"
+        >
+          Login
+        </button>
+      </div>
+
+      <style>{`
+        .navbar-mobile {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          z-index: 1000;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          font-family: 'Poppins', sans-serif;
+          transition: all 0.3s ease;
+        }
+
+        .nav-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 20px;
+        }
+
+        .logo-text {
+          font-size: 1.7rem;
+          font-weight: 700;
+          color: #ff6600;
+          letter-spacing: 0.5px;
+        }
+
+        .menu-toggle {
+          background: none;
+          border: none;
+          color: #ff6600;
+          cursor: pointer;
+        }
+
+        .menu-container {
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          height: 0;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.88);
+          backdrop-filter: blur(1px);
+          -webkit-backdrop-filter: blur(1px);
+          box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+          border-top: 1px solid rgba(255,255,255,0.3);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          transition: height 0.4s ease;
+        }
+
+        .menu-container.open {
+          height: 100vh;
+        }
+
+        .mobile-link {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: #ff6600;
+          text-decoration: none;
+          margin: 15px 0;
+          transition: all 0.3s ease;
+        }
+
+        .mobile-link:hover {
+          color: #ff4500;
+          transform: scale(1.05);
+        }
+
+        .login-btn-mobile {
+          margin-top: 25px;
+          background: linear-gradient(135deg, #ff6600, #ff8533);
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: 600;
+          border: none;
+          border-radius: 30px;
+          padding: 10px 45px;
+          box-shadow: 0 5px 15px rgba(255,102,0,0.4);
+          transition: all 0.3s ease;
+        }
+
+        .login-btn-mobile:hover {
+          background: linear-gradient(135deg, #ff4500, #ff6600);
+          transform: translateY(-2px);
+        }
+
+        @media (min-width: 769px) {
+          .navbar-mobile {
+            display: none;
+          }
+        }
+      `}</style>
+    </nav>
+  );
+};
+
+export default Navbar;
