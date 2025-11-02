@@ -25,7 +25,8 @@ import MPartners from "./mobile/components/Partners";
 import MContact from "./mobile/components/Contact";
 import MOfficeShowcase from "./mobile/components/OfficeShowcase";
 import MLogin from "./mobile/pages/Login";
-import MSignUp from "./mobile/pages/SignUp";
+import MSignUp from "./mobile/pages/signup";
+
 
 
 function App() {
