@@ -94,7 +94,7 @@ function About() {
             alt="Shreepati Logo"
             style={{
               width: "160px",
-              height: "80px",
+              height: "90px",
               objectFit: "cover",
               marginBottom: "10px",
             }}
@@ -137,7 +137,7 @@ function About() {
             }}
           >
             This enterprise is led by a twenty-year experienced individual,
-            Mr. Jayant Krishna — a senior procurement professional with a
+            Mr. Jayant Krishna  a senior procurement professional with a
             complete understanding of man-management, policy-making, liaison
             with corporate, semi-government, and government organizations,
             commissioning, and operational handling. He has strong expertise in
@@ -219,7 +219,7 @@ function About() {
                 consultant to our high level educational institution for their
                 establishment and accreditation for the last five years. We have
                 provided our services as chief consultant to health education
-                (Nursing,Paramedical & Pharmacy) institutions from grassroots
+                (Nursing, Paramedical & Pharmacy) institutions from grassroots
                 idea to final establishment with apex level accreditation. This
                 consultancy starts from infrastructures development to final
                 accreditation and reaching up to mobilization of students and
@@ -386,7 +386,7 @@ function About() {
           style={{
             fontSize: "1rem",
             color: "#555",
-            lineHeight: "1.8",
+            lineHeight: "1.5",
             textAlign: "justify",
             marginBottom: "20px",
           }}
