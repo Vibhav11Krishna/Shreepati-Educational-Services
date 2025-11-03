@@ -386,7 +386,7 @@ function About() {
           style={{
             fontSize: "1rem",
             color: "#555",
-            lineHeight: "1.5",
+            lineHeight: "1.6",
             textAlign: "justify",
             marginBottom: "20px",
           }}
