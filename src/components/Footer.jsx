@@ -8,6 +8,8 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-scroll";
+import { FaLinkedin } from "react-icons/fa";
+
 
 function Footer() {
   return (
@@ -174,6 +176,11 @@ function Footer() {
                 icon: <FaInstagram />,
                 color: "#E1306C",
                 link: "https://www.instagram.com/ses_consultancy?igsh=d2I5dmN5ZmIwcm00",
+              },
+              {
+                icon: <FaLinkedin />,
+                color: "#0A66C2",
+                link: "https://www.linkedin.com/company/shreepati-educational-services/",
               },
             ].map((social, idx) => (
               <a

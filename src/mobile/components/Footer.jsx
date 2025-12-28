@@ -7,6 +7,8 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -163,6 +165,14 @@ const Footer = () => {
             >
               <FaXTwitter />
             </a>
+            <a
+    href="https://www.linkedin.com/company/shreepati-educational-services/" // replace with your LinkedIn URL
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#0A66C2" }}
+  >
+    <FaLinkedin />
+  </a>
             <a href="mailto:jayantkrishna@yahoo.in" style={{ color: "#FF6600" }}>
               <FaEnvelope />
             </a>
