@@ -2,7 +2,8 @@ import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
 function Navbar({ openLogin }) {
-  const sections = ["home", "about", "services", "projects", "partners", "contact"];
+  // Added "knowledge" section
+  const sections = ["home", "about", "services", "projects", "partners", "knowledge", "contact"];
 
   return (
     <nav className="navbar">
@@ -14,14 +15,16 @@ function Navbar({ openLogin }) {
         {sections.map((sec) => (
           <ScrollLink
             key={sec}
-            to={sec}
+            to={sec === "knowledge" ? "knowledge-videos" : sec} // link to knowledge section
             smooth={true}
             duration={500}
             spy={true}
             activeClass="active"
             className="nav-link-custom"
           >
-            {sec === "about" ? "About Us" : sec.charAt(0).toUpperCase() + sec.slice(1)}
+            {sec === "about" ? "About Us" 
+              : sec === "knowledge" ? "Knowledge" // display name
+              : sec.charAt(0).toUpperCase() + sec.slice(1)}
           </ScrollLink>
         ))}
       </div>
@@ -43,11 +46,13 @@ function Navbar({ openLogin }) {
           padding: 10px 30px;
           z-index: 1000;
           font-family: 'Poppins';
+          background: rgba(240, 239, 239, 0.8);z
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .logo-text {
           font-weight: 700;
-          font-size: 1.4rem;
+          font-size: 1.7rem; /* keep larger */
           color: #FF6600;
         }
 
@@ -61,7 +66,7 @@ function Navbar({ openLogin }) {
           border: none;
           color: white;
           font-weight: 700;
-          font-size: 0.95rem;
+          font-size: 1rem;
           padding: 8px 20px;
           border-radius: 12px;
           cursor: pointer;
@@ -88,7 +93,7 @@ function Navbar({ openLogin }) {
           color: #FF6600;
           text-decoration: none;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 1.1rem; /* slightly larger for desktop */
           transition: all 0.3s ease;
           position: relative;
         }

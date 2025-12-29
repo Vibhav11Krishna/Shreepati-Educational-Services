@@ -11,6 +11,7 @@ import Projects from "./components/Projects";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import OfficeShowcase from "./components/OfficeShowcase";
+import KnowledgeVideoSection from "./components/KnowledgeVideoSection"; // ✅ New Video Section
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
@@ -24,10 +25,9 @@ import MProjects from "./mobile/components/Projects";
 import MPartners from "./mobile/components/Partners";
 import MContact from "./mobile/components/Contact";
 import MOfficeShowcase from "./mobile/components/OfficeShowcase";
+import MKnowledgeVideoSection from "./mobile/components/KnowledgeVideoSection"; // Optional if you want mobile version
 import MLogin from "./mobile/pages/Login";
 import MSignUp from "./mobile/pages/signup";
-
-
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -54,6 +54,7 @@ function App() {
         <Services />
         <Projects />
         <Partners />
+        <KnowledgeVideoSection /> {/* ✅ Added Video Section */}
         <Contact />
       </main>
       <Footer />
@@ -71,6 +72,7 @@ function App() {
         <MServices />
         <MProjects />
         <MPartners />
+        <MKnowledgeVideoSection /> {/* Optional: Mobile version */}
         <MContact />
       </main>
       <MFooter />

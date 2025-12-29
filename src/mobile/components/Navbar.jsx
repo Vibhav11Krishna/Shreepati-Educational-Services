@@ -1,20 +1,28 @@
 import React, { useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = ({ openLogin }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   const sections = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
     { id: "projects", label: "Projects" },
     { id: "partners", label: "Partners" },
+    { id: "knowledge-videos", label: "Knowledge" },
     { id: "contact", label: "Contact" },
   ];
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenuAndScroll = (id) => {
+    setMenuOpen(false);
+    scroll.scrollTo(document.getElementById(id).offsetTop - 60, {
+      duration: 500,
+      smooth: true,
+    });
+  };
 
   return (
     <nav className="navbar-mobile">
@@ -29,23 +37,18 @@ const Navbar = ({ openLogin }) => {
       {/* Slide Menu */}
       <div className={`menu-container ${menuOpen ? "open" : ""}`}>
         {sections.map((sec) => (
-          <ScrollLink
+          <button
             key={sec.id}
-            to={sec.id}
-            smooth={true}
-            duration={500}
-            spy={true}
-            offset={-60} // Ensures correct alignment with sticky header
-            onClick={closeMenu}
+            onClick={() => closeMenuAndScroll(sec.id)}
             className="mobile-link"
           >
             {sec.label}
-          </ScrollLink>
+          </button>
         ))}
 
         <button
           onClick={() => {
-            closeMenu();
+            setMenuOpen(false);
             openLogin();
           }}
           className="login-btn-mobile"
@@ -54,18 +57,18 @@ const Navbar = ({ openLogin }) => {
         </button>
       </div>
 
+      {/* Styles */}
       <style>{`
         .navbar-mobile {
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
-          background: rgba(255, 255, 255, 0.2);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
+          background: rgba(255, 255, 255, 0.25);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
           border-bottom: 1px solid rgba(255, 255, 255, 0.3);
           z-index: 1000;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
           font-family: 'Poppins', sans-serif;
           transition: all 0.3s ease;
         }
@@ -74,7 +77,7 @@ const Navbar = ({ openLogin }) => {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 15px 20px;
+          padding: 12px 20px;
         }
 
         .logo-text {
@@ -96,22 +99,19 @@ const Navbar = ({ openLogin }) => {
           top: 60px;
           left: 0;
           width: 100%;
-          height: 0;
+          max-height: 0;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.88);
-          backdrop-filter: blur(1px);
-          -webkit-backdrop-filter: blur(1px);
-          box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
-          border-top: 1px solid rgba(255,255,255,0.3);
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: flex-start;
-          transition: height 0.4s ease;
+          transition: max-height 0.4s ease;
+          z-index: 999;
         }
 
         .menu-container.open {
-          height: 100vh;
+          max-height: 100vh;
         }
 
         .mobile-link {
@@ -119,7 +119,10 @@ const Navbar = ({ openLogin }) => {
           font-weight: 600;
           color: #ff6600;
           text-decoration: none;
-          margin: 15px 0;
+          margin: 12px 0;
+          background: none;
+          border: none;
+          cursor: pointer;
           transition: all 0.3s ease;
         }
 
@@ -129,7 +132,7 @@ const Navbar = ({ openLogin }) => {
         }
 
         .login-btn-mobile {
-          margin-top: 25px;
+          margin-top: 20px;
           background: linear-gradient(135deg, #ff6600, #ff8533);
           color: #fff;
           font-size: 1.1rem;
