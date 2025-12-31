@@ -11,9 +11,12 @@ import Projects from "./components/Projects";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import OfficeShowcase from "./components/OfficeShowcase";
-import KnowledgeVideoSection from "./components/KnowledgeVideoSection"; // ✅ New Video Section
+import KnowledgeVideoSection from "./components/KnowledgeVideoSection"; 
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+
+// Logo import
+import logo from "./assets/logo-2.png";
 
 // 📱 Mobile imports
 import MNavbar from "./mobile/components/Navbar";
@@ -25,25 +28,28 @@ import MProjects from "./mobile/components/Projects";
 import MPartners from "./mobile/components/Partners";
 import MContact from "./mobile/components/Contact";
 import MOfficeShowcase from "./mobile/components/OfficeShowcase";
-import MKnowledgeVideoSection from "./mobile/components/KnowledgeVideoSection"; // Optional if you want mobile version
+import MKnowledgeVideoSection from "./mobile/components/KnowledgeVideoSection"; 
 import MLogin from "./mobile/pages/Login";
 import MSignUp from "./mobile/pages/signup";
+
+// 🤖 Frontend Chatbot
+import Chatbot from "./Chatbot/Chatbot";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [loginOpen, setLoginOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
 
   const handleOpenLogin = () => setLoginOpen(true);
   const handleCloseLogin = () => setLoginOpen(false);
+  const toggleChat = () => setChatOpen(prev => !prev);
 
-  // Detect resize
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🖥️ Desktop Main Site
   const DesktopSite = () => (
     <>
       <Navbar openLogin={handleOpenLogin} />
@@ -54,14 +60,13 @@ function App() {
         <Services />
         <Projects />
         <Partners />
-        <KnowledgeVideoSection /> {/* ✅ Added Video Section */}
+        <KnowledgeVideoSection />
         <Contact />
       </main>
       <Footer />
     </>
   );
 
-  // 📱 Mobile Main Site
   const MobileSite = () => (
     <>
       <MNavbar openLogin={handleOpenLogin} />
@@ -72,7 +77,7 @@ function App() {
         <MServices />
         <MProjects />
         <MPartners />
-        <MKnowledgeVideoSection /> {/* Optional: Mobile version */}
+        <MKnowledgeVideoSection />
         <MContact />
       </main>
       <MFooter />
@@ -83,21 +88,43 @@ function App() {
     <Router>
       <div className={`app-wrapper ${loginOpen ? "blur-active" : ""}`}>
         <Routes>
-          <Route
-            path="/"
-            element={isMobile ? <MobileSite /> : <DesktopSite />}
-          />
+          <Route path="/" element={isMobile ? <MobileSite /> : <DesktopSite />} />
           <Route path="/signup" element={isMobile ? <MSignUp /> : <SignUp />} />
         </Routes>
       </div>
 
       {/* Login overlay */}
       {loginOpen &&
-        (isMobile ? (
-          <MLogin closeLogin={handleCloseLogin} />
-        ) : (
-          <Login closeLogin={handleCloseLogin} />
-        ))}
+        (isMobile ? <MLogin closeLogin={handleCloseLogin} /> : <Login closeLogin={handleCloseLogin} />)}
+{/* Chatbot toggle button */}
+<div
+  onClick={toggleChat}
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    width: "170px",       // wider rectangle
+    height: "70px",       // taller rectangle
+    borderRadius: "15px", // slightly rounded corners
+    backgroundColor: "#fef8f4ff", // white background
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
+    zIndex: 10000,
+    boxShadow: "0 5px 20px rgba(0,0,0,0.3)"
+  }}
+>
+  <img
+    src={logo}   // imported logo
+    alt="Shreepati Logo"
+    style={{ width: "100px", height: "60px" }} // logo fits inside nicely
+  />
+</div>
+
+
+      {/* Chatbot window */}
+      {chatOpen && <Chatbot />}
 
       <style>{`
         .blur-active main, 
