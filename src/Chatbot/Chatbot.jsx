@@ -10,6 +10,7 @@ export default function Chatbot() {
   const knowledgeBase = [
     { question: /^(hi|hello|hey)$/i, answer: "Hello! Welcome to Shreepati Educational Services. How can I help you today?" },
     { question: /who created shreepati/i, answer: "Shreepati Educational Services was created by Mr. Jayant Krishna, a senior procurement professional." },
+    { question: /when shreepati was created|year of estabilishement/i, answer: "Shreepati Educational Services was created by Mr. Jayant Krishna, a senior procurement professional,it was estabilished in the year 2023" },
     { question: /who is jayant krishna/i, answer: "Mr. Jayant Krishna is a senior procurement professional with 20 years of experience, specializing in institute development and strategy implementation." },
     { question: /what are the services|services/i, answer: `Shreepati Educational Services provides:
 1. Collaboration Guidance
@@ -20,7 +21,18 @@ export default function Chatbot() {
 6. Overseas Admissions & Visa
 7. Educational Loans & HR
 8. Domestic Admission Counseling
-9. Accreditation Assistance` },
+9. Accreditation Assistance
+10. Data & Document Management` },
+{ question: /what is collaboration guidance service|collaboration guidance|service 1/i, answer: ` (collaboration guidance) Form strong partnerships with universities, industry, and networks to enhance academic growth.` },
+{ question: /what is affiliation guidance service|affiliation guidance|service 2/i, answer: ` (affiliation guidance) Complete support for obtaining affiliation from recognized boards and universities.` },
+{ question: /what is new institution setup service|new institution setup|service 3/i, answer: `(new institution setup) Assist in establishing and getting recognition for new colleges or mid-level institutions.` },
+{ question: /what is new schools setup service|new school setup|service 4/i, answer: `(new schools setup) Step-by-step guidance to establish schools with approvals and documentation.` },
+{ question: /what is dpr and consultancy service|dpr and consultancy|dpr & consultancy|service 5/i, answer: `(dpr and consultancy) Prepare detailed project reports covering financial, academic, and infrastructure aspects.` },
+{ question: /what is overseas admissions and visa service|overseas admissions and visa|overseas admission & visa|service 6/i, answer: ` (overseas admissions and visa) Counseling and application support for international studies and visa documentation.` },
+{ question: /what is educational loans and hr service|education loans & hr|educational loans and hr|service 7/i, answer: ` (educational loans and hr) Consultation for securing loans and streamlining HR for institutions.` },
+{ question: /what is domestic admission counseling service|domestic admission counseling|service 8/i, answer: ` (domestic admission counseling) Guide students across India in selecting the right courses and institutions.` },
+{ question: /what is accreditation assistance service|accreditation assistance|service 9/i, answer: ` (accreditation assistance) Help institutions achieve national and international accreditation efficiently.` },
+{ question: /what is data and document management service|data and document management|data & document management|service 10/i, answer: ` (data and document management) Customized solutions for managing institutional data, libraries, and documents.` },
     { question: /what is shreepati/i, answer: `Shreepati Educational Services is an educational consultancy enterprise run by Mr. Jayant Krishna, a 20-year experienced professional.` },
     { question: /about shreepati/i, answer: `Shreepati Educational Services is run by Mr. Jayant Krishna, specializing in management, policy making, and institute development.` },
     { question: /contact|email|phone/i, answer: `You can contact Mr. Jayant Krishna via:
