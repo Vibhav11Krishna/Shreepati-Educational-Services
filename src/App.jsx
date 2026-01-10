@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// 🖥️ Desktop imports
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -18,7 +17,7 @@ import SignUp from "./pages/SignUp";
 // Logo import
 import logo from "./assets/logo-2.png";
 
-// 📱 Mobile imports
+
 import MNavbar from "./mobile/components/Navbar";
 import MFooter from "./mobile/components/Footer";
 import MHome from "./mobile/components/Home";
@@ -32,7 +31,7 @@ import MKnowledgeVideoSection from "./mobile/components/KnowledgeVideoSection";
 import MLogin from "./mobile/pages/Login";
 import MSignUp from "./mobile/pages/signup";
 
-// 🤖 Frontend Chatbot
+
 import Chatbot from "./Chatbot/Chatbot";
 
 function App() {
