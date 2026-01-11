@@ -1,53 +1,56 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaUserGraduate, FaUserFriends, FaUserTie } from "react-icons/fa";
+import menImage from "../assets/men.jpg";
+import womenImage from "../assets/women.jpg";
 
 function Projects() {
-  const timeline = [
-    {
-      year: "2022",
-      month: "July",
-      name: "Aarav Sharma",
-      role: "NEET Aspirant",
-      quote:
-        "Shreepati helped me stay focused and confident throughout my preparation. The mentorship was truly life-changing.",
-      image: "https://via.placeholder.com/150x100.png?text=Aarav",
-      icon: <FaUserGraduate size={24} color="#fff" />,
-      iconBg: "#FF6600",
-    },
-    {
-      year: "2023",
-      month: "March",
-      name: "Isha Verma",
-      role: "Parent",
-      quote:
-        "The guidance and care my daughter received were exceptional. Shreepati is more than an institute — it's a family.",
-      image: "https://via.placeholder.com/150x100.png?text=Isha",
-      icon: <FaUserFriends size={24} color="#fff" />,
-      iconBg: "#D32F2F",
-    },
-    {
-      year: "2024",
-      month: "November",
-      name: "Rohan Mehta",
-      role: "JEE Student",
-      quote:
-        "The personalized support and structured approach made all the difference. I cracked JEE with clarity and confidence.",
-      image: "https://via.placeholder.com/150x100.png?text=Rohan",
-      icon: <FaUserTie size={24} color="#fff" />,
-      iconBg: "#FFB400",
-    },
-    {
-      year: "2025",
-      month: "April",
-      name: "Sneha Kulkarni",
-      role: "CUET Topper",
-      quote:
-        "Shreepati’s mock tests and strategy sessions gave me the edge I needed. I felt supported every step of the way.",
-      image: "https://via.placeholder.com/150x100.png?text=Sneha",
-      icon: <FaUserGraduate size={24} color="#fff" />,
-      iconBg: "#FF6600",
-    },
-  ];
+ const timeline = [
+  {
+    year: "2022",
+    month: "July",
+    name: "Aarav Sharma",
+    role: "NEET Aspirant",
+    quote:
+      "Shreepati helped me stay focused and confident throughout my preparation. The mentorship was truly life-changing.",
+    image: menImage,
+    icon: <FaUserGraduate size={24} color="#fff" />,
+    iconBg: "#FF6600",
+  },
+  {
+    year: "2023",
+    month: "March",
+    name: "Isha Verma",
+    role: "Parent",
+    quote:
+      "The guidance and care my daughter received were exceptional. Shreepati is more than an institute — it's a family.",
+    image: womenImage,
+    icon: <FaUserFriends size={24} color="#fff" />,
+    iconBg: "#D32F2F",
+  },
+  {
+    year: "2024",
+    month: "November",
+    name: "Rohan Mehta",
+    role: "JEE Student",
+    quote:
+      "The personalized support and structured approach made all the difference. I cracked JEE with clarity and confidence.",
+    image: menImage,
+    icon: <FaUserTie size={24} color="#fff" />,
+    iconBg: "#FFB400",
+  },
+  {
+    year: "2025",
+    month: "April",
+    name: "Sneha Kulkarni",
+    role: "CUET Aspirant",
+    quote:
+      "Shreepati’s mock tests and strategy sessions gave me the edge I needed. I felt supported every step of the way.",
+    image: womenImage,
+    icon: <FaUserGraduate size={24} color="#fff" />,
+    iconBg: "#FF6600",
+  },
+];
+
 
   const cardRefs = useRef([]);
   const [visible, setVisible] = useState([]);
@@ -227,7 +230,7 @@ function Projects() {
         }
         .timeline-image {
           width: 150px;
-          height: 100px;
+          height: 150px;
           object-fit: cover;
           border-radius: 10px;
           margin-bottom: 15px;

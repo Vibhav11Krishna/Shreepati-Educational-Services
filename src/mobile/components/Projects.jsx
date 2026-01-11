@@ -1,5 +1,7 @@
 import React from "react";
 import { FaUserGraduate, FaUserFriends, FaUserTie } from "react-icons/fa";
+import menImage from "../../assets/men.jpg";
+import womenImage from "../../assets/women.jpg";
 
 const Projects = () => {
   const timeline = [
@@ -10,7 +12,7 @@ const Projects = () => {
       role: "NEET Aspirant",
       quote:
         "Shreepati helped me stay focused and confident throughout my preparation. The mentorship was truly life-changing.",
-      image: "https://via.placeholder.com/150x100.png?text=Aarav",
+      image: menImage,
       icon: <FaUserGraduate size={20} color="#fff" />,
       iconBg: "#FF6600",
     },
@@ -21,7 +23,7 @@ const Projects = () => {
       role: "Parent",
       quote:
         "The guidance and care my daughter received were exceptional. Shreepati is more than an institute — it's a family.",
-      image: "https://via.placeholder.com/150x100.png?text=Isha",
+      image: womenImage,
       icon: <FaUserFriends size={20} color="#fff" />,
       iconBg: "#D32F2F",
     },
@@ -32,7 +34,7 @@ const Projects = () => {
       role: "JEE Student",
       quote:
         "The personalized support and structured approach made all the difference. I cracked JEE with clarity and confidence.",
-      image: "https://via.placeholder.com/150x100.png?text=Rohan",
+      image: menImage,
       icon: <FaUserTie size={20} color="#fff" />,
       iconBg: "#FFB400",
     },
@@ -40,26 +42,23 @@ const Projects = () => {
       year: "2025",
       month: "April",
       name: "Sneha Kulkarni",
-      role: "CUET Topper",
+      role: "CUET Aspirant",
       quote:
         "Shreepati’s mock tests and strategy sessions gave me the edge I needed. I felt supported every step of the way.",
-      image: "https://via.placeholder.com/150x100.png?text=Sneha",
+      image: womenImage,
       icon: <FaUserGraduate size={20} color="#fff" />,
       iconBg: "#FF6600",
     },
   ];
 
   return (
-    <section id="projects" className="projects-mobile">
+    <section  id="projects"className="projects-mobile">
       <h2 className="projects-title">Projects</h2>
 
       <div className="timeline-mobile">
         {timeline.map((t, i) => (
           <div className="timeline-card" key={i}>
-            <div
-              className="timeline-icon"
-              style={{ background: t.iconBg }}
-            >
+            <div className="timeline-icon" style={{ background: t.iconBg }}>
               {t.icon}
             </div>
             <p className="timeline-date">
@@ -144,8 +143,8 @@ const Projects = () => {
         }
 
         .timeline-image {
-          width: 100%;
-          height: 160px;
+          width: 60%;
+          height: 170px;
           object-fit: cover;
           border-radius: 10px;
           margin-bottom: 10px;

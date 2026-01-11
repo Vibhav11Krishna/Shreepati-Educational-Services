@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Office1 from "../assets/office1.png";
-import Office2 from "../assets/office2.png";
-import Office3 from "../assets/office3.png";
-import FatherClient from "../assets/founder.jpg";
+import expert from "../assets/expert.jpg";
+import campus from "../assets/campus.jpg";
+import digital from "../assets/digital.jpg";
+import vision from "../assets/vision.jpg";
 
 const slides = [
   {
-    image: Office1,
-    title: "Welcoming Campus",
-    description: "Step into a vibrant environment where architecture meets inspiration. Our campus sparks creativity and community."
+    image: expert,
+    title: "Expert Educational Consultancy",
+    description: "We guide institutions in planning, strategy, and operations to build a strong foundation for academic success. "
   },
   {
-    image: Office2,
-    title: "Modern Classrooms",
-    description: "Experience learning in smart classrooms with interactive boards, digital tools, and ergonomic seating."
+    image: campus,
+    title: "Campus & Infrastructure Planning",
+    description: "From classrooms and labs to libraries and auditoriums, we design modern, functional college setups that foster learning, innovation, and student engagement."
   },
   {
-    image: Office3,
-    title: "Student Lounge",
-    description: "Unwind, collaborate, and recharge in thoughtfully curated lounge spaces for every learner."
+    image: digital,
+    title: "Digital & Administrative Solutions",
+    description: "We implement smart management systems, digital tools, and administrative processes to streamline operations and enhance institutional efficiency."
   },
   {
-    image: FatherClient,
-    title: "With Our Clients",
-    description: "Building strong relationships and guiding students with a personal touch, every step of the way."
+    image: vision,
+    title: "From Vision to Reality",
+    description: "We turn your educational vision into a fully operational institution, ensuring modern infrastructure, smooth administration, and sustainable growth."
   }
 ];
 

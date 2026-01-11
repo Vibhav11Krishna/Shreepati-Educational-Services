@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Office1 from "../../assets/office1.png";
-import Office2 from "../../assets/office2.png";
-import Office3 from "../../assets/office3.png";
-import FatherClient from "../../assets/founder.jpg";
+import expert from "../../assets/expert.jpg";
+import campus from "../../assets/campus.jpg";
+import digital from "../../assets/digital.jpg";
+import vision from "../../assets/vision.jpg";
 
 const slides = [
   {
-    image: Office1,
-    title: "Welcoming Campus",
-    description: "Step into a vibrant space where architecture meets inspiration."
+    image: expert,
+    title: "Expert Educational Consultancy",
+   
   },
   {
-    image: Office2,
-    title: "Modern Classrooms",
-    description: "Smart classrooms with digital tools and ergonomic comfort."
+    image: campus,
+    title: "Campus & Infrastructure Planning",
+    
   },
   {
-    image: Office3,
-    title: "Student Lounge",
-    description: "Relax and collaborate in our beautiful student lounge."
+    image: digital,
+    title: "Digital & Administrative Solutions",
+   
   },
   {
-    image: FatherClient,
-    title: "With Our Clients",
-    description: "Guiding students personally, every step of the way."
+    image: vision,
+    title: "From Vision to Reality",
+    
   }
 ];
 
