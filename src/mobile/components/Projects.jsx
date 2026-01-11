@@ -141,14 +141,14 @@ const Projects = () => {
           color: #FF6600;
           margin-bottom: 10px;
         }
+.timeline-image {
+  width: 192px;       /* same as height to make a square */
+  height: 192px;      /* same as width */
+  object-fit: cover;  /* keeps image aspect ratio inside the circle */
+  border-radius: 50%; /* makes it circular */
+  margin-bottom: 10px;
+}
 
-        .timeline-image {
-          width: 60%;
-          height: 170px;
-          object-fit: cover;
-          border-radius: 10px;
-          margin-bottom: 10px;
-        }
 
         .timeline-quote {
           font-size: 0.95rem;
