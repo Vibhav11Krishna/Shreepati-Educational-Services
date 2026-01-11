@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shreepati-educational-services-a35b.vercel.app/sitemap.xml
