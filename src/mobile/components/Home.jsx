@@ -4,6 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { MdSchool, MdCheckCircle } from "react-icons/md";
 import { FaUniversity, FaUserGraduate } from "react-icons/fa";
 import logo from "../../assets/logo-2.png";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [counts, setCounts] = useState({
@@ -33,6 +34,8 @@ const Home = () => {
   }, []);
 
   return (
+
+    
     <section
       id="home"
       style={{

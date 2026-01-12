@@ -34,6 +34,8 @@ function Home() {
   }, []);
 
   return (
+
+    
     <section
       id="home"
       className={loaded ? "fade-in visible" : "fade-in"}
