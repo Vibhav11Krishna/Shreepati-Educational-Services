@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../mobile/components/Footer";
 import Navbar from "../../mobile/components/Navbar";
-import processImg from "../../assets/loans.png";
+import processImg from "../../assets/Education.png";
 
 import {
   FaChalkboardTeacher,
