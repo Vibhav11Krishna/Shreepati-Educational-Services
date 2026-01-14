@@ -340,7 +340,7 @@ function OverseasAdmissions() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Our Collaboration Process
+          Our Overseas Admission Process
         </h2>
 
         {/* White Landscape Image Box */}
