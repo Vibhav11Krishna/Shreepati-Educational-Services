@@ -5,7 +5,7 @@ import processImg from "../../assets/Accreditation.png";
 import naacLogo from "../../assets/Nacc.png";
 import ugcLogo from "../../assets/Nabh.png";
 import aicteLogo from "../../assets/Nba.jpg";
-import cbseLogo from "../../assets/iso.jpg";
+import cbseLogo from "../../assets/Board.jpg";
 import stateBoardLogo from "../../assets/Nirf.jpg";
 
 import {
