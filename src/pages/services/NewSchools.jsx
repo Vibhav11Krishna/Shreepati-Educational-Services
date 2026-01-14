@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../mobile/components/Footer";
 import Navbar from "../../mobile/components/Navbar";
 import processImg from "../../assets/School.png";
-import naacLogo from "../../assets/logo.jpg";
-import ugcLogo from "../../assets/logo.jpg";
-import aicteLogo from "../../assets/logo.jpg";
+import naacLogo from "../../assets/Cbse.png";
+import ugcLogo from "../../assets/Bihar.jpg";
+import aicteLogo from "../../assets/Madhya.jpg";
 import {
   FaChalkboardTeacher,
   FaLightbulb,
@@ -383,7 +383,7 @@ function NewSchools() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Our College Setup Process
+          Our School Setup Process
         </h2>
 
         {/* White Landscape Image Box */}
@@ -424,7 +424,7 @@ function NewSchools() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes
+          Outcomes Of New Schools Setup
         </h2>
         <div
           style={{
@@ -602,8 +602,9 @@ function NewSchools() {
     padding: 22px !important;
   }
 }
-.board-logo {
-  height: 80px;
+board-logo {
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -614,14 +615,9 @@ function NewSchools() {
 
 @media (max-width: 768px) {
   .board-logo {
-    height: 60px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .board-logo {
-    height: 60px;
+    height: 110px;
+    width: auto;
+    object-fit: contain;
   }
 }`}</style>
     </div>

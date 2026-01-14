@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../mobile/components/Footer";
 import Navbar from "../../mobile/components/Navbar";
 import processImg from "../../assets/Accreditation.png";
+import naacLogo from "../../assets/Nacc.png";
+import ugcLogo from "../../assets/Nabh.png";
+import aicteLogo from "../../assets/Nba.jpg";
+import cbseLogo from "../../assets/iso.jpg";
+import stateBoardLogo from "../../assets/Nirf.jpg";
 
 import {
   FaChalkboardTeacher,
@@ -256,7 +261,53 @@ function Accreditation() {
           ))}
         </div>
       </section>
+{/* Affiliation Boards */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "2.4rem",
+      fontWeight: "700",
+      marginBottom: "40px",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    Accreditation We Offer
+  </h2>
 
+  <div
+    style={{
+      background: "#fff",
+      padding: "35px",
+      borderRadius: "20px",
+      boxShadow: "0 18px 45px rgba(0,0,0,0.18)",
+      borderTop: "6px solid #FF6600",
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: "40px",
+    }}
+  >
+    {[naacLogo, ugcLogo, aicteLogo, cbseLogo, stateBoardLogo].map(
+      (logo, index) => (
+        <img
+          key={index}
+          src={logo}
+          alt="Affiliation Board Logo"
+          className="board-logo"
+        />
+      )
+    )}
+  </div>
+</section>
       {/* Why Choose SES */}
       <section
         style={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}
@@ -378,7 +429,7 @@ function Accreditation() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes of Collaboration
+          Outcomes of Accreditation Assistance
         </h2>
         <div
           style={{
@@ -554,6 +605,24 @@ function Accreditation() {
   .step-card,
   .benefit-card {
     padding: 22px !important;
+  }
+}
+.board-logo {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.board-logo:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .board-logo {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
   }
 }`}</style>
     </div>

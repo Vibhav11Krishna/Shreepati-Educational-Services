@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../mobile/components/Footer";
 import Navbar from "../../mobile/components/Navbar";
 import processImg from "../../assets/Affiliation.png";
-import naacLogo from "../../assets/logo.jpg";
-import ugcLogo from "../../assets/logo.jpg";
-import aicteLogo from "../../assets/logo.jpg";
-import cbseLogo from "../../assets/logo.jpg";
-import stateBoardLogo from "../../assets/logo.jpg";
+import naacLogo from "../../assets/Nacc.png";
+import ugcLogo from "../../assets/inc.png";
+import aicteLogo from "../../assets/Ugc.png";
+import cbseLogo from "../../assets/Pci.png";
+import stateBoardLogo from "../../assets/Aictce.png";
+import bteLogo from "../../assets/Bte.png";
+import akuLogo from "../../assets/Aku.png";
+import beuLogo from "../../assets/Beu.png";
+import madhyaLogo from "../../assets/Madhya.jpg";
+
 import {
   FaClipboardCheck,
   FaFileAlt,
@@ -290,7 +295,7 @@ function Affiliation() {
       gap: "40px",
     }}
   >
-    {[naacLogo, ugcLogo, aicteLogo, cbseLogo, stateBoardLogo].map(
+    {[naacLogo, ugcLogo, aicteLogo, cbseLogo, stateBoardLogo , bteLogo,akuLogo, beuLogo , madhyaLogo].map(
       (logo, index) => (
         <img
           key={index}
@@ -610,7 +615,8 @@ function Affiliation() {
   }
 }
 .board-logo {
-  height: 80px;
+  width: 160px;
+  height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -621,14 +627,9 @@ function Affiliation() {
 
 @media (max-width: 768px) {
   .board-logo {
-    height: 60px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .board-logo {
-    height: 60px;
+    height: 90px;
+    width: auto;
+    object-fit: contain;
   }
 }
 `}</style>

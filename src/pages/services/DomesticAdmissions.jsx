@@ -374,7 +374,7 @@ function DomesticAdmissions() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes
+          Outcomes of Domestic Counselling
         </h2>
         <div
           style={{

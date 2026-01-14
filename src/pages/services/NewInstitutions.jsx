@@ -2,9 +2,16 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../mobile/components/Footer";
 import Navbar from "../../mobile/components/Navbar";
 import processImg from "../../assets/College.png";
-import naacLogo from "../../assets/logo.jpg";
-import ugcLogo from "../../assets/logo.jpg";
-import aicteLogo from "../../assets/College.png";
+import naacLogo from "../../assets/Nacc.png";
+import ugcLogo from "../../assets/Ugc.png";
+import aicteLogo from "../../assets/Aictce.png";
+import incLogo from "../../assets/inc.png";
+import pciLogo from "../../assets/Pci.png";
+import akuLogo from "../../assets/Aku.png";
+import beuLogo from "../../assets/Beu.png";
+import bteLogo from "../../assets/Bte.png";
+import madhyaLogo from "../../assets/Madhya.jpg";
+
 import {
   FaChalkboardTeacher,
   FaLightbulb,
@@ -291,7 +298,54 @@ function NewInstitutions() {
       gap: "40px",
     }}
   >
-    {[naacLogo, ugcLogo, aicteLogo].map(
+    {[akuLogo, beuLogo, bteLogo, madhyaLogo].map(
+      (logo, index) => (
+        <img
+          key={index}
+          src={logo}
+          alt="Affiliation Board Logo"
+          className="board-logo"
+        />
+      )
+    )}
+  </div>
+</section>
+{/* Affiliation Boards */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "2.4rem",
+      fontWeight: "700",
+      marginBottom: "40px",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    Government Approvals
+  </h2>
+
+  <div
+    style={{
+      background: "#fff",
+      padding: "35px",
+      borderRadius: "20px",
+      boxShadow: "0 18px 45px rgba(0,0,0,0.18)",
+      borderTop: "6px solid #FF6600",
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: "40px",
+    }}
+  >
+    {[naacLogo, ugcLogo, aicteLogo , pciLogo , incLogo].map(
       (logo, index) => (
         <img
           key={index}
@@ -425,7 +479,7 @@ function NewInstitutions() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes
+          Outcomes Of New Institutions Setup
         </h2>
         <div
           style={{
@@ -604,26 +658,24 @@ function NewInstitutions() {
   }
 }
 .board-logo {
-  height: 80px;
+  width: 160px;
+  height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
+
 .board-logo:hover {
   transform: scale(1.1);
 }
-
 @media (max-width: 768px) {
   .board-logo {
-    height: 60px;
+    height: 90px;
+    width: auto;
+    object-fit: contain;
   }
 }
 
-
-@media (max-width: 768px) {
-  .board-logo {
-    height: 60px;
-  }
 }`}</style>
     </div>
   );

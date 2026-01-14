@@ -381,7 +381,7 @@ function DPRConsultancy() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes
+          Outcomes of DPR & Consultancy
         </h2>
         <div
           style={{

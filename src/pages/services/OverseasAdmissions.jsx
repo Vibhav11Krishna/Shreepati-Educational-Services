@@ -381,7 +381,7 @@ function OverseasAdmissions() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes of Collaboration
+          Outcomes of Overseas Admission
         </h2>
         <div
           style={{

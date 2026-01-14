@@ -379,7 +379,7 @@ function EducationLoans() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes 
+          Outcomes of Education Loans 
         </h2>
         <div
           style={{

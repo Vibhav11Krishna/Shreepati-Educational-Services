@@ -384,7 +384,7 @@ function DataManagement() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Outcomes of Collaboration
+          Outcomes of Data Management
         </h2>
         <div
           style={{
