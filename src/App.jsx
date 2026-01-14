@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+/* COMPONENTS */
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -10,14 +11,25 @@ import Projects from "./components/Projects";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import OfficeShowcase from "./components/OfficeShowcase";
-import KnowledgeVideoSection from "./components/KnowledgeVideoSection"; 
+import KnowledgeVideoSection from "./components/KnowledgeVideoSection";
+
+/* AUTH */
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
-// Logo import
-import logo from "./assets/logo-2.png";
+/* SERVICE PAGES (DESKTOP) */
+import Collaboration from "./pages/services/Collaboration";
+import Affiliation from "./pages/services/Affiliation";
+import NewInstitutions from "./pages/services/NewInstitutions";
+import NewSchools from "./pages/services/NewSchools";
+import DPRConsultancy from "./pages/services/DPRConsultancy";
+import OverseasAdmissions from "./pages/services/OverseasAdmissions";
+import EducationLoans from "./pages/services/EducationLoans";
+import DomesticAdmissions from "./pages/services/DomesticAdmissions";
+import Accreditation from "./pages/services/Accreditation";
+import DataManagement from "./pages/services/DataManagement";
 
-
+/* MOBILE COMPONENTS */
 import MNavbar from "./mobile/components/Navbar";
 import MFooter from "./mobile/components/Footer";
 import MHome from "./mobile/components/Home";
@@ -27,12 +39,16 @@ import MProjects from "./mobile/components/Projects";
 import MPartners from "./mobile/components/Partners";
 import MContact from "./mobile/components/Contact";
 import MOfficeShowcase from "./mobile/components/OfficeShowcase";
-import MKnowledgeVideoSection from "./mobile/components/KnowledgeVideoSection"; 
+import MKnowledgeVideoSection from "./mobile/components/KnowledgeVideoSection";
 import MLogin from "./mobile/pages/Login";
 import MSignUp from "./mobile/pages/signup";
 
-
+/* UTILITIES */
+import ScrollToTop from "./ScrollToTop";
 import Chatbot from "./Chatbot/Chatbot";
+
+/* ASSETS */
+import logo from "./assets/logo-2.png";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -85,74 +101,73 @@ function App() {
 
   return (
     <Router>
+      {/* 🔥 SCROLL FIX */}
+      <ScrollToTop />
+
       <div className={`app-wrapper ${loginOpen ? "blur-active" : ""}`}>
         <Routes>
+
+          {/* HOME */}
           <Route path="/" element={isMobile ? <MobileSite /> : <DesktopSite />} />
+
+          {/* AUTH */}
           <Route path="/signup" element={isMobile ? <MSignUp /> : <SignUp />} />
+
+          {/* SERVICE PAGES */}
+          <Route path="/collaboration" element={<Collaboration />} />
+          <Route path="/affiliation" element={<Affiliation />} />
+          <Route path="/new-institutions" element={<NewInstitutions />} />
+          <Route path="/new-schools" element={<NewSchools />} />
+          <Route path="/dpr-consultancy" element={<DPRConsultancy />} />
+          <Route path="/overseas-admissions" element={<OverseasAdmissions />} />
+          <Route path="/education-loans" element={<EducationLoans />} />
+          <Route path="/domestic-admissions" element={<DomesticAdmissions />} />
+          <Route path="/accreditation" element={<Accreditation />} />
+          <Route path="/data-management" element={<DataManagement />} />
+
         </Routes>
       </div>
 
-      {/* Login overlay */}
+      {/* LOGIN OVERLAY */}
       {loginOpen &&
-        (isMobile ? <MLogin closeLogin={handleCloseLogin} /> : <Login closeLogin={handleCloseLogin} />)}
-{/* Chatbot toggle button */}
-<div
-  onClick={toggleChat}
-  style={{
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    width: "170px",       // wider rectangle
-    height: "70px",       // taller rectangle
-    borderRadius: "15px", // slightly rounded corners
-    backgroundColor: "#fef8f4ff", // white background
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: "pointer",
-    zIndex: 10000,
-    boxShadow: "0 5px 20px rgba(0,0,0,0.3)"
-  }}
->
-  <img
-    src={logo}   // imported logo
-    alt="Shreepati Logo"
-    style={{ width: "100px", height: "60px" }} // logo fits inside nicely
-  />
-</div>
+        (isMobile
+          ? <MLogin closeLogin={handleCloseLogin} />
+          : <Login closeLogin={handleCloseLogin} />
+        )
+      }
 
+      {/* CHATBOT BUTTON */}
+      <div
+        onClick={toggleChat}
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          width: "170px",
+          height: "70px",
+          borderRadius: "15px",
+          backgroundColor: "#fef8f4ff",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          zIndex: 10000,
+          boxShadow: "0 5px 20px rgba(0,0,0,0.3)",
+        }}
+      >
+        <img src={logo} alt="Shreepati Logo" style={{ width: "100px", height: "60px" }} />
+      </div>
 
-      {/* Chatbot window */}
+      {/* CHATBOT WINDOW */}
       {chatOpen && <Chatbot />}
 
       <style>{`
-        .blur-active main, 
-        .blur-active nav, 
+        .blur-active main,
+        .blur-active nav,
         .blur-active footer {
           filter: blur(6px);
           pointer-events: none;
           user-select: none;
-          transition: filter 0.3s ease;
-        }
-
-        .login-page-wrapper, .login-box {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 10000;
-        }
-
-        .login-page-overlay {
-          content: '';
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(255,255,255,0.2);
-          backdrop-filter: blur(10px);
-          z-index: 9999;
         }
       `}</style>
     </Router>

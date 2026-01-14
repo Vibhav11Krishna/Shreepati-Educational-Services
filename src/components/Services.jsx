@@ -11,6 +11,7 @@ import {
   FaCertificate,
   FaDatabase,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Services() {
   const [loaded, setLoaded] = useState(false);
@@ -19,68 +20,90 @@ function Services() {
     setTimeout(() => setLoaded(true), 100);
   }, []);
 
+  
   const serviceList = [
-    {
-      icon: <FaChalkboardTeacher size={40} />,
-      title: "Collaboration Guidance",
-      description: "Form strong partnerships with universities, industry, and networks to enhance academic growth.",
-      color: "#FF6600",
-    },
-    {
-      icon: <FaLightbulb size={40} />,
-      title: "Affiliation Guidance",
-      description: "Complete support for obtaining affiliation from recognized boards and universities.",
-      color: "#FFB400",
-    },
-    {
-      icon: <FaUniversity size={40} />,
-      title: "New Institutions Setup",
-      description: "Assist in establishing and getting recognition for new colleges or mid-level institutions.",
-      color: "#D32F2F",
-    },
-    {
-      icon: <FaGraduationCap size={40} />,
-      title: "New Schools Setup",
-      description: "Step-by-step guidance to establish schools with approvals and documentation.",
-      color: "#FF6600",
-    },
-    {
-      icon: <FaTools size={40} />,
-      title: "DPR & Consultancy",
-      description: "Prepare detailed project reports covering financial, academic, and infrastructure aspects.",
-      color: "#D32F2F",
-    },
-    {
-      icon: <FaPlane size={40} />,
-      title: "Overseas Admissions & Visa",
-      description: "Counseling and application support for international studies and visa documentation.",
-      color: "#FFB400",
-    },
-    {
-      icon: <FaMoneyCheckAlt size={40} />,
-      title: "Educational Loans & HR",
-      description: "Consultation for securing loans and streamlining HR for institutions.",
-      color: "#FF6600",
-    },
-    {
-      icon: <FaGlobe size={40} />,
-      title: "Domestic Admission Counseling",
-      description: "Guide students across India in selecting the right courses and institutions.",
-      color: "#D32F2F",
-    },
-    {
-      icon: <FaCertificate size={40} />,
-      title: "Accreditation Assistance",
-      description: "Help institutions achieve national and international accreditation efficiently.",
-      color: "#FFB400",
-    },
-    {
-      icon: <FaDatabase size={40} />,
-      title: "Data & Document Management",
-      description: "Customized solutions for managing institutional data, libraries, and documents.",
-      color: "#FF6600",
-    },
-  ];
+  {
+    icon: <FaChalkboardTeacher size={40} />,
+    title: "Collaboration Guidance",
+    description:
+      "Form strong partnerships with universities, industry, and networks to enhance academic growth.",
+    color: "#FF6600",
+    link: "/collaboration",
+  },
+  {
+    icon: <FaLightbulb size={40} />,
+    title: "Affiliation Guidance",
+    description:
+      "Complete support for obtaining affiliation from recognized boards and universities.",
+    color: "#FFB400",
+    link: "/affiliation",
+  },
+  {
+    icon: <FaUniversity size={40} />,
+    title: "New Institutions Setup",
+    description:
+      "Assist in establishing and getting recognition for new colleges or institutions.",
+    color: "#D32F2F",
+    link: "/new-institutions",
+  },
+  {
+    icon: <FaGraduationCap size={40} />,
+    title: "New Schools Setup",
+    description:
+      "Step-by-step guidance to establish schools with approvals and documentation.",
+    color: "#FF6600",
+    link: "/new-schools",
+  },
+  {
+    icon: <FaTools size={40} />,
+    title: "DPR & Consultancy",
+    description:
+      "Detailed project reports covering finance, academics, and infrastructure.",
+    color: "#D32F2F",
+    link: "/dpr-consultancy",
+  },
+  {
+    icon: <FaPlane size={40} />,
+    title: "Overseas Admissions & Visa",
+    description:
+      "Complete counseling and visa documentation for international studies.",
+    color: "#FFB400",
+    link: "/overseas-admissions",
+  },
+  {
+    icon: <FaMoneyCheckAlt size={40} />,
+    title: "Educational Loans & HR",
+    description:
+      "Guidance for education loans and institutional HR management.",
+    color: "#FF6600",
+    link: "/education-loans",
+  },
+  {
+    icon: <FaGlobe size={40} />,
+    title: "Domestic Admission Counseling",
+    description:
+      "Helping students choose the right colleges across India.",
+    color: "#D32F2F",
+    link: "/domestic-admissions",
+  },
+  {
+    icon: <FaCertificate size={40} />,
+    title: "Accreditation Assistance",
+    description:
+      "Support for NAAC, NBA, and international accreditations.",
+    color: "#FFB400",
+    link: "/accreditation",
+  },
+  {
+    icon: <FaDatabase size={40} />,
+    title: "Data & Document Management",
+    description:
+      "Secure and efficient academic & administrative data solutions.",
+    color: "#FF6600",
+    link: "/data-management",
+  },
+];
+
 
   return (
     <section
@@ -135,8 +158,30 @@ function Services() {
               className={`service-card ${loaded ? "visible" : ""}`}
               style={{
                 flex: "1 1 300px",
+                position: "relative",
               }}
             >
+              {/* Number Badge */}
+              <div style={{
+                position: "absolute",
+                top: "-15px",
+                left: "-15px",
+                width: "45px",
+                height: "45px",
+                borderRadius: "50%",
+                background: service.color,
+                color: "#fff",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontWeight: "700",
+                fontSize: "1.2rem",
+                boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+                zIndex: 2,
+              }}>
+                {index + 1}
+              </div>
+
               <div
                 style={{
                   borderRadius: "20px",
@@ -194,6 +239,29 @@ function Services() {
                 >
                   {service.description}
                 </p>
+
+                {/* Read More Link */}
+              {/* Read More Button */}
+<Link
+  to={service.link}
+  style={{
+    marginTop: "10px",
+    fontWeight: "600",
+    color: "#fff",
+    background: `linear-gradient(90deg, ${service.color}, #D32F2F)`,
+    padding: "8px 20px",
+    borderRadius: "25px",
+    fontSize: "0.95rem",
+    textDecoration: "none",
+    display: "inline-block",
+    transition: "all 0.3s ease",
+    boxShadow: "0 4px 15px rgba(0,0,0,0.15)",
+  }}
+>
+  Read More →
+</Link>
+
+
               </div>
             </div>
           ))}
