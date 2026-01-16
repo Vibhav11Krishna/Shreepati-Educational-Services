@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:sitemap": "node sitemap-generator.js"
+    "generate:sitemap": "node sitemap-generator.js",
+    "vercel:fix": "node vercel.js"
   },
   "dependencies": {
     "@cloudinary/react": "^1.14.3",
