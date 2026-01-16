@@ -1,7 +1,7 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-function Navbar({ openLogin }) {
+function DekstopNavbar({ openLogin }) {
   // Added "knowledge" section
   const sections = ["home", "about", "services", "projects", "partners", "knowledge", "contact"];
 
@@ -141,4 +141,4 @@ function Navbar({ openLogin }) {
   );
 }
 
-export default Navbar;
+export default DekstopNavbar;

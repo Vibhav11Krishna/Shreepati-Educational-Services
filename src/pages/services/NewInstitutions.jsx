@@ -11,7 +11,9 @@ import akuLogo from "../../assets/Aku.png";
 import beuLogo from "../../assets/Beu.png";
 import bteLogo from "../../assets/Bte.png";
 import madhyaLogo from "../../assets/Madhya.jpg";
-
+import blog1 from "../../assets/Starting.jpg";
+import blog2 from "../../assets/Faculty.jpg";
+import blog3 from "../../assets/Requirements.jpg";
 import {
   FaChalkboardTeacher,
   FaLightbulb,
@@ -105,7 +107,29 @@ const outcomes = [
     title: "Sustainable Growth",
   },
 ];
-
+const blogs = [
+  {
+    image: blog1,
+    title: "Starting A New College",
+    description:
+      "Key steps from planning to infrastructure and staff setup",
+    link: "/blogs/blog7",
+  },
+  {
+    image: blog2,
+    title: "Setting Up Faculty & Courses",
+    description:
+      "SES guidance on hiring, course design, and administration",
+    link: "/blogs/blog8",
+  },
+  {
+    image: blog3,
+    title: "Regulatory Compilance Made Easy",
+    description:
+      "Meet all legal and academic requirements smoothly",
+    link: "/blogs/blog9",
+  },
+];
 function NewInstitutions() {
   const [loaded, setLoaded] = useState(false);
 
@@ -520,9 +544,106 @@ function NewInstitutions() {
           ))}
         </div>
       </section>
+      {/* Blogs Section */}
+<section
+  style={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}
+>
+  <h2
+    style={{
+      fontSize: "2.5rem",
+      fontWeight: "700",
+      textAlign: "center",
+      marginBottom: "50px",
+      fontFamily: "'Poppins', sans-serif",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    Latest Blogs
+  </h2>
+
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "30px",
+      justifyContent: "center",
+    }}
+  >
+    {blogs.map((blog, index) => (
+      <div
+        key={index}
+        className={`blog-card ${loaded ? "visible" : ""}`}
+        style={{
+          flex: "1 1 320px",
+          background: "#fff",
+          borderRadius: "18px",
+          overflow: "hidden",
+          boxShadow: "0 18px 45px rgba(0,0,0,0.22)",
+          transition: "all 0.4s ease",
+        }}
+      >
+        {/* Blog Image */}
+        <img
+          src={blog.image}
+          alt={blog.title}
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+          }}
+        />
+
+        {/* Blog Content */}
+        <div style={{ padding: "25px", textAlign: "center" }}>
+          <h3
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: "700",
+              marginBottom: "12px",
+              color: "#D32F2F",
+            }}
+          >
+            {blog.title}
+          </h3>
+
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.7",
+              color: "#df4b1f",
+              marginBottom: "18px",
+            }}
+          >
+            {blog.description}
+          </p>
+
+          <a
+            href={blog.link}
+            style={{
+              display: "inline-block",
+              padding: "10px 22px",
+              borderRadius: "30px",
+              background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+              color: "#fff",
+              textDecoration: "none",
+              fontWeight: "600",
+              transition: "all 0.3s ease",
+            }}
+          >
+            Read More →
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
       {/* Footer */}
       <Footer />
       <Navbar />
+    
 
       {/* Animations */}
       <style>{`
@@ -676,6 +797,27 @@ function NewInstitutions() {
   }
 }
 
+}
+.blog-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.blog-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    flex: 1 1 100%;
+  }
 }`}</style>
     </div>
   );

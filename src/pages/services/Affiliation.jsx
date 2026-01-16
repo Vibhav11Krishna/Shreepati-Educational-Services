@@ -11,6 +11,9 @@ import bteLogo from "../../assets/Bte.png";
 import akuLogo from "../../assets/Aku.png";
 import beuLogo from "../../assets/Beu.png";
 import madhyaLogo from "../../assets/Madhya.jpg";
+import blog1 from "../../assets/University.jpg";
+import blog2 from "../../assets/Mistakes.jpg";
+import blog3 from "../../assets/Credibility.jpg";
 
 import {
   FaClipboardCheck,
@@ -100,7 +103,29 @@ const outcomes = [
     title: "Long Term Institutional Stability",
   },
 ];
-
+const blogs = [
+  {
+    image: blog1,
+    title: "How to get Affiliation from universities & Board",
+    description:
+      "Step by step guide to obtain affiliation from boards and universities",
+    link: "/blogs/blog4",
+  },
+  {
+    image: blog2,
+    title: "Common Affiliation Mistakes",
+    description:
+      "Avoid errors that can delay approval with SES expert guidance",
+    link: "/blogs/blog5",
+  },
+  {
+    image: blog3,
+    title: "Benefits of Board & University Affiliation",
+    description:
+      "Why affiliation increases credibility and opportunities for institutions",
+    link: "/blogs/blog6",
+  },
+];
 function Affiliation() {
   const [loaded, setLoaded] = useState(false);
 
@@ -478,12 +503,129 @@ function Affiliation() {
           ))}
         </div>
       </section>
+      {/* Blogs Section */}
+<section
+  style={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}
+>
+  <h2
+    style={{
+      fontSize: "2.5rem",
+      fontWeight: "700",
+      textAlign: "center",
+      marginBottom: "50px",
+      fontFamily: "'Poppins', sans-serif",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    Latest Blogs
+  </h2>
+
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "30px",
+      justifyContent: "center",
+    }}
+  >
+    {blogs.map((blog, index) => (
+      <div
+        key={index}
+        className={`blog-card ${loaded ? "visible" : ""}`}
+        style={{
+          flex: "1 1 320px",
+          background: "#fff",
+          borderRadius: "18px",
+          overflow: "hidden",
+          boxShadow: "0 18px 45px rgba(0,0,0,0.22)",
+          transition: "all 0.4s ease",
+        }}
+      >
+        {/* Blog Image */}
+        <img
+          src={blog.image}
+          alt={blog.title}
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+          }}
+        />
+
+        {/* Blog Content */}
+        <div style={{ padding: "25px", textAlign: "center" }}>
+          <h3
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: "700",
+              marginBottom: "12px",
+              color: "#D32F2F",
+            }}
+          >
+            {blog.title}
+          </h3>
+
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.7",
+              color: "#df4b1f",
+              marginBottom: "18px",
+            }}
+          >
+            {blog.description}
+          </p>
+
+          <a
+            href={blog.link}
+            style={{
+              display: "inline-block",
+              padding: "10px 22px",
+              borderRadius: "30px",
+              background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+              color: "#fff",
+              textDecoration: "none",
+              fontWeight: "600",
+              transition: "all 0.3s ease",
+            }}
+          >
+            Read More →
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
       {/* Footer */}
       <Footer />
       <Navbar />
+     
 
       {/* Animations */}
       <style>{`
+      .blog-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.blog-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    flex: 1 1 100%;
+  }
+}
         .step-card, .benefit-card {
           opacity: 0;
           transform: translateY(30px);
