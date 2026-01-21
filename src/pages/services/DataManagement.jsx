@@ -65,7 +65,7 @@ const blogs = [
   },
   {
     image: blog3,
-    title: "Compilance & Organization",
+    title: "Compilance & Organization & Operations",
     description:
       "Maintain regulatory compilance while streamlining operations",
     link: "/blogs/blog30",

@@ -115,7 +115,7 @@ const blogs = [
   },
   {
     image: blog3,
-    title: "Expert Consultancy Support",
+    title: "Expert Consultancy Support & Growth",
     description:
       "Avoid mistakes and get professional guidance for institutional Growth",
     link: "/blogs/blog15",

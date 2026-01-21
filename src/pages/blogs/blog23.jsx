@@ -2,115 +2,231 @@ import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
 
-function blog23() {
+// Assets
+import heroImg from "../../assets/Banner23.jpg";
+import collaborationImg from "../../assets/Admission3.jpg";
+import researchImg from "../../assets/Admission4.jpg";
+
+function Blog23() {
   return (
     <>
       <Navbar />
 
-      <div
-        style={{
-          background: "#fff4ea",
-          minHeight: "100vh",
-          fontFamily: "'Poppins', sans-serif",
-        }}
-      >
-        <section
-          style={{
-            padding: "100px 16px 70px",
-            maxWidth: "900px",
-            margin: "0 auto",
-            textAlign: "center",
-          }}
-        >
-          {/* BLOG HEADING */}
-          <h1 className="blog-heading">
-          How Counseling Helps Students
-          </h1>
-
-          {/* DIVIDER */}
-          <div className="blog-divider" />
-
-          {/* CONTENT CARD */}
-          <div className="blog-card-content">
-            <p className="blog-text">
-              This blog will be updated soon.
-            </p>
+      {/* PAGE WRAPPER */}
+      <div className="blog-page">
+        {/* HERO SECTION */}
+        <div className="blog-hero">
+          <img src={heroImg} alt="Academic Collaboration" />
+          <div className="hero-overlay">
+            <h1 className="gradient-heading">How Counseling Helps Students</h1>
           </div>
-        </section>
+        </div>
+
+        {/* BLOG CONTENT */}
+        <article className="blog-article">
+          {/* INTRO */}
+          <p className="blog-intro">
+            Academic counseling plays a vital role in helping students overcome
+            confusion, pressure, and uncertainty. Proper counseling builds
+            confidence and enables students to make decisions based on clarity
+            rather than stress.
+          </p>
+
+          {/* SECTION 1 */}
+          <h2 className="gradient-heading">Personalized Counseling Approach</h2>
+          <p>
+            SES offers personalized counseling sessions tailored to each
+            student’s academic background and goals. This individual-focused
+            approach ensures students receive practical and relevant guidance.
+          </p>
+
+          <div className="blog-image">
+            <img src={collaborationImg} alt="Industry Collaboration" />
+          </div>
+
+          {/* SECTION 2 */}
+          <h2 className="gradient-heading">Building Confidence & Direction</h2>
+          <p>
+            Through counseling, students gain clarity about their strengths,
+            opportunities, and future options. SES helps students feel confident
+            and prepared for academic challenges.
+          </p>
+
+          <div className="blog-image">
+            <img src={researchImg} alt="Research Collaboration" />
+          </div>
+
+          {/* VIDEO SECTION */}
+          <h2 className="gradient-heading">Video Explanation</h2>
+
+          <div className="blog-video">
+            <iframe
+              src="https://player.cloudinary.com/embed/?public_id=counselling-2_xhpp7j&cloud_name=dqmkivr5i&fluid=true"
+              title="Academic Collaboration Video"
+              allow="autoplay; fullscreen; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+
+          <p>
+            This video explains how Academic counseling plays a vital role in helping students overcome
+            confusion, pressure, and uncertainty.
+          </p>
+
+          {/* CONCLUSION */}
+          <h2 className="gradient-heading">Conclusion</h2>
+          <p>
+            Counseling empowers students to make confident academic choices.SES
+            provides reliable guidance that supports student success and
+            personal growth.
+          </p>
+        </article>
+
+        <Footer />
       </div>
 
-      <Footer />
-
-      {/* RESPONSIVE STYLES */}
+      {/* STYLES */}
       <style>{`
-        .blog-heading {
-          font-size: 3rem;
-          font-weight: 800;
-          margin-bottom: 28px;
+        html, body {
+          margin: 0;
+          padding: 0;
+          background: #fff4ea;
+        }
+
+        .blog-page {
+          background: #fff4ea;
+          font-family: 'Poppins', sans-serif;
+          color: #000;
+        }
+
+        /* HERO */
+        .blog-hero {
+          position: relative;
+          height: 420px;
+          overflow: hidden;
+        }
+
+        .blog-hero img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .hero-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.45);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .hero-overlay h1 {
+          font-size: 3.2rem;
+          max-width: 900px;
+        }
+
+        /* BLOG ARTICLE */
+        .blog-article {
+          max-width: 760px;
+          margin: 80px auto 0;
+          padding: 0 16px 80px;
+          text-align: justify;
+        }
+
+        .blog-intro {
+          font-size: 1.3rem;
+          line-height: 1.9;
+          margin-bottom: 50px;
+        }
+
+        .gradient-heading {
           font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #FF6600, #D32F2F);
+          background: linear-gradient(90deg, #ff6600, #d32f2f);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          font-weight: 800;
+          margin: 60px 0 20px;
         }
 
-        .blog-divider {
-          width: 90px;
-          height: 5px;
-          margin: 0 auto 36px;
-          border-radius: 10px;
-          background: linear-gradient(90deg, #FF6600, #D32F2F);
+        .blog-article h2 {
+          font-size: 2rem;
+          margin-top: 60px;
+          margin-bottom: 20px;
         }
 
-        .blog-card-content {
-          background: #fff;
-          padding: 40px;
-          border-radius: 20px;
+        .blog-article p {
+          font-size: 1.15rem;
+          line-height: 1.9;
+          margin-bottom: 28px;
+        }
+
+        /* IMAGES */
+        .blog-image {
+          margin: 40px 0;
+          border-radius: 18px;
+          overflow: hidden;
           box-shadow: 0 18px 45px rgba(0,0,0,0.18);
         }
 
-        .blog-text {
-          font-size: 1.25rem;
-          line-height: 1.8;
-          color: #D32F2F;
-          margin: 0;
+        .blog-image img {
+          width: 100%;
+          display: block;
         }
 
-        /* 🔥 TABLET */
+        /* VIDEO */
+        .blog-video {
+          margin: 40px 0;
+          border-radius: 18px;
+          overflow: hidden;
+          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+        }
+
+        .blog-video iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+
+        /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
-          .blog-heading {
-            font-size: 2.4rem;
+          .blog-article {
+            padding: 0 12px 60px;
+            text-align: justify;
           }
 
-          .blog-card-content {
-            padding: 30px;
+          .blog-article h2 {
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 16px;
           }
 
-          .blog-text {
-            font-size: 1.1rem;
-          }
-        }
-
-        /* 🔥 MOBILE */
-        @media (max-width: 480px) {
-          .blog-heading {
-            font-size: 2rem;
-            line-height: 1.3;
-          }
-
-          .blog-divider {
-            width: 65px;
-            height: 4px;
-            margin-bottom: 28px;
-          }
-
-          .blog-card-content {
-            padding: 22px;
-            border-radius: 16px;
-          }
-
-          .blog-text {
+          .blog-article p {
             font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+          }
+
+          .blog-article .blog-intro {
+            font-size: 1.1rem;
             line-height: 1.7;
+            margin-bottom: 30px;
+          }
+
+          .blog-video iframe {
+            height: 200px;
+          }
+
+          .hero-overlay h1 {
+            font-size: 2rem;
+            padding: 10px;
           }
         }
       `}</style>
@@ -118,4 +234,4 @@ function blog23() {
   );
 }
 
-export default blog23;
+export default Blog23;

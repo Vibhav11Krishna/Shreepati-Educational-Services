@@ -1,9 +1,8 @@
 import { SitemapStream, streamToPromise } from "sitemap";
 import { createWriteStream } from "fs";
 
-const SITE_URL = "https://shreepati-educational-services-a35b.vercel.app/"; // 🔴 CHANGE THIS
+const SITE_URL = "https://shreepati-educational-services-a35b.vercel.app/"; 
 
-// ✅ ONLY REAL ROUTES (URLs), not components
 const routes = [
   "/",
   "/about",

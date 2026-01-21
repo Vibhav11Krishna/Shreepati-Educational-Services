@@ -9,6 +9,13 @@ import {
   FaHandshake
 
 } from "react-icons/fa";
+import {
+  FaAward,
+  FaProjectDiagram,
+  FaUsers,
+  FaCheckCircle,
+  FaChartLine,
+} from "react-icons/fa";
 
 function About() {
   const [loaded, setLoaded] = useState(false);
@@ -425,6 +432,144 @@ function About() {
     }
   `}</style>
         </div>
+{/* SECTION 5: Why Choose SES */}
+<div style={{ marginBottom: "90px" }}>
+  {/* Heading */}
+ {/* Heading */}
+<h3
+  className={`fade-in ${loaded ? "visible" : ""}`}
+  style={{
+    textAlign: "center",
+    fontFamily: "'Orbitron', sans-serif",
+    fontWeight: "700",
+    fontSize: "2.5rem",
+    background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    marginBottom: "65px",
+    textTransform: "uppercase",
+    letterSpacing: "1.2px",
+    position: "relative",
+    display: "inline-block",
+    left: "50%",
+    transform: "translateX(-50%)",
+  }}
+>
+  Why Choose SES
+
+  {/* Underline */}
+  <span
+    style={{
+      position: "absolute",
+      bottom: "-14px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      width: "160px",
+      height: "5px",
+      borderRadius: "6px",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+    }}
+  />
+</h3>
+
+
+  {/* 6 FEATURE BOXES – 3 PER ROW */}
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      gap: "35px",
+    }}
+  >
+    {[
+      {
+        icon: <FaAward />,
+        title: "Proven Leadership",
+        text: "20+ years of leadership experience in education consultancy and institutional development.",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "End-to-End Support",
+        text: "From concept, DPR, infrastructure, approvals to admissions — complete lifecycle consultancy.",
+      },
+      {
+        icon: <FaCheckCircle />,
+        title: "Regulatory Expertise",
+        text: "Strong expertise in UGC, Nursing, Paramedical, Pharmacy, ITI, Polytechnic & Management institutions.",
+      },
+      {
+        icon: <FaUsers />,
+        title: "Trusted by Institutions",
+        text: "Partnered with multiple institutions for accreditation, recognition, and operational setup.",
+      },
+      {
+        icon: <FaHandshake />,
+        title: "Ethical Partnership",
+        text: "Transparent process, ethical guidance, and a long-term partnership approach.",
+      },
+      {
+        icon: <FaChartLine />,
+        title: "Sustainable Growth",
+        text: "Structured methodology ensuring compliance, sustainability, and long-term academic success.",
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className={`fade-in hover-card ${loaded ? "visible" : ""}`}
+        style={{
+          background: "#fff",
+          borderRadius: "20px",
+          padding: "42px 30px",
+          border: "3px solid #FF6600",
+          textAlign: "center",
+          transition: "transform 0.3s ease, border-color 0.3s ease",
+        }}
+      >
+        {/* Icon */}
+        <div
+          style={{
+            width: "72px",
+            height: "72px",
+            margin: "0 auto 22px",
+            borderRadius: "50%",
+            background: "#fff",
+            border: "3px solid #D32F2F",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#D32F2F",
+            fontSize: "1.9rem",
+          }}
+        >
+          {item.icon}
+        </div>
+
+        {/* Title */}
+        <h4
+          style={{
+            fontSize: "1.45rem",
+            fontWeight: "700",
+            color: "#D32F2F",
+            marginBottom: "12px",
+          }}
+        >
+          {item.title}
+        </h4>
+
+        {/* Text */}
+        <p
+          style={{
+            fontSize: "1.05rem",
+            color: "#555",
+            lineHeight: "1.8",
+          }}
+        >
+          {item.text}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* SECTION 4: Mission Vision Values */}
         <div
