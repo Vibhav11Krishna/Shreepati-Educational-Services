@@ -3,11 +3,15 @@ import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { MdSchool, MdCheckCircle } from "react-icons/md";
 import { FaUniversity, FaUserGraduate } from "react-icons/fa";
+import { FaPlayCircle } from "react-icons/fa";
+
 import logo from "../assets/logo-2.png";
 
 function Home() {
   const [loaded, setLoaded] = useState(false);
   const [counts, setCounts] = useState({ institutions: 0, universities: 0, students: 0, success: 0 });
+  const [showWalkthrough, setShowWalkthrough] = useState(false);
+
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 300);
@@ -178,6 +182,32 @@ function Home() {
           Let’s Connect
         </ScrollLink>
       </div>
+<button
+  onClick={() => setShowWalkthrough(true)}
+  title="Website Walkthrough"
+  className="walkthrough-btn"
+  style={{
+    position: "relative",
+    top: "-25px",
+    background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+    border: "none",
+    borderRadius: "40px",
+    padding: "14px 18px",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    transition: "all 0.3s ease",
+    zIndex: 2,
+    color: "#fff",
+    fontWeight: "600",
+    fontSize: "0.95rem",
+  }}
+>
+  <FaPlayCircle size={26} />
+  Website Walkthrough
+</button>
+
 
       {/* Stats */}
       <div
@@ -226,9 +256,76 @@ function Home() {
           </div>
         ))}
       </div>
+{showWalkthrough && (
+  <div
+    onClick={() => setShowWalkthrough(false)}
+    style={{
+      position: "fixed",
+      inset: 0,
+      background: "rgba(0,0,0,0.65)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      zIndex: 9999,
+      padding: "20px",
+    }}
+  >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      style={{
+        background: "#000",
+        borderRadius: "18px",
+        width: "100%",
+        maxWidth: "900px",
+        aspectRatio: "16 / 9",
+        position: "relative",
+        boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+        overflow: "hidden",
+      }}
+    >
+      <button
+        onClick={() => setShowWalkthrough(false)}
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "12px",
+          background: "rgba(0,0,0,0.6)",
+          color: "#fff",
+          border: "none",
+          borderRadius: "50%",
+          width: "36px",
+          height: "36px",
+          cursor: "pointer",
+          fontSize: "18px",
+          zIndex: 2,
+        }}
+      >
+        ✕
+      </button>
+
+     <video
+  src="https://res.cloudinary.com/dqmkivr5i/video/upload/v1769092681/Your_paragraph_text_anmrzy.mp4"
+  controls
+  autoPlay
+  style={{
+    width: "100%",
+    height: "100%",
+    objectFit: "contain", // 👈 shows full video
+    backgroundColor: "#000", // optional: black bars look clean
+  }}
+/>
+
+    </div>
+  </div>
+)}
 
       {/* Animations */}
       <style>{`
+      .walkthrough-btn:hover {
+  transform: translateY(-6px) scale(1.08);
+
+}
+
         .fade-in {
           opacity: 0;
           transform: translateY(20px);
