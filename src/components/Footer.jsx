@@ -5,6 +5,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaInstagram,
+   FaFacebook,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-scroll";
@@ -158,9 +159,9 @@ function Footer() {
                 link: "https://wa.me/919801066182",
               },
               {
-                icon: <FaPhoneAlt />,
-                color: "#FFD700",
-                link: "tel:+919801066182",
+                icon: <FaFacebook />,
+                color: "#1f3ff4",
+                link: "https://www.facebook.com/share/1AHWKzG6xw/",
               },
               {
                 icon: <FaEnvelope />,
@@ -169,7 +170,7 @@ function Footer() {
               },
               {
                 icon: <FaXTwitter />,
-                color: "#1DA1F2",
+                color: "#63676a",
                 link: "https://x.com/SES_Consultancy",
               },
               {

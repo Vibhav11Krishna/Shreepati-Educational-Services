@@ -287,7 +287,7 @@ const Home = () => {
 
       {/* Cloudinary Video */}
       <video
-  src="https://res.cloudinary.com/dqmkivr5i/video/upload/v1769092681/Your_paragraph_text_anmrzy.mp4"
+  src="https://res.cloudinary.com/dqmkivr5i/video/upload/v1769434157/Your_paragraph_text_1_quk4kx.mp4"
   controls
   autoPlay
   style={{

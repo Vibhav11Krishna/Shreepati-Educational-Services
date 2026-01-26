@@ -5,6 +5,7 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
+  FaFacebook,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -161,7 +162,7 @@ const Footer = () => {
               href="https://x.com/SES_Consultancy"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#3b17dfff" }}
+              style={{ color: "rgb(101, 99, 110)" }}
             >
               <FaXTwitter />
             </a>
@@ -176,8 +177,8 @@ const Footer = () => {
             <a href="mailto:jayantkrishna@yahoo.in" style={{ color: "#FF6600" }}>
               <FaEnvelope />
             </a>
-            <a href="tel:+919801066182" style={{ color: "#e3e014ff" }}>
-              <FaPhoneAlt />
+            <a href="ttps://www.facebook.com/share/1AHWKzG6xw/" style={{ color: "rgb(75, 20, 227)" }}>
+              <FaFacebook  />
             </a>
           </div>
         </div>
