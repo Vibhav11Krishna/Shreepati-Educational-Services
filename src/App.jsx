@@ -12,6 +12,7 @@ import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import OfficeShowcase from "./components/OfficeShowcase";
 import KnowledgeVideoSection from "./components/KnowledgeVideoSection";
+import AllKnowledgeVideos from "./components/AllKnowledgeVideos"; // ✅ new import
 
 /* AUTH */
 import Login from "./pages/Login";
@@ -170,7 +171,6 @@ function App() {
           <Route path="/blogs/blog8" element={<Blog8 />} />
           <Route path="/blogs/blog9" element={<Blog9 />} />
           <Route path="/blogs/blog10" element={<Blog10 />} />
-
           <Route path="/blogs/blog11" element={<Blog11 />} />
           <Route path="/blogs/blog12" element={<Blog12 />} />
           <Route path="/blogs/blog13" element={<Blog13 />} />
@@ -181,7 +181,6 @@ function App() {
           <Route path="/blogs/blog18" element={<Blog18 />} />
           <Route path="/blogs/blog19" element={<Blog19 />} />
           <Route path="/blogs/blog20" element={<Blog20 />} />
-
           <Route path="/blogs/blog21" element={<Blog21 />} />
           <Route path="/blogs/blog22" element={<Blog22 />} />
           <Route path="/blogs/blog23" element={<Blog23 />} />
@@ -192,6 +191,12 @@ function App() {
           <Route path="/blogs/blog28" element={<Blog28 />} />
           <Route path="/blogs/blog29" element={<Blog29 />} />
           <Route path="/blogs/blog30" element={<Blog30 />} />
+
+          {/* VIEW ALL KNOWLEDGE VIDEOS */}
+          <Route
+            path="/all-knowledge-videos"
+            element={<AllKnowledgeVideos />}
+          />
         </Routes>
       </div>
 

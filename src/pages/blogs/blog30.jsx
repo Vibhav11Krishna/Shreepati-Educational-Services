@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 // Assets
 import heroImg from "../../assets/Banner30.jpg";
 import collaborationImg from "../../assets/Document5.jpg";
 import researchImg from "../../assets/Document6.jpg";
-
+import blog1 from "../../assets/Academic.jpg";
+import blog2 from "../../assets/Admission.png";
+import blog3 from "../../assets/Admission.png";
 function Blog30() {
   return (
     <>
@@ -85,11 +87,153 @@ function Blog30() {
           </p>
         </article>
 
+<section className="expert-guidance-box">
+  <h3>Expert Guidance</h3>
+
+  <p>
+    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
+  </p>
+
+  <div className="expert-actions">
+    <a href="tel:+919801066182" className="expert-btn call">
+      <FaPhoneAlt /> Call Now
+    </a>
+
+    <a
+      href="https://wa.me/919801066182"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="expert-btn whatsapp"
+    >
+      <FaWhatsapp /> WhatsApp
+    </a>
+  </div>
+</section>
         <Footer />
       </div>
 
       {/* STYLES */}
       <style>{`
+      .expert-guidance-box {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 40px 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.expert-guidance-box h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6600;
+  margin-bottom: 14px;
+}
+
+.expert-guidance-box p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.expert-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.expert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.expert-btn.call {
+  background: linear-gradient(90deg, #ffb400, #ff6600);
+}
+
+.expert-btn.whatsapp {
+  background: linear-gradient(90deg, #25d366, #1ebf5c);
+}
+
+.expert-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 400px) {
+  .expert-guidance-box {
+    max-width: 92%;   /* ✅ prevents touching screen edges */
+    padding: 22px 20px;
+  }
+}
+
+      /* ===== EXPERT GUIDANCE ===== */
+.expert-guidance {
+  max-width: 820px;
+  margin: 90px auto;
+  padding: 45px 35px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff6600, #d32f2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 22px;
+}
+
+.expert-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.expert-cta {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.cta-btn.call {
+  background: linear-gradient(90deg, #ff6600, #ff8c1a);
+}
+
+.cta-btn.whatsapp {
+  background: linear-gradient(90deg, #25d366, #1ebf5c);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+
         html, body {
           margin: 0;
           padding: 0;

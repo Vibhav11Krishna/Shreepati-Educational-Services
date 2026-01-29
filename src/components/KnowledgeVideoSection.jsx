@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInstagram, FaPlay, FaSchool, FaUsers, FaBuilding, FaRocket, FaChalkboardTeacher, FaChartLine, FaRupeeSign } from "react-icons/fa";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { GiRibbonMedal } from "react-icons/gi"
 
 
 function KnowledgeVideoSection() {
@@ -17,8 +18,7 @@ function KnowledgeVideoSection() {
     { title: "How an Institution Actually Starts", description: "From idea to establishment — documentation, approval and setup journey.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999373/video-4_oko3bv.mp4", color: "#FF6600", icon: <FaRocket size={40} /> },
     { title: "How an Institution Runs Successfully", description: "Operations, governance, compliance, and quality improvement systems.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999367/video-5_qpj982.mp4", color: "#D32F2F", icon: <FaChalkboardTeacher size={40} /> },
     { title: "Growth from Survival to Sustainability", description: "Helping institutions scale through stability, strategy and innovation.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999374/video-6_ymykl4.mp4", color: "#FFB400", icon: <FaChartLine size={40} /> },
-    { title: "Legal & Compliance Risks Colleges Often Ignore", description: "Common compliance mistakes colleges make that create serious legal and operational risks. ", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1769422552/Running_a_College_Without_Compliance_wyh6eh.mp4", color: "#FF6600", icon: <FaBuilding size={40} /> },
-    { title: "How to Make Your Institution Financially Sustainable", description: "Practical steps to optimize revenue, manage costs, and achieve financial sustainability.", url: "", color: "#D32F2F", icon: <FaRupeeSign size={40} /> },
+    
   ];
 const [openFaq, setOpenFaq] = useState(null);
 
@@ -55,6 +55,17 @@ const faqs = [
   }
 ];
 
+const [currentSlide, setCurrentSlide] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentSlide((prev) =>
+      prev === videoList.length - 1 ? 0 : prev + 1
+    );
+  }, 4000); // auto slide every 4s
+
+  return () => clearInterval(interval);
+}, [videoList.length]);
 
   return (
     <section
@@ -110,7 +121,34 @@ const faqs = [
             </div>
           ))}
         </div>
-
+{/* View All Videos Button */}
+<div style={{ textAlign: "center", marginTop: "40px", marginBottom: "60px" }}>
+  <button
+    onClick={() => window.location.href = "/all-knowledge-videos"} // Link to your new page
+    style={{
+      padding: "12px 28px",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+      color: "#fff",
+      border: "none",
+      borderRadius: "30px",
+      cursor: "pointer",
+      fontWeight: "600",
+      fontSize: "1rem",
+      transition: "all 0.3s ease",
+      boxShadow: "0 6px 18px rgba(0,0,0,0.18)"
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = "translateY(-2px)";
+      e.currentTarget.style.filter = "brightness(1.08)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = "translateY(0)";
+      e.currentTarget.style.filter = "brightness(1)";
+    }}
+  >
+    View All Videos
+  </button>
+</div>
         <div style={{ textAlign: "center", marginTop: "40px" }}>
           <a href="https://www.instagram.com/ses_consultancy"
             target="_blank" rel="noopener noreferrer"
