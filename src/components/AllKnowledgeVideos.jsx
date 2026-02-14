@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { FaPlay, FaSchool, FaUsers, FaBuilding, FaRocket, FaChalkboardTeacher, FaChartLine } from "react-icons/fa";
+import {
+  FaPlay,
+  FaSchool,
+  FaUsers,
+  FaBuilding,
+  FaRocket,
+  FaChalkboardTeacher,
+  FaChartLine,
+} from "react-icons/fa";
 import { GiRibbonMedal } from "react-icons/gi";
+import { FaBalanceScale } from "react-icons/fa";
+import { FaTriangleExclamation } from "react-icons/fa6";
+
 import Navbar from "../mobile/components/Navbar";
 import Footer from "../mobile/components/Footer";
 
@@ -12,62 +23,172 @@ function AllKnowledgeVideos() {
   }, []);
 
   const videoList = [
-    { title: "What is Shreepati Educational Services (SES)?", description: "Overview of our mission, vision, and purpose in education consultancy.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999321/video-1_prjmy9.mp4", color: "#FF6600", icon: <FaSchool size={40} /> },
-    { title: "Experts Behind SES", description: "Experience, leadership, and guidance that drive our consultancy efforts.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999349/video-2_cgdpje.mp4", color: "#FFB400", icon: <FaUsers size={40} /> },
-    { title: "How We Build Educational Institutions", description: "Structured planning, foundation, and institutional development support.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999371/video-3_vix37h.mp4", color: "#D32F2F", icon: <FaBuilding size={40} /> },
-    { title: "How an Institution Actually Starts", description: "From idea to establishment — documentation, approval and setup journey.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999373/video-4_oko3bv.mp4", color: "#FF6600", icon: <FaRocket size={40} /> },
-    { title: "How an Institution Runs Successfully", description: "Operations, governance, compliance, and quality improvement systems.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999367/video-5_qpj982.mp4", color: "#D32F2F", icon: <FaChalkboardTeacher size={40} /> },
-    { title: "Growth from Survival to Sustainability", description: "Helping institutions scale through stability, strategy and innovation.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999374/video-6_ymykl4.mp4", color: "#FFB400", icon: <FaChartLine size={40} /> },
-    { title: "Legal & Compliance Risks Colleges Often Ignore", description: "Common compliance mistakes colleges make that create serious legal and operational risks.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1769422552/Running_a_College_Without_Compliance_wyh6eh.mp4", color: "#FF6600", icon: <FaBuilding size={40} /> },
-    { title: "How NAAC Helps Colleges & SES Supports Accreditation", description: "NAAC ensures college quality, and SES helps achieve accreditation and growth.", url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1769583810/epublic_day_1_uxfiul.mp4", color: "#D32F2F", icon: <GiRibbonMedal size={50} /> },
+    {
+      title: "What is Shreepati Educational Services (SES)?",
+      description:
+        "Overview of our mission, vision, and purpose in education consultancy.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999321/video-1_prjmy9.mp4",
+      color: "#FF6600",
+      icon: <FaSchool size={40} />,
+    },
+    {
+      title: "Experts Behind SES",
+      description:
+        "Experience, leadership, and guidance that drive our consultancy efforts.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999349/video-2_cgdpje.mp4",
+      color: "#FFB400",
+      icon: <FaUsers size={40} />,
+    },
+    {
+      title: "How We Build Educational Institutions",
+      description:
+        "Structured planning, foundation, and institutional development support.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999371/video-3_vix37h.mp4",
+      color: "#D32F2F",
+      icon: <FaBuilding size={40} />,
+    },
+    {
+      title: "How an Institution Actually Starts",
+      description:
+        "From idea to establishment — documentation, approval and setup journey.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999373/video-4_oko3bv.mp4",
+      color: "#FF6600",
+      icon: <FaRocket size={40} />,
+    },
+    {
+      title: "How an Institution Runs Successfully",
+      description:
+        "Operations, governance, compliance, and quality improvement systems.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999367/video-5_qpj982.mp4",
+      color: "#D32F2F",
+      icon: <FaChalkboardTeacher size={40} />,
+    },
+    {
+      title: "Growth from Survival to Sustainability",
+      description:
+        "Helping institutions scale through stability, strategy and innovation.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1766999374/video-6_ymykl4.mp4",
+      color: "#FFB400",
+      icon: <FaChartLine size={40} />,
+    },
+    {
+      title: "Legal & Compliance Risks Colleges Often Ignore",
+      description:
+        "Common compliance mistakes colleges make that create serious legal and operational risks.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1769422552/Running_a_College_Without_Compliance_wyh6eh.mp4",
+      color: "#FF6600",
+      icon: <FaBuilding size={40} />,
+    },
+    {
+      title: "How NAAC Helps Colleges & SES Supports Accreditation",
+      description:
+        "NAAC ensures college quality, and SES helps achieve accreditation and growth.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1769583810/epublic_day_1_uxfiul.mp4",
+      color: "#D32F2F",
+      icon: <GiRibbonMedal size={50} />,
+    },
+    {
+      title:
+        "How Educational Consultancy Saves Institutions from Legal Trouble",
+      description:
+        "Educational consultancies prevent legal trouble by ensuring proper compliance and documentation.",
+      url: "https://res.cloudinary.com/dqmkivr5i/video/upload/v1771050216/Running_a_College_Without_Compliance_1_wpm7my.mp4",
+      color: "#FFB400",
+      icon: <FaBalanceScale size={50} />,
+    },
+    {
+      title: "Why Some Colleges Fail Within 5 Years",
+      description:
+        "This video explains the key strategic, financial, and governance reasons why some colleges fail within their first five years",
+      url: "",
+      color: "#FF6600",
+      icon: <FaTriangleExclamation size={50} />,
+    },
   ];
 
   return (
     <>
       <Navbar />
 
-      <section style={{ padding: "80px 20px", background: "#fdf6f0", fontFamily: "'Poppins', sans-serif" }}>
+      <section
+        style={{
+          padding: "80px 20px",
+          background: "#fdf6f0",
+          fontFamily: "'Poppins', sans-serif",
+        }}
+      >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{
-            textAlign: "center",
-            color: "#FF6600",
-            fontWeight: "700",
-            fontSize: "2.5rem",
-            marginBottom: "50px",
-            fontFamily: "'Orbitron', sans-serif",
-            position: "relative"
-          }}>
+          <h2
+            style={{
+              textAlign: "center",
+              color: "#FF6600",
+              fontWeight: "700",
+              fontSize: "2.5rem",
+              marginBottom: "50px",
+              fontFamily: "'Orbitron', sans-serif",
+              position: "relative",
+            }}
+          >
             All Knowledge Videos
-            <span style={{
-              position: "absolute",
-              bottom: "-12px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "100px",
-              height: "4px",
-              borderRadius: "5px",
-              background: "linear-gradient(90deg, #FF6600, #D32F2F)"
-            }}></span>
+            <span
+              style={{
+                position: "absolute",
+                bottom: "-12px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "100px",
+                height: "4px",
+                borderRadius: "5px",
+                background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+              }}
+            ></span>
           </h2>
 
           {/* Video Grid */}
           <div className="roadmap">
             {videoList.map((item, index) => (
-              <div key={index} className={`roadmap-card ${loaded ? "visible" : ""}`} style={{ borderLeft: `6px solid ${item.color}` }}>
-                <div className="number" style={{ background: item.color }}>{index + 1}</div>
-                <div className="icon" style={{ color: item.color, marginBottom: "12px" }}>{item.icon}</div>
-                <h5 style={{ fontWeight: "700", fontSize: "1rem", color: item.color, marginBottom: "8px" }}>{item.title}</h5>
-                <p style={{ fontSize: "0.85rem", color: "#555", flexGrow: 1 }}>{item.description}</p>
-                <a href={item.url} target="_blank" rel="noopener noreferrer" style={{
-                  marginTop: "12px",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  fontWeight: "600",
-                  color: item.color,
-                  textDecoration: "none",
-                  fontSize: "0.9rem"
-                }}>
+              <div
+                key={index}
+                className={`roadmap-card ${loaded ? "visible" : ""}`}
+                style={{ borderLeft: `6px solid ${item.color}` }}
+              >
+                <div className="number" style={{ background: item.color }}>
+                  {index + 1}
+                </div>
+                <div
+                  className="icon"
+                  style={{ color: item.color, marginBottom: "12px" }}
+                >
+                  {item.icon}
+                </div>
+                <h5
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "1rem",
+                    color: item.color,
+                    marginBottom: "8px",
+                  }}
+                >
+                  {item.title}
+                </h5>
+                <p style={{ fontSize: "0.85rem", color: "#555", flexGrow: 1 }}>
+                  {item.description}
+                </p>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    marginTop: "12px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontWeight: "600",
+                    color: item.color,
+                    textDecoration: "none",
+                    fontSize: "0.9rem",
+                  }}
+                >
                   <FaPlay /> Watch Video
                 </a>
               </div>
