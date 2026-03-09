@@ -12,7 +12,7 @@ import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import OfficeShowcase from "./components/OfficeShowcase";
 import KnowledgeVideoSection from "./components/KnowledgeVideoSection";
-import AllKnowledgeVideos from "./components/AllKnowledgeVideos"; // ✅ new import
+import AllKnowledgeVideos from "./components/AllKnowledgeVideos"; 
 
 /* AUTH */
 import Login from "./pages/Login";
@@ -104,6 +104,7 @@ function App() {
       <main>
         <Home />
         <OfficeShowcase />
+       
         <About />
         <Services />
         <Projects />

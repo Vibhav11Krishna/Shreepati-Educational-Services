@@ -10,6 +10,7 @@ import {
   FaGlobe,
   FaCertificate,
   FaDatabase,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -267,7 +268,160 @@ function Services() {
           ))}
         </div>
       </div>
+{/* --- GOVERNMENT LINKS SECTION --- */}
+<h2 style={{ 
+  textAlign: "center", 
+  color: "#FF6600", 
+  fontWeight: "700", 
+  fontSize: "3rem", 
+  marginBottom: "60px", 
+  marginTop: "80px", 
+  fontFamily: "'Orbitron', sans-serif", 
+  position: "relative" 
+}}>
+  Important Portals
+  <span style={{ 
+    position: "absolute", 
+    bottom: "-15px", 
+    left: "50%", 
+    transform: "translateX(-50%)", 
+    width: "100px", 
+    height: "5px", 
+    borderRadius: "5px", 
+    background: "linear-gradient(90deg, #FF6600, #D32F2F)" 
+  }}></span>
+</h2>
 
+<div className="row" style={{ 
+  display: "flex", 
+  flexWrap: "wrap", 
+  gap: "30px", 
+  justifyContent: "center" 
+}}>
+  {[
+    {
+      title: "Institutional Hub",
+      color: "#D32F2F",
+      mainIcon: <FaUniversity size={40} />,
+      links: [
+        { name: "UGC Official", url: "https://www.ugc.gov.in/", icon: <FaUniversity /> },
+        { name: "AICTE Portal", url: "https://www.aicte-india.org/", icon: <FaTools /> },
+        { name: "CBSE SARAS", url: "https://saras.cbse.gov.in/", icon: <FaGraduationCap /> },
+        { name: "AISHE Data", url: "https://dashboard.aishe.gov.in/", icon: <FaDatabase /> }
+      ]
+    },
+    {
+      title: "Student Support",
+      color: "#FF6600",
+      mainIcon: <FaGraduationCap size={40} />,
+      links: [
+        { name: "Bihar Credit Card", url: "https://www.7nishchay-yuvaupmission.bihar.gov.in/", icon: <FaMoneyCheckAlt /> },
+        { name: "NSP Scholarship", url: "https://scholarships.gov.in/", icon: <FaCertificate /> },
+        { name: "PM Vidyalaxmi", url: "https://pmvidyalaxmi.co.in/", icon: <FaMoneyCheckAlt /> },
+        { name: "DigiLocker", url: "https://www.digilocker.gov.in/", icon: <FaDatabase /> }
+      ]
+    },
+    {
+      title: "Regulatory & Visa",
+      color: "#FFB400",
+      mainIcon: <FaGlobe size={40} />,
+      links: [
+        { name: "NAAC Portal", url: "http://naac.gov.in/", icon: <FaCertificate /> },
+        { name: "MADAD (Overseas)", url: "https://portal2.madad.gov.in/", icon: <FaPlane /> },
+        { name: "NCTE Portal", url: "https://ncte.gov.in/", icon: <FaChalkboardTeacher /> },
+        { name: "Passport Seva", url: "https://www.passportindia.gov.in/", icon: <FaGlobe /> }
+      ]
+    }
+  ].map((hub, index) => (
+    <div key={index} className={`service-card ${loaded ? "visible" : ""}`} style={{ 
+      flex: "1 1 350px", 
+      maxWidth: "400px", 
+      position: "relative" 
+    }}>
+      <div style={{ 
+        borderRadius: "20px", 
+        padding: "35px 25px", 
+        textAlign: "center", 
+        background: "#fff", 
+        boxShadow: "0 15px 40px rgba(0,0,0,0.1)", 
+        transition: "all 0.4s ease", 
+        height: "100%", 
+        display: "flex", 
+        flexDirection: "column", 
+        alignItems: "center", 
+        gap: "15px", 
+        border: `2px solid ${hub.color}` 
+      }}>
+        {/* Main Category Icon */}
+        <div style={{ 
+          padding: "20px", 
+          borderRadius: "50%", 
+          background: `linear-gradient(135deg, ${hub.color} 0%, #fff 100%)`, 
+          display: "inline-flex",
+          marginBottom: "10px",
+          boxShadow: `0 10px 20px ${hub.color}22`
+        }}>
+          {React.cloneElement(hub.mainIcon, { color: "#fff" })}
+        </div>
+        
+        <h5 style={{ 
+          fontWeight: "700", 
+          fontSize: "1.6rem", 
+          color: hub.color === "#FFB400" ? "#b27d00" : hub.color, 
+          fontFamily: "'Orbitron', sans-serif" 
+        }}>
+          {hub.title}
+        </h5>
+
+        {/* List of links with individual icons */}
+        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "12px", marginTop: "10px" }}>
+          {hub.links.map((link, lIdx) => (
+            <a 
+              key={lIdx}
+              href={link.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hub-link-item"
+              style={{ 
+                display: "flex",
+                alignItems: "center",
+                padding: "12px 15px",
+                borderRadius: "12px",
+                background: "#fdf6f0",
+                color: "#444",
+                textDecoration: "none",
+                fontWeight: "600",
+                fontSize: "0.9rem",
+                transition: "all 0.3s ease",
+                border: "1px solid transparent"
+              }}
+            >
+              <span style={{ 
+                marginRight: "12px", 
+                color: hub.color, 
+                display: "flex", 
+                alignItems: "center" 
+              }}>
+                {link.icon}
+              </span>
+              <span style={{ flex: 1, textAlign: "left" }}>{link.name}</span>
+              <FaExternalLinkAlt size={10} style={{ opacity: 0.4 }} />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  ))}
+
+  <style>{`
+    .hub-link-item:hover {
+      background: #fff !important;
+      transform: translateX(8px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-color: currentColor !important;
+    }
+  `}</style>
+</div>
       {/* Animations */}
       <style>{`
         .service-card {
