@@ -58,7 +58,14 @@ const steps = [
       "We guide institutions through inspection readiness , compilance corrections and final approval processes to ensure successful affiliation.",
   },
 ];
-
+const documentChecklist = [
+  { title: "Land Deeds", detail: "Ownership or long-term lease proof" },
+  { title: "Safety Certs", detail: "Structural stability engineering reports" },
+  { title: "Fire NOC", detail: "Current fire department clearance" },
+  { title: "Society Deed", detail: "Legal registration of the parent body" },
+  { title: "Staff Profiles", detail: "CVs of Principal and teaching staff" },
+  { title: "Hygiene Cert", detail: "CMO verification of campus sanitation" },
+];
 const benefits = [
   {
     icon: <FaCheckCircle size={30} />,
@@ -446,6 +453,67 @@ function Affiliation() {
 </section>
 
         </section>
+
+
+        {/* Documents Checklist Section */}
+<section style={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}>
+  <h2
+    style={{
+      fontSize: "2.5rem",
+      fontWeight: "700",
+      textAlign: "center",
+      marginBottom: "15px",
+      fontFamily: "'Poppins', sans-serif",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    Required Documentation Checklist
+  </h2>
+  <p style={{ textAlign: 'center', color: '#D32F2F', marginBottom: '40px', fontSize: '1.1rem' }}>
+    Ensure you have these essential documents ready for a seamless collaboration process.
+  </p>
+
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "20px",
+      justifyContent: "center",
+    }}
+  >
+    {documentChecklist.map((doc, index) => (
+      <div
+        key={index}
+        className={`step-card ${loaded ? "visible" : ""}`}
+        style={{
+          flex: "1 1 340px",
+          background: "#fff",
+          padding: "25px",
+          borderRadius: "15px",
+          display: "flex",
+          alignItems: "center",
+          gap: "20px",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+          borderLeft: "6px solid #FF6600",
+        }}
+      >
+        <div style={{ color: "#FF6600" }}>
+          <FaFileAlt size={30} />
+        </div>
+        <div style={{ textAlign: "left" }}>
+          <h4 style={{ margin: "0 0 5px 0", color: "#D32F2F", fontWeight: "700" }}>
+            {doc.title}
+          </h4>
+          <p style={{ margin: 0, fontSize: "0.9rem", color: "#df4b1f" }}>
+            {doc.detail}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
       <section
         style={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}

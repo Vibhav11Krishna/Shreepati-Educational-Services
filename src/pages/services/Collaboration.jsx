@@ -94,12 +94,12 @@ const outcomes = [
 ];
 
 const documentChecklist = [
-  { title: "Institutional Profile", detail: "Detailed overview of academic history and infrastructure." },
-  { title: "Memorandum of Understanding (MoU)", detail: "Drafted framework for the partnership scope." },
-  { title: "Regulatory Certifications", detail: "UGC, AICTE, or Board affiliation documents." },
-  { title: "Financial Audit Reports", detail: "Last 3 years of audited statements for due diligence." },
-  { title: "Academic Curriculum", detail: "Course structures for credit transfer or integration." },
-  { title: "Legal Identity Proofs", detail: "Trust deed, Society registration, or Incorporation certificates." },
+  { title: "Letter of Intent", detail: "Formal interest to partner" },
+  { title: "Draft MoU", detail: " Framework of shared goals" },
+  { title: "IP Policy", detail: "Ownership rules for co-creations" },
+  { title: "Inst. Profile", detail: "Overview of campus and faculty" },
+  { title: "Resource Map", detail: "List of shared labs/libraries" },
+  { title: "Financial Sheet", detail: "Funding and revenue split details" },
 ];
 const blogs = [
   {

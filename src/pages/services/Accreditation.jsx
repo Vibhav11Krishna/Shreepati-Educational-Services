@@ -18,6 +18,7 @@ import {
   FaCheckCircle,
   FaGraduationCap,
   FaTools,
+  FaFileAlt,
   FaCertificate,
 } from "react-icons/fa";
 
@@ -85,6 +86,14 @@ const benefits = [
     description:
       "Accreditation becomes a foundation for long-term recognition and credibility. ",
   },
+];
+const documentChecklist = [
+  { title: "SSR Report", detail: "Self-study data for NAAC/NBA" },
+  { title: "AQAR Files", detail: "Annual quality assurance records" },
+  { title: "Research List", detail: "Faculty journal publications/books" },
+  { title: "Progression Data", detail: "Student placement/higher study logs" },
+  { title: "ICT Proofs", detail: " Evidence of smart classrooms and labs" },
+  { title: "Feedback Logs", detail: "Surveys from students and alumni" },
 ];
 const outcomes = [
   {
@@ -439,6 +448,66 @@ function Accreditation() {
   />
 </div>
       </section>
+
+         {/* Documents Checklist Section */}
+<section style={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}>
+  <h2
+    style={{
+      fontSize: "2.5rem",
+      fontWeight: "700",
+      textAlign: "center",
+      marginBottom: "15px",
+      fontFamily: "'Poppins', sans-serif",
+      background: "linear-gradient(90deg, #FF6600, #D32F2F)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    Required Documentation Checklist
+  </h2>
+  <p style={{ textAlign: 'center', color: '#D32F2F', marginBottom: '40px', fontSize: '1.1rem' }}>
+    Ensure you have these essential documents ready for a seamless collaboration process.
+  </p>
+
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "20px",
+      justifyContent: "center",
+    }}
+  >
+    {documentChecklist.map((doc, index) => (
+      <div
+        key={index}
+        className={`step-card ${loaded ? "visible" : ""}`}
+        style={{
+          flex: "1 1 340px",
+          background: "#fff",
+          padding: "25px",
+          borderRadius: "15px",
+          display: "flex",
+          alignItems: "center",
+          gap: "20px",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+          borderLeft: "6px solid #FF6600",
+        }}
+      >
+        <div style={{ color: "#FF6600" }}>
+          <FaFileAlt size={30} />
+        </div>
+        <div style={{ textAlign: "left" }}>
+          <h4 style={{ margin: "0 0 5px 0", color: "#D32F2F", fontWeight: "700" }}>
+            {doc.title}
+          </h4>
+          <p style={{ margin: 0, fontSize: "0.9rem", color: "#df4b1f" }}>
+            {doc.detail}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
       <section
         style={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}
       >
