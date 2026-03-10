@@ -82,12 +82,12 @@ const benefits = [
   }, 
 ];
 const documentChecklist = [
-  { title: "Institutional Profile", detail: "Detailed overview of academic history and infrastructure." },
-  { title: "Memorandum of Understanding (MoU)", detail: "Drafted framework for the partnership scope." },
-  { title: "Regulatory Certifications", detail: "UGC, AICTE, or Board affiliation documents." },
-  { title: "Financial Audit Reports", detail: "Last 3 years of audited statements for due diligence." },
-  { title: "Academic Curriculum", detail: "Course structures for credit transfer or integration." },
-  { title: "Legal Identity Proofs", detail: "Trust deed, Society registration, or Incorporation certificates." },
+  { title: "Transcripts", detail: "Certified marks and degree copies" },
+  { title: "English Scores", detail: "Valid IELTS, TOEFL, or PTE results" },
+  { title: "SOP", detail: "Personal essay on motivation/goals" },
+  { title: "Bank Proof", detail: "Evidence of funds for tuition/living" },
+  { title: "LORs", detail: " Recommendations from past professors" },
+  { title: "Passport", detail: "Clear copies of a valid passport" },
 ];
 const outcomes = [
   {

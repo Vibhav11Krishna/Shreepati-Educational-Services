@@ -82,12 +82,12 @@ const benefits = [
   },
 ];
 const documentChecklist = [
-  { title: "Institutional Profile", detail: "Detailed overview of academic history and infrastructure." },
-  { title: "Memorandum of Understanding (MoU)", detail: "Drafted framework for the partnership scope." },
-  { title: "Regulatory Certifications", detail: "UGC, AICTE, or Board affiliation documents." },
-  { title: "Financial Audit Reports", detail: "Last 3 years of audited statements for due diligence." },
-  { title: "Academic Curriculum", detail: "Course structures for credit transfer or integration." },
-  { title: "Legal Identity Proofs", detail: "Trust deed, Society registration, or Incorporation certificates." },
+  { title: "Scorecard", detail: "Results from JEE, NEET, or CUET" },
+  { title: "Preference List", detail: " Selection order of colleges/courses" },
+  { title: "Category Certificate", detail: "Valid Caste or EWS documents" },
+  { title: "Transfer Certificate", detail: "Leaving paper from previous school" },
+  { title: "Migration Certificate", detail: "Required for moving across boards" },
+  { title: "Gap Affidavit", detail: "Legal reason for any study breaks" },
 ];
 const outcomes = [
   {

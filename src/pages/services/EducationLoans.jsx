@@ -100,12 +100,12 @@ const outcomes = [
   },
 ];
 const documentChecklist = [
-  { title: "Institutional Profile", detail: "Detailed overview of academic history and infrastructure." },
-  { title: "Memorandum of Understanding (MoU)", detail: "Drafted framework for the partnership scope." },
-  { title: "Regulatory Certifications", detail: "UGC, AICTE, or Board affiliation documents." },
-  { title: "Financial Audit Reports", detail: "Last 3 years of audited statements for due diligence." },
-  { title: "Academic Curriculum", detail: "Course structures for credit transfer or integration." },
-  { title: "Legal Identity Proofs", detail: "Trust deed, Society registration, or Incorporation certificates." },
+  { title: "Sanction Letter", detail: "Official bank loan approval" },
+  { title: "KYC Docs", detail: " ID and address proofs for applicants" },
+  { title: "Income Proof", detail: "Salary slips or ITR for eligibility" },
+  { title: "HR Policy", detail: "Staff hiring and conduct standards" },
+  { title: "Staff Contracts", detail: " Appointment and NDA agreements" },
+  { title: "Payroll Plan", detail: "Breakdown of salary and benefits" },
 ];
 const blogs = [
   {
