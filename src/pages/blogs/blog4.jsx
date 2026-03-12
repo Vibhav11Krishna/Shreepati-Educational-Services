@@ -1,392 +1,243 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+// Icons
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaRegClock, 
+  FaRegCalendarAlt, 
+  FaQuoteLeft, 
+  FaCheckCircle,
+  FaArrowRight 
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner4.jpg";
 import collaborationImg from "../../assets/Affiliation1.jpg";
 import researchImg from "../../assets/Affiliation2.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import blog4Img from "../../assets/Academic.jpg";
+import blog5Img from "../../assets/Admission.png";
+import blog6Img from "../../assets/Admission.png";
+
 function Blog4() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">
-              How to get Affiliation from universities & Board
+      <div className="blog-wrapper">
+        <header className="blog-header">
+          <div className="hero-background-container">
+            <img src={heroImg} alt="University Affiliation" className="hero-image" />
+            <div className="hero-overlay-gradient"></div>
+          </div>
+          
+          <div className="hero-text-content">
+            <div className="meta-info-row">
+              <span className="meta-item"><FaRegCalendarAlt /> March 16, 2026</span>
+              <span className="meta-item"><FaRegClock /> 5 Min Read</span>
+            </div>
+            <h1 className="main-title">
+              How to get Affiliation from <br />
+              <span className="accent-text">Universities & Boards</span>
             </h1>
           </div>
+        </header>
+
+        <div className="blog-layout">
+          <main className="blog-body">
+            <p className="intro-text">
+              <span className="first-letter">I</span>nstitutional affiliation links your school or college with
+              recognized boards or universities. It ensures that courses are
+              academically valid, legally recognized, and compliant with
+              regulatory standards. Affiliation is essential for credibility,
+              student trust, and smooth academic operations.
+            </p>
+
+            <div className="inspirational-quote">
+              <FaQuoteLeft className="q-icon" />
+              <p>Affiliation is the cornerstone of academic legitimacy and the gateway to student success.</p>
+            </div>
+
+            {/* SECTION 1 - UPDATED ALIGNMENT */}
+            <section className="article-section">
+              <h2 className="section-title">Step By Step Process</h2>
+              <p className="section-intro-para">
+                The affiliation process is a meticulous journey that transforms an institution into a recognized academic body:
+              </p>
+              <ul className="benefit-list">
+                <li>
+                  <FaCheckCircle className="bullet-icon" /> 
+                  <div><strong>Eligibility Assessment:</strong> Verify if infrastructure and faculty meet board criteria.</div>
+                </li>
+                <li>
+                  <FaCheckCircle className="bullet-icon" /> 
+                  <div><strong>Documentation:</strong> Compile certifications, staff qualifications, and curriculum plans.</div>
+                </li>
+                <li>
+                  <FaCheckCircle className="bullet-icon" /> 
+                  <div><strong>Application:</strong> Formal submission to the appropriate academic authority.</div>
+                </li>
+                <li>
+                  <FaCheckCircle className="bullet-icon" /> 
+                  <div><strong>Inspections:</strong> Coordination with officials for site visits and compliance checks.</div>
+                </li>
+              </ul>
+              
+              <div className="content-image-box">
+                <img src={collaborationImg} alt="Affiliation Step Process" />
+              </div>
+            </section>
+
+            <section className="article-section">
+              <h2 className="section-title">SES Guidance</h2>
+              <p className="section-intro-para">
+                SES provides end-to-end support for each stage of affiliation. From
+                reviewing documents to guiding inspections and ensuring compliance,
+                SES ensures institutions avoid delays and meet all regulations efficiently.
+              </p>
+              <div className="content-image-box">
+                <img src={researchImg} alt="Guidance Support" />
+              </div>
+            </section>
+
+            <section className="video-card">
+              <div className="video-info">
+                <h3>Process Visualizer</h3>
+                <p>Learn the legal and academic requirements for a successful affiliation.</p>
+              </div>
+              <div className="iframe-wrapper">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=step-by-step-affiliation-process_hrajai&cloud_name=dqmkivr5i&fluid=true"
+                  title="Affiliation Process Video"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="conclusion-box">
+                <h2 className="section-title">Conclusion</h2>
+                <p className="section-intro-para">
+                    Affiliation is the cornerstone of academic legitimacy. With SES
+                    guidance, institutions complete the process efficiently, avoid
+                    delays, and gain credibility and recognition, setting a strong
+                    foundation for long-term institutional growth.
+                </p>
+            </section>
+          </main>
+
+          <aside className="blog-sidebar">
+            <div className="sidebar-insights-card">
+                <h3 className="sidebar-title">Latest Insights</h3>
+                <div className="sidebar-insight-list">
+                    <a href="/blogs/blog5" className="mini-insight">
+                        <img src={blog5Img} alt="Blog 5 Link" />
+                        <div>
+                            <h4>Admission Strategies</h4>
+                            <span>Read More <FaArrowRight /></span>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog6" className="mini-insight">
+                        <img src={blog6Img} alt="Blog 6 Link" />
+                        <div>
+                            <h4>Global Collaborations</h4>
+                            <span>Read More <FaArrowRight /></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div className="sidebar-contact-card">
+              <div className="avatar-box">
+                <img src={blog4Img} alt="SES Expert" />
+              </div>
+              <h3>Talk to an Expert</h3>
+              <p>Ready to start your affiliation journey? Our consultants are ready to guide you.</p>
+              <div className="sidebar-actions">
+                <a href="tel:+919801066182" className="s-btn call"><FaPhoneAlt /> Call Now</a>
+                <a href="https://wa.me/919801066182" className="s-btn wa"><FaWhatsapp /> WhatsApp</a>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Institutional affiliation links your school or college with
-            recognized boards or universities. It ensures that courses are
-            academically valid, legally recognized, and compliant with
-            regulatory standards. Affiliation is essential for credibility,
-            student trust, and smooth academic operations. Without proper
-            affiliation, students may face challenges in certifications, further
-            education, and career opportunities.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">Step By Step Process</h2>
-          <p>
-            The affiliation process involves multiple steps: Eligibility
-            Assessment: Check whether your institution meets board or university
-            criteria. Documentation: Prepare institutional documents, including
-            infrastructure, staff qualifications, and curriculum plans.
-            Application Submission: Submit your application to the appropriate
-            authority. Coordination & Inspections: Work with officials for
-            clarifications, inspections, and approvals. Final Approval: Receive
-            the official affiliation certificate and start recognized academic
-            operations.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">SES Guidance</h2>
-          <p>
-            SES provides end-to-end support for each stage of affiliation. From
-            reviewing documents to guiding inspections and ensuring compliance,
-            SES ensures institutions avoid delays, meet all regulations, and
-            achieve recognition efficiently..
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=step-by-step-affiliation-process_hrajai&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains how Institutional affiliation links your school or college with
-            recognized boards or universities. It ensures that courses are
-            academically valid, legally recognized, and compliant with
-            regulatory standards.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            Affiliation is the cornerstone of academic legitimacy. With SES
-            guidance, institutions complete the process efficiently, avoid
-            delays, and gain credibility and recognition, setting a strong
-            foundation for growth..
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
-      .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap');
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        .blog-wrapper { background: #fff4ea; color: #333; font-family: 'Poppins', sans-serif; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
-
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
-
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
+        .blog-header { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-background-container { position: absolute; inset: 0; z-index: 1; }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay-gradient { 
+            position: absolute; inset: 0; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4), #fff4ea); 
         }
 
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
+        .hero-text-content { position: relative; z-index: 2; text-align: center; color: white; padding: 20px; }
+        .meta-info-row { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; font-size: 0.85rem; font-weight: 600; }
+        .meta-item { background: rgba(255,102,0,0.2); padding: 5px 15px; border-radius: 50px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2); }
+        
+        .main-title { font-family: 'Orbitron', sans-serif; font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; line-height: 1.2; }
+        .accent-text { color: #ff6600; }
 
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
+        .blog-layout { max-width: 1200px; margin: -60px auto 0; display: grid; grid-template-columns: 1fr 340px; gap: 40px; padding: 0 20px 100px; position: relative; z-index: 10; }
 
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        .blog-body { background: white; padding: 50px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
 
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
+        .intro-text { font-size: 1.2rem; line-height: 1.8; color: #444; margin-bottom: 40px; text-align: justify; }
+        .first-letter { float: left; font-size: 4rem; font-weight: 900; color: #ff6600; line-height: 1; margin-right: 10px; font-family: 'Orbitron'; }
 
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
+        /* ALIGNMENT FIXES */
+        .section-intro-para { font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 25px; text-align: justify; }
+        
+        .benefit-list { list-style: none; padding: 0; margin-bottom: 30px; display: flex; flex-direction: column; gap: 15px; }
+        .benefit-list li { display: flex; align-items: flex-start; gap: 15px; font-weight: 500; line-height: 1.6; text-align: left; }
+        .bullet-icon { color: #ff6600; font-size: 1.2rem; flex-shrink: 0; margin-top: 3px; }
 
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
+        .inspirational-quote { margin: 40px 0; padding: 30px; background: #fff4ea; border-radius: 20px; border-left: 6px solid #ff6600; position: relative; }
+        .q-icon { font-size: 2rem; color: #ff6600; opacity: 0.2; position: absolute; top: 10px; left: 10px; }
+        .inspirational-quote p { font-style: italic; font-weight: 600; font-size: 1.1rem; color: #1a1a1a; padding-left: 20px; }
 
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
+        .section-title { font-family: 'Orbitron', sans-serif; font-size: 1.6rem; color: #1a1a1a; margin: 40px 0 20px; display: flex; align-items: center; gap: 10px; }
+        .section-title::after { content: ''; height: 2px; flex: 1; background: #eee; }
 
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
+        .content-image-box { margin: 30px 0; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .content-image-box img { width: 100%; display: block; }
 
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
+        .video-card { background: #1a1a1a; padding: 40px; border-radius: 25px; color: white; margin-top: 50px; }
+        .video-info h3 { font-family: 'Orbitron', sans-serif; color: #ff6600; margin-bottom: 5px; }
+        .iframe-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; margin-top: 20px; }
+        .iframe-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
+        .conclusion-box { margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee; }
 
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
+        .blog-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 30px; }
+        .sidebar-insights-card { background: white; padding: 25px; border-radius: 25px; border: 1px solid #eee; }
+        .sidebar-title { font-family: 'Orbitron'; font-size: 1.1rem; margin-bottom: 20px; color: #ff6600; }
+        .sidebar-insight-list { display: flex; flex-direction: column; gap: 15px; }
+        .mini-insight { display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; transition: 0.3s; }
+        .mini-insight img { width: 60px; height: 60px; border-radius: 10px; object-fit: cover; }
+        .mini-insight h4 { font-size: 0.9rem; margin: 0; font-weight: 700; }
+        .mini-insight span { font-size: 0.75rem; color: #ff6600; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+        .mini-insight:hover { transform: translateX(5px); }
 
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
+        .sidebar-contact-card { background: white; padding: 35px 25px; border-radius: 25px; text-align: center; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .avatar-box { width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 50%; border: 3px solid #ff6600; padding: 3px; }
+        .avatar-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .sidebar-actions { display: flex; flex-direction: column; gap: 10px; }
+        .s-btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px; border-radius: 50px; text-decoration: none; color: white; font-weight: 700; transition: 0.3s; }
+        .s-btn.call { background: #ff6600; }
+        .s-btn.wa { background: #25d366; }
 
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .blog-layout { grid-template-columns: 1fr; }
+          .blog-sidebar { position: static; }
+          .blog-body { padding: 30px 20px; }
         }
       `}</style>
     </>

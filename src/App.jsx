@@ -11,6 +11,8 @@ import Projects from "./components/Projects";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import OfficeShowcase from "./components/OfficeShowcase";
+import Blogspage from "./components/Blogspage";
+import Allinsights from "./components/Allinsights";
 import KnowledgeVideoSection from "./components/KnowledgeVideoSection";
 import AllKnowledgeVideos from "./components/AllKnowledgeVideos"; 
 
@@ -69,6 +71,7 @@ import MHome from "./mobile/components/Home";
 import MAbout from "./mobile/components/About";
 import MServices from "./mobile/components/Services";
 import MProjects from "./mobile/components/Projects";
+import MBlogspage from "./mobile/components/Blogspage";
 import MPartners from "./mobile/components/Partners";
 import MContact from "./mobile/components/Contact";
 import MOfficeShowcase from "./mobile/components/OfficeShowcase";
@@ -108,6 +111,7 @@ function App() {
         <About />
         <Services />
         <Projects />
+        <Blogspage />
         <Partners />
         <KnowledgeVideoSection />
         <Contact />
@@ -125,6 +129,7 @@ function App() {
         <MAbout />
         <MServices />
         <MProjects />
+        <MBlogspage />
         <MPartners />
         <MKnowledgeVideoSection />
         <MContact />
@@ -145,7 +150,8 @@ function App() {
             path="/"
             element={isMobile ? <MobileSite /> : <DesktopSite />}
           />
-
+{/* Add this inside your <Routes> tag */}
+<Route path="/Allinsights" element={<Allinsights />} />
           {/* AUTH */}
           <Route path="/signup" element={isMobile ? <MSignUp /> : <SignUp />} />
 
@@ -199,6 +205,7 @@ function App() {
             element={<AllKnowledgeVideos />}
           />
         </Routes>
+        
       </div>
 
       {/* LOGIN OVERLAY */}

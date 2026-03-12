@@ -1,378 +1,232 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaAward, 
+  FaGraduationCap, // Replaces FaUserGrad for better compatibility
+  FaChartLine, 
+  FaCheckCircle,
+  FaClock,         // Standard FA5 Clock
+  FaRegCalendar    // Standard FA5 Calendar
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner27.jpg";
-import collaborationImg from "../../assets/Accreditation5.jpg";
-import researchImg from "../../assets/Accreditation6.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import benefitImg1 from "../../assets/Accreditation5.jpg";
+import benefitImg2 from "../../assets/Accreditation6.jpg";
+
 function Blog27() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">Benefits of Accreditation</h1>
+      <div className="blog-container">
+        {/* PRESTIGE HERO SECTION */}
+        <header className="hero-section">
+          <div className="hero-bg">
+            <img src={heroImg} alt="Academic Excellence" />
+            <div className="hero-shade"></div>
           </div>
+          
+          <div className="hero-content">
+            <div className="category-tag">INSTITUTIONAL GROWTH</div>
+            <h1 className="title-h1">
+              The Strategic Benefits <br />
+              <span className="highlight">of Accreditation</span>
+            </h1>
+         <div className="meta-bar">
+  <span><FaRegCalendar /> March 12, 2026</span>
+  <span className="sep">•</span>
+  <span><FaClock /> 5 Min Read</span>
+</div>
+          </div>
+        </header>
+
+        {/* CONTENT LAYOUT */}
+        <div className="content-grid">
+          <article className="article-main">
+            <section className="intro-section">
+              <p className="summary-text">
+                <span className="drop-cap">A</span>ccreditation is more than 
+                a regulatory milestone; it is a seal of quality that enhances 
+                an institution’s public image and academic standing. It signals 
+                to the world a relentless commitment to quality education and 
+                a culture of continuous improvement.
+              </p>
+            </section>
+
+            {/* SECTION 1 - STUDENT GROWTH */}
+            <section className="article-part">
+              <h2 className="heading-underline">Student Enrollment & Growth</h2>
+              <p className="body-text">
+                Accredited institutions consistently attract higher student 
+                enrollment. This is driven by increased trust among parents 
+                and students who seek globally recognized credentials. 
+                Beyond numbers, accreditation provides the framework 
+                necessary for program diversification and sustainable 
+                institutional expansion.
+              </p>
+              
+              <div className="impact-cards">
+                <div className="i-card">
+  <FaGraduationCap className="i-icon" />
+  <h4>Global Trust</h4>
+  <p>Increased student confidence and application rates.</p>
+</div>
+                <div className="i-card">
+                  <FaChartLine className="i-icon" />
+                  <h4>Scalability</h4>
+                  <p>Streamlined paths for adding new academic programs.</p>
+                </div>
+              </div>
+
+              <div className="image-wrapper">
+                <img src={benefitImg1} alt="Student Growth and Success" />
+              </div>
+            </section>
+
+            {/* SECTION 2 - EXCELLENCE */}
+            <section className="article-part">
+              <h2 className="heading-underline">Development & Excellence</h2>
+              <p className="body-text">
+                Accreditation promotes long-term strategic planning and 
+                accountability. By establishing measurable benchmarks, 
+                institutions can track performance improvements over time. 
+                SES acts as a partner in this journey, helping you leverage 
+                accreditation not just as a certificate, but as a growth catalyst.
+              </p>
+              <div className="image-wrapper">
+                <img src={benefitImg2} alt="Institutional Excellence" />
+              </div>
+            </section>
+
+            {/* VIDEO SECTION */}
+            <section className="video-spotlight">
+              <div className="v-info">
+                <FaAward className="v-top-icon" />
+                <h3>Quality Benchmarking</h3>
+                <p>Understanding how accreditation elevates your institution's profile.</p>
+              </div>
+              <div className="v-player">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=acreditatton-3_yjfjat&cloud_name=dqmkivr5i&fluid=true"
+                  title="Accreditation Benefits Video"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="conclusion">
+              <h2 className="heading-underline">Conclusion</h2>
+              <p className="body-text">
+                In a competitive academic market, accreditation drives 
+                credibility and excellence. SES provides the professional 
+                oversight and expertise required to help your institution 
+                achieve and sustain a legacy of accreditation success.
+              </p>
+            </section>
+          </article>
+
+          {/* PRESTIGE SIDEBAR */}
+          <aside className="article-aside">
+            <div className="sticky-sidebar">
+              <div className="sidebar-box gold-box">
+                <FaCheckCircle className="b-icon" />
+                <h3>Value Proposition</h3>
+                <ul className="benefit-list">
+                  <li>Global Recognition</li>
+                  <li>Financial Aid Eligibility</li>
+                  <li>Transfer Credits Ease</li>
+                  <li>Employer Preference</li>
+                </ul>
+              </div>
+
+              <div className="sidebar-box contact-box">
+                <h3>Elevate Your Status</h3>
+                <p>Let our consultants guide you through the accreditation roadmap.</p>
+                <div className="sidebar-actions">
+                  <a href="tel:+919801066182" className="cta-link call-bg"><FaPhoneAlt /> Call</a>
+                  <a href="https://wa.me/919801066182" className="cta-link wa-bg"><FaWhatsapp /> WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Accreditation enhances an institution’s public image and academic
-            standing. It signals commitment to quality education and continuous
-            improvement.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">Student Enrollment & Growth</h2>
-          <p>
-            Accredited institutions attract higher student enrollment due to
-            increased trust and recognition. Accreditation also supports
-            expansion and program diversification.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">
-            Development & Excellence
-          </h2>
-          <p>
-            Accreditation promotes long-term planning, accountability, and
-            performance improvement. SES helps institutions use accreditation as
-            a growth catalyst.
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=acreditatton-3_yjfjat&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains how Accreditation enhances an institution’s public image and academic
-            standing.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            Accreditation drives credibility, growth, and excellence. SES
-            provides expert guidance to help institutions achieve and sustain
-            accreditation success.
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
-         .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        .blog-container { background: #fff4ea; color: #1a1a1a; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+        /* Hero Styling */
+        .hero-section { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%); }
+        .hero-content { position: relative; z-index: 10; padding: 0 20px; }
+        .category-tag { background: #ff6600; padding: 4px 12px; border-radius: 2px; font-family: 'Orbitron'; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 20px; display: inline-block; }
+        .title-h1 { font-family: 'Orbitron'; font-size: clamp(1.8rem, 6vw, 3.2rem); margin: 0; line-height: 1.2; }
+        .highlight { color: #ffb400; }
+        .meta-bar { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; }
+        .sep { margin: 0 10px; }
 
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+        /* Content Grid */
+        .content-grid { max-width: 1200px; margin: 80px auto; display: grid; grid-template-columns: 1fr 340px; gap: 50px; padding: 0 20px; }
+        .article-main { background: white; padding: 60px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        
+        .summary-text { font-size: 1.25rem; line-height: 2; color: #444; margin-bottom: 50px; }
+        .drop-cap { float: left; font-size: 4.5rem; line-height: 0.8; padding-top: 4px; padding-right: 8px; font-weight: 700; color: #ff6600; font-family: 'Orbitron'; }
+        
+        .heading-underline { font-family: 'Orbitron'; font-size: 1.5rem; margin: 60px 0 30px; position: relative; padding-bottom: 12px; border: none; }
+        .heading-underline::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 4px; background: #ff6600; }
+        
+        .body-text { font-size: 1.1rem; line-height: 1.9; color: #555; margin-bottom: 30px; }
 
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
+        .impact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0; }
+        .i-card { background: #fffaf5; padding: 30px; border-radius: 12px; border: 1px solid #ffe6d5; text-align: center; }
+        .i-icon { font-size: 2rem; color: #ff6600; margin-bottom: 15px; }
+        .i-card h4 { font-family: 'Orbitron'; font-size: 0.9rem; margin-bottom: 10px; }
+        .i-card p { font-size: 0.85rem; color: #777; }
 
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
+        .image-wrapper { border-radius: 12px; overflow: hidden; margin: 45px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .image-wrapper img { width: 100%; display: block; transition: 0.5s; }
+        .image-wrapper:hover img { transform: scale(1.05); }
 
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
+        /* Video */
+        .video-spotlight { background: #1a1a1a; padding: 50px; border-radius: 15px; color: white; margin-top: 70px; }
+        .v-top-icon { font-size: 2.5rem; color: #ffb400; margin-bottom: 20px; }
+        .v-info h3 { font-family: 'Orbitron'; font-size: 1.6rem; margin-bottom: 10px; }
+        .v-info p { color: #aaa; margin-bottom: 40px; }
+        .v-player { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
+        .v-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
+        /* Sidebar */
+        .sticky-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 30px; }
+        .sidebar-box { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .gold-box { border-top: 5px solid #ffb400; }
+        .b-icon { font-size: 2.5rem; color: #ffb400; margin-bottom: 20px; }
+        .benefit-list { list-style: none; padding: 0; margin-top: 20px; }
+        .benefit-list li { font-size: 0.9rem; padding: 8px 0; border-bottom: 1px solid #eee; color: #555; }
+        .benefit-list li:last-child { border: none; }
 
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
+        .contact-box { background: #ff6600; color: white; text-align: center; }
+        .sidebar-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
+        .cta-link { padding: 14px; border-radius: 6px; text-decoration: none; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; }
+        .call-bg { background: rgba(0,0,0,0.2); }
+        .wa-bg { background: #25d366; }
+        .cta-link:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
-        }
-
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
-
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
-
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
-
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
-
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
-
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
-
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
-
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
-
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
-
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
-
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
-
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .content-grid { grid-template-columns: 1fr; }
+          .article-main { padding: 35px 20px; }
+          .impact-cards { grid-template-columns: 1fr; }
+          .hero-section { height: 400px; }
         }
       `}</style>
     </>

@@ -10,6 +10,7 @@ const Navbar = ({ openLogin }) => {
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
     { id: "projects", label: "Projects" },
+    { id: "blogs", label: "Blogs" },
     { id: "partners", label: "Partners" },
     { id: "knowledge-videos", label: "Knowledge" },
     { id: "contact", label: "Contact" },

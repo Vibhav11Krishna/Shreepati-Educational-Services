@@ -1,379 +1,244 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaRegClock, 
+  FaRegCalendarAlt, 
+  FaArrowRight, 
+  FaWallet,
+  FaBalanceScale,
+  FaPiggyBank
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner21.jpg";
-import collaborationImg from "../../assets/Education5.jpg";
-import researchImg from "../../assets/Education6.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import finImg1 from "../../assets/Education5.jpg";
+import finImg2 from "../../assets/Education6.jpg";
+import blogSidebar1 from "../../assets/Academic.jpg";
+import blogSidebar2 from "../../assets/Admission.png";
+
 function Blog21() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">
-              Financial Planning For Institutions
+      <div className="blog-wrapper">
+        {/* STRATEGIC FINANCE HERO */}
+        <header className="blog-header">
+          <div className="hero-background-container">
+            <img src={heroImg} alt="Institutional Financial Planning" className="hero-image" />
+            <div className="hero-overlay-gradient"></div>
+          </div>
+          
+          <div className="hero-text-content">
+            <div className="meta-info-row">
+              <span className="meta-item"><FaRegCalendarAlt /> August 20, 2026</span>
+              <span className="meta-item"><FaRegClock /> 7 Min Read</span>
+            </div>
+            <h1 className="main-title">
+              Strategic <span className="accent-text">Financial Planning</span> <br />
+              For Sustainable Institutions
             </h1>
           </div>
+        </header>
+
+        {/* MAIN LAYOUT */}
+        <div className="blog-layout">
+          <main className="blog-body">
+            <section className="content-segment">
+              <p className="intro-text">
+                <span className="first-letter">E</span>ffective financial management is the 
+                foundation upon which academic excellence is built. In an era of rising 
+                operational costs and technological shifts, institutions must move beyond 
+                simple bookkeeping to advanced financial forecasting. Strategic planning 
+                ensures that your vision for growth remains solvent and stress-free.
+              </p>
+            </section>
+
+            {/* SECTION 1 - BUDGETING */}
+            <section className="article-section">
+              <h2 className="section-title">Budgeting & Resource Allocation</h2>
+              <p className="section-para">
+                SES supports institutions in transitioning from traditional budgeting to 
+                **Zero-Based Budgeting (ZBB)**. We help you scrutinize every expense, 
+                ensuring that funds are prioritized for high-impact areas like research 
+                grants, digital infrastructure, and student support services.
+              </p>
+              
+              <div className="finance-grid">
+                <div className="stat-box">
+                  <FaWallet className="s-icon" />
+                  <h4>OpEx Control</h4>
+                  <p>Streamlining operational costs without affecting quality.</p>
+                </div>
+                <div className="stat-box">
+                  <FaBalanceScale className="s-icon" />
+                  <h4>Risk Mitigation</h4>
+                  <p>Building reserves for market and regulatory fluctuations.</p>
+                </div>
+              </div>
+
+              <div className="content-image-box">
+                <img src={finImg1} alt="Budget Planning Dashboard" />
+              </div>
+            </section>
+
+            {/* SECTION 2 - STABILITY */}
+            <section className="article-section">
+              <h2 className="section-title">Long-Term Financial Stability</h2>
+              <p className="section-para">
+                Sustainability is about the next decade, not just the next semester. 
+                Our consultancy focuses on creating diversified revenue streams—including 
+                alumni funds, corporate partnerships, and auxiliary services—to 
+                strengthen your balance sheet against economic volatility.
+              </p>
+              <div className="content-image-box">
+                <img src={finImg2} alt="Long term Growth Chart" />
+              </div>
+            </section>
+
+            {/* VIDEO SECTION */}
+            <section className="video-card">
+              <div className="video-info">
+                <FaPiggyBank className="video-icon-svg" />
+                <h3>Financial Literacy for Trustees</h3>
+                <p>A deep dive into institutional budgeting, resource optimization, and the pillars of sustainable development.</p>
+              </div>
+              <div className="iframe-wrapper">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=loans-3_pehdka&cloud_name=dqmkivr5i&fluid=true"
+                  title="Financial Planning Video"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="conclusion-box">
+              <h2 className="section-title">Conclusion</h2>
+              <p className="section-para">
+                Clarity in finances leads to confidence in leadership. By partnering 
+                with SES, your institution gains a dedicated financial advisory desk 
+                committed to turning your academic roadmap into a fiscally 
+                responsible reality.
+              </p>
+            </section>
+          </main>
+
+          {/* SIDEBAR */}
+          <aside className="blog-sidebar">
+            <div className="sticky-container">
+              <div className="sidebar-card insights">
+                <h3 className="sidebar-label">Strategy Series</h3>
+                <div className="insight-links">
+                  <a href="/blogs/blog20" className="link-item">
+                    <img src={finImg1} alt="HR" />
+                    <div className="link-text">
+                      <h4>HR Solutions</h4>
+                      <span>Read More <FaArrowRight /></span>
+                    </div>
+                  </a>
+                  <a href="/blogs/blog19" className="link-item">
+                    <img src={blogSidebar1} alt="Loans" />
+                    <div className="link-text">
+                      <h4>Educational Loans</h4>
+                      <span>Read More <FaArrowRight /></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div className="sidebar-card expert">
+                <div className="expert-avatar">
+                  <img src={blogSidebar2} alt="Strategic Consultant" />
+                </div>
+                <h3>Strategy Desk</h3>
+                <p>Need a custom financial audit or a 5-year growth budget? Connect with our senior financial consultants today.</p>
+                <div className="btn-group">
+                  <a href="tel:+919801066182" className="btn call"><FaPhoneAlt /> Call Now</a>
+                  <a href="https://wa.me/919801066182" className="btn wa"><FaWhatsapp /> WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Financial planning is essential for sustainable institutional
-            growth. It helps institutions allocate resources efficiently, manage
-            operational expenses, and plan long-term development without
-            financial stress.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">Budgeting & Resource Allocation</h2>
-          <p>
-            SES supports institutions in preparing realistic budgets,
-            forecasting expenses, and optimizing resource utilization across
-            academics, infrastructure, and operations.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">Long-Term Financial Stability</h2>
-          <p>
-            With structured financial planning, institutions can manage risks,
-            control costs, and support steady growth. SES ensures financial
-            strategies align with institutional objectives.
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=loans-3_pehdka&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains how Financial planning is essential for sustainable institutional
-            growth.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            Effective financial planning strengthens institutional foundations.
-            SES provides expert consultancy to ensure financial clarity,
-            control, and long-term success.
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
-        .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        .blog-wrapper { background: #fff4ea; color: #333; font-family: 'Poppins', sans-serif; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+        /* Hero */
+        .blog-header { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-background-container { position: absolute; inset: 0; }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay-gradient { 
+            position: absolute; inset: 0; 
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.5) 60%, #fff4ea 100%); 
+        }
+        .hero-text-content { position: relative; z-index: 2; text-align: center; color: white; padding: 20px; }
+        .main-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; }
+        .accent-text { color: #ff6600; text-shadow: 0 0 20px rgba(255,102,0,0.4); }
+        .meta-info-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .meta-item { background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 50px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); }
 
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
-
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
-
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
+        /* Layout */
+        .blog-layout { 
+          max-width: 1200px; margin: -60px auto 0; 
+          display: grid; grid-template-columns: 1fr 350px; 
+          gap: 30px; padding: 0 20px 80px; 
         }
 
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
+        .blog-body { background: white; padding: 50px; border-radius: 30px; box-shadow: 0 25px 60px rgba(0,0,0,0.08); }
+        .intro-text { font-size: 1.2rem; line-height: 1.9; color: #334155; margin-bottom: 40px; text-align: justify; }
+        .first-letter { float: left; font-size: 4rem; font-weight: 900; color: #ff6600; line-height: 1; margin-right: 15px; font-family: 'Orbitron'; }
 
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
+        .finance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 40px 0; }
+        .stat-box { border: 1px solid #e2e8f0; padding: 30px; border-radius: 20px; transition: 0.3s; background: #f8fafc; }
+        .stat-box:hover { border-color: #ff6600; transform: translateY(-5px); }
+        .s-icon { font-size: 2.2rem; color: #ff6600; margin-bottom: 20px; }
+        .stat-box h4 { font-family: 'Orbitron'; font-size: 0.9rem; margin-bottom: 10px; color: #0f172a; }
+        .stat-box p { font-size: 0.85rem; color: #64748b; margin: 0; line-height: 1.6; }
 
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        .section-title { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: #0f172a; margin: 50px 0 25px; display: flex; align-items: center; gap: 20px; }
+        .section-title::after { content: ''; height: 2px; flex: 1; background: linear-gradient(90deg, #e2e8f0, transparent); }
 
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
+        .content-image-box { margin: 35px 0; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+        .content-image-box img { width: 100%; display: block; }
 
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
+        .video-card { background: #0f172a; padding: 40px; border-radius: 25px; color: white; margin-top: 50px; border: 1px solid rgba(255,102,0,0.3); }
+        .video-icon-svg { font-size: 3rem; color: #ff6600; margin-bottom: 20px; }
+        .video-info h3 { font-family: 'Orbitron', sans-serif; color: #ff6600; font-size: 1.4rem; margin-bottom: 12px; }
+        .iframe-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; margin-top: 25px; border: 2px solid #1e293b; }
+        .iframe-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
+        /* Sidebar */
+        .sticky-container { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 30px; }
+        .sidebar-card { background: white; padding: 30px; border-radius: 25px; border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+        .sidebar-label { font-family: 'Orbitron'; font-size: 0.8rem; color: #64748b; margin-bottom: 20px; letter-spacing: 1px; }
+        
+        .link-item { display: flex; gap: 15px; text-decoration: none; color: inherit; align-items: center; margin-bottom: 20px; }
+        .link-item img { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; }
+        .link-text h4 { font-size: 0.85rem; margin: 0; font-weight: 700; color: #1e293b; }
+        .link-text span { font-size: 0.7rem; color: #ff6600; display: flex; align-items: center; gap: 5px; margin-top: 4px; font-weight: 600; }
+        
+        .expert { text-align: center; background: linear-gradient(145deg, #ffffff, #fff4ea); }
+        .expert-avatar { width: 80px; height: 80px; margin: 0 auto 15px; border: 3px solid #ff6600; border-radius: 50%; padding: 4px; background: white; }
+        .expert-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .btn { padding: 12px; border-radius: 50px; text-decoration: none; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; margin-top: 15px; transition: 0.3s; }
+        .btn.call { background: #0f172a; }
+        .btn.wa { background: #25d366; }
+        .btn:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
-
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
-
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
-
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
-
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
-
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
-
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .blog-layout { grid-template-columns: 1fr; margin-top: -40px; }
+          .blog-body { padding: 35px 20px; }
+          .finance-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </>

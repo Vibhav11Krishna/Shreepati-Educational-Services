@@ -1,387 +1,244 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaRegClock, 
+  FaRegCalendarAlt, 
+  FaArrowRight, 
+  FaAward, 
+  FaCheckCircle 
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner6.jpg";
 import collaborationImg from "../../assets/Affiliation5.jpg";
 import researchImg from "../../assets/Affiliation6.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import blog1Img from "../../assets/Academic.jpg";
+import blog2Img from "../../assets/Admission.png";
+import blog3Img from "../../assets/Admission.png";
+
 function Blog6() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">
-              Benefits of Board & University Affiliation
+      <div className="blog-wrapper">
+        {/* PREMIUM HERO SECTION */}
+        <header className="blog-header">
+          <div className="hero-background-container">
+            <img src={heroImg} alt="University Affiliation Benefits" className="hero-image" />
+            <div className="hero-overlay-gradient"></div>
+          </div>
+          
+          <div className="hero-text-content">
+            <div className="meta-info-row">
+              <span className="meta-item"><FaRegCalendarAlt /> March 20, 2026</span>
+              <span className="meta-item"><FaRegClock /> 4 Min Read</span>
+            </div>
+            <h1 className="main-title">
+              The Strategic <span className="accent-text">Benefits of Affiliation</span> <br />
+              for Your Institution
             </h1>
           </div>
+        </header>
+
+        {/* MAIN LAYOUT */}
+        <div className="blog-layout">
+          <main className="blog-body">
+            <section className="content-segment">
+              <p className="intro-text">
+                <span className="first-letter">A</span>ffiliation is not merely a legal requirement; it is the 
+                foundation of your institution’s academic legitimacy. By aligning with recognized boards 
+                or universities, your institution secures the credibility needed to foster long-term 
+                trust with students and parents.
+              </p>
+            </section>
+
+            {/* SECTION 1 - KEY BENEFITS */}
+            <section className="article-section">
+              <h2 className="section-title">Key Institutional Benefits</h2>
+              <p className="section-para">
+                An affiliated institution gains access to a ecosystem of standardized quality and 
+                professional recognition:
+              </p>
+              
+              <ul className="benefit-checklist">
+                <li><FaCheckCircle className="check-icon" /> <strong>Standardized Curriculum:</strong> Ensures consistency in learning outcomes and academic rigor.</li>
+                <li><FaCheckCircle className="check-icon" /> <strong>Enhanced Enrollment:</strong> High-quality students and parents prioritize recognized institutions.</li>
+                <li><FaCheckCircle className="check-icon" /> <strong>Faculty Development:</strong> Direct access to board-led training, workshops, and partnerships.</li>
+                <li><FaCheckCircle className="check-icon" /> <strong>Operational Stability:</strong> Regulatory compliance protects the institution from legal hurdles.</li>
+              </ul>
+
+              <div className="content-image-box">
+                <img src={collaborationImg} alt="Academic Growth" />
+              </div>
+            </section>
+
+            {/* SECTION 2 - SES SUPPORT */}
+            <section className="article-section">
+              <h2 className="section-title">SES Strategic Support</h2>
+              <p className="section-para">
+                SES provides structured guidance to help you unlock these benefits. From initial 
+                feasibility studies to documentation and final approval, we ensure the 
+                process is tailored to your specific goals. For instance, institutions 
+                partnering with SES often see a marked improvement in enrollment within the 
+                first six months post-affiliation.
+              </p>
+              <div className="content-image-box">
+                <img src={researchImg} alt="Consultancy Support" />
+              </div>
+            </section>
+
+            {/* VIDEO SECTION */}
+            <section className="video-card">
+              <div className="video-info">
+                <FaAward className="award-icon" />
+                <h3>The Impact of Recognition</h3>
+                <p>Understand how affiliation transforms your college's reputation and student intake.</p>
+              </div>
+              <div className="iframe-wrapper">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=benefits-of-boards-university-affiliation_rdnsxo&cloud_name=dqmkivr5i&fluid=true"
+                  title="Affiliation Benefits Video"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="conclusion-box">
+              <h2 className="section-title">Conclusion</h2>
+              <p className="section-para">
+                Securing affiliation is a vital step toward academic excellence and operational 
+                longevity. With professional support from SES, your institution can navigate 
+                the complexities of approval and immediately begin reaping the rewards of 
+                global recognition.
+              </p>
+            </section>
+          </main>
+
+          {/* STICKY SIDEBAR */}
+          <aside className="blog-sidebar">
+            <div className="sticky-container">
+              <div className="sidebar-card insights">
+                <h3 className="sidebar-label">Related Insights</h3>
+                <div className="insight-links">
+                 
+                  <a href="/blogs/blog2" className="link-item">
+                    <img src={blog2Img} alt="Blog 2" />
+                    <div className="link-text">
+                      <h4>Faculty Skills</h4>
+                      <span>Read More <FaArrowRight /></span>
+                    </div>
+                  </a>
+                  <a href="/blogs/blog3" className="link-item">
+                    <img src={blog3Img} alt="Blog 3" />
+                    <div className="link-text">
+                      <h4>Reputation Growth</h4>
+                      <span>Read More <FaArrowRight /></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div className="sidebar-card expert">
+                <div className="expert-avatar">
+                  <img src={blog1Img} alt="SES Expert" />
+                </div>
+                <h3>Expert Guidance</h3>
+                <p>Transform your institution with professional board affiliation.</p>
+                <div className="btn-group">
+                  <a href="tel:+919801066182" className="btn call"><FaPhoneAlt /> Call Now</a>
+                  <a href="https://wa.me/919801066182" className="btn wa"><FaWhatsapp /> WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Affiliation gives your institution legal recognition, credibility,
-            and academic legitimacy. Students, parents, and stakeholders gain
-            confidence in the institution’s quality. An affiliated institution
-            can offer recognized certifications, attract high-quality faculty,
-            and maintain regulatory compliance.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">Key Benefits</h2>
-          <p>
-            Standardized Curriculum: Ensures consistency in learning outcomes.
-            Enhanced Student Enrollment: Students and parents trust affiliated
-            institutions. Faculty Development & Collaboration: Opportunities for
-            training and partnerships. Operational & Academic Stability:
-            Affiliation ensures long-term credibility. Recognition & Networking:
-            Easier access to academic boards and professional networks. For
-            example, a college that partnered with SES received affiliation from
-            a central board within 6 months, which improved its credibility and
-            student enrollment immediately.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">SES Support</h2>
-          <p>
-            SES provides structured guidance to achieve all the benefits of
-            affiliation. From planning and documentation to final approval, SES
-            ensures institutions receive support tailored to their unique
-            requirements.
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=benefits-of-boards-university-affiliation_rdnsxo&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains why affiliation from boards and universities are important and what they impact on college.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            Board and university affiliation is vital for credibility,
-            operational stability, and academic excellence. SES provides
-            professional support to secure affiliation efficiently and reap its
-            long-term benefits.
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
-      .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        .blog-wrapper { background: #fff4ea; color: #333; font-family: 'Poppins', sans-serif; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+        /* Hero */
+        .blog-header { position: relative; height: 480px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-background-container { position: absolute; inset: 0; }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay-gradient { 
+            position: absolute; inset: 0; 
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, #fff4ea 100%); 
+        }
+        .hero-text-content { position: relative; z-index: 2; text-align: center; color: white; padding: 20px; }
+        .main-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; line-height: 1.2; }
+        .accent-text { color: #ff6600; }
+        .meta-info-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+        .meta-item { background: rgba(255,102,0,0.25); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); }
 
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
-
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
-
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
+        /* Layout */
+        .blog-layout { 
+          max-width: 1200px; 
+          margin: -50px auto 0; 
+          display: grid; 
+          grid-template-columns: 1fr 340px; 
+          gap: 30px; 
+          padding: 0 20px 80px; 
         }
 
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
+        /* Content Body */
+        .blog-body { background: white; padding: 45px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
+        .intro-text { font-size: 1.15rem; line-height: 1.8; color: #444; margin-bottom: 30px; text-align: justify; }
+        .first-letter { float: left; font-size: 3.5rem; font-weight: 900; color: #ff6600; line-height: 1; margin-right: 12px; font-family: 'Orbitron'; }
+        
+        .section-para { font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 25px; text-align: justify; }
 
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
+        .benefit-checklist { list-style: none; padding: 0; margin: 30px 0; display: flex; flex-direction: column; gap: 15px; }
+        .benefit-checklist li { display: flex; gap: 15px; font-size: 1rem; line-height: 1.6; color: #333; }
+        .check-icon { color: #25d366; font-size: 1.2rem; margin-top: 4px; flex-shrink: 0; }
 
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        .section-title { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: #111; margin: 40px 0 20px; display: flex; align-items: center; gap: 15px; }
+        .section-title::after { content: ''; height: 2px; flex: 1; background: #f0f0f0; }
 
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
+        .content-image-box { margin: 30px 0; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .content-image-box img { width: 100%; display: block; }
 
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
+        .video-card { background: #111; padding: 30px; border-radius: 20px; color: white; margin-top: 40px; }
+        .award-icon { font-size: 2.5rem; color: #ffb400; margin-bottom: 10px; }
+        .video-info h3 { font-family: 'Orbitron', sans-serif; color: #ff6600; font-size: 1.2rem; margin: 10px 0; }
+        .iframe-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; margin-top: 20px; }
+        .iframe-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
+        .conclusion-box { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; }
 
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
+        /* Sidebar Styling */
+        .blog-sidebar { position: relative; }
+        .sticky-container { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 25px; }
+        .sidebar-card { background: white; padding: 25px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .sidebar-label { font-family: 'Orbitron'; font-size: 0.85rem; color: #ff6600; margin-bottom: 15px; text-transform: uppercase; }
+        
+        .insight-links { display: flex; flex-direction: column; gap: 15px; }
+        .link-item { display: flex; gap: 12px; text-decoration: none; color: inherit; align-items: center; transition: 0.3s; }
+        .link-item img { width: 50px; height: 50px; border-radius: 6px; object-fit: cover; }
+        .link-text h4 { font-size: 0.8rem; margin: 0; font-weight: 700; }
+        .link-text span { font-size: 0.65rem; color: #ff6600; display: flex; align-items: center; gap: 4px; font-weight: 600; }
+        
+        .expert { text-align: center; }
+        .expert-avatar { width: 70px; height: 70px; margin: 0 auto 12px; border: 2px solid #ff6600; border-radius: 50%; padding: 3px; }
+        .expert-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .btn-group { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+        .btn { padding: 10px; border-radius: 50px; text-decoration: none; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem; }
+        .btn.call { background: #ff6600; }
+        .btn.wa { background: #25d366; }
 
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
-
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
-
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
-
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
-
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
-
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .blog-layout { grid-template-columns: 1fr; }
+          .sticky-container { position: static; }
+          .blog-body { padding: 30px 20px; }
         }
       `}</style>
     </>

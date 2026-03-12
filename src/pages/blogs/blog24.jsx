@@ -1,379 +1,243 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaRegClock, 
+  FaRegCalendarAlt, 
+  FaArrowRight, 
+  FaBullseye,
+  FaCompass,
+  FaCogs
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner24.jpg";
-import collaborationImg from "../../assets/Admission5.jpg";
-import researchImg from "../../assets/Admission6.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import actionImg1 from "../../assets/Admission5.jpg";
+import actionImg2 from "../../assets/Admission6.jpg";
+import blogSidebar1 from "../../assets/Academic.jpg";
+import blogSidebar2 from "../../assets/Admission.png";
+
 function Blog24() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">
-              Marking Informed Decisions & Right Carrer Paths
+      <div className="blog-wrapper">
+        {/* STRATEGIC VISION HERO */}
+        <header className="blog-header">
+          <div className="hero-background-container">
+            <img src={heroImg} alt="Strategic Career Planning" className="hero-image" />
+            <div className="hero-overlay-gradient"></div>
+          </div>
+          
+          <div className="hero-text-content">
+            <div className="meta-info-row">
+              <span className="meta-item"><FaRegCalendarAlt /> Sept 20, 2026</span>
+              <span className="meta-item"><FaRegClock /> 4 Min Read</span>
+            </div>
+            <h1 className="main-title">
+              Informed Decisions & <br />
+              <span className="accent-text">Right Career Paths</span>
             </h1>
           </div>
+        </header>
+
+        {/* MAIN LAYOUT */}
+        <div className="blog-layout">
+          <main className="blog-body">
+            <section className="content-segment">
+              <p className="intro-text">
+                <span className="first-letter">M</span>aking a career choice is not a 
+                one-time event, but a strategic process. Many students find themselves 
+                swayed by temporary trends or peer pressure, often leading to mid-career 
+                fatigue. At SES, we help you replace impulse with insight, ensuring 
+                your academic choices are rooted in long-term professional vision.
+              </p>
+            </section>
+
+            {/* SECTION 1 - CAREER PATH PLANNING */}
+            <section className="article-section">
+              <h2 className="section-title">Career Path Planning with SES</h2>
+              <p className="section-para">
+                Our consultancy approach involves a multi-dimensional exploration of 
+                career options. We don't just look at what you can do; we look at where 
+                the industry is heading. By mapping your capabilities against future 
+                market needs, we create a structured plan that minimizes risk and 
+                maximizes potential.
+              </p>
+              
+              <div className="planning-grid">
+                <div className="plan-item">
+                  <FaBullseye className="p-icon" />
+                  <h4>Market Analysis</h4>
+                  <p>Studying growth sectors for 2030 and beyond.</p>
+                </div>
+                <div className="plan-item">
+                  <FaCompass className="p-icon" />
+                  <h4>Path Discovery</h4>
+                  <p>Identifying niche roles that match your passion.</p>
+                </div>
+              </div>
+
+              <div className="content-image-box">
+                <img src={actionImg1} alt="Career Planning Workshop" />
+              </div>
+            </section>
+
+            {/* SECTION 2 - LONG TERM SUCCESS */}
+            <section className="article-section">
+              <h2 className="section-title">Clarity for Long-Term Success</h2>
+              <p className="section-para">
+                The ultimate goal of SES is to provide "Future-Proof" guidance. Whether 
+                it's selecting the right undergraduate major or planning for 
+                international post-graduate studies, our roadmap ensures you move 
+                forward with absolute confidence and a clear competitive edge.
+              </p>
+              <div className="content-image-box">
+                <img src={actionImg2} alt="Successful career development" />
+              </div>
+            </section>
+
+            {/* VIDEO SECTION - HIGH IMPACT */}
+            <section className="video-card-dark">
+              <div className="video-header">
+                <div className="v-label">
+                    <FaCogs /> STRATEGY SESSION
+                </div>
+                <h3>Breaking the Cycle of Peer Pressure</h3>
+                <p>Learn how to filter out external noise and make a decision that belongs truly to you.</p>
+              </div>
+              <div className="iframe-wrapper">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=counseling-3_hnqm5q&cloud_name=dqmkivr5i&fluid=true"
+                  title="Informed Decisions Video"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="conclusion-box">
+              <h2 className="section-title">Final Thoughts</h2>
+              <p className="section-para">
+                Your career path is yours to walk, but you don't have to map it alone. 
+                Informed decisions today pave the way for a legacy of success tomorrow. 
+                Let SES be the partner in your professional journey.
+              </p>
+            </section>
+          </main>
+
+          {/* SIDEBAR */}
+          <aside className="blog-sidebar">
+            <div className="sticky-container">
+              <div className="sidebar-card directory">
+                <h3 className="sidebar-label">Complete the Journey</h3>
+                <div className="path-tracker">
+                  <div className="path-step completed">
+                    <span className="dot"></span>
+                    <p>Understanding Counseling (Blog 23)</p>
+                  </div>
+                  <div className="path-step completed">
+                    <span className="dot"></span>
+                    <p>Course Selection (Blog 22)</p>
+                  </div>
+                  <div className="path-step active">
+                    <span className="dot"></span>
+                    <p>Strategic Planning (Blog 24)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="sidebar-card expert-gold">
+                <h3>Take the Next Step</h3>
+                <p>Ready to finalize your academic roadmap? Our senior consultants are available for one-on-one sessions.</p>
+                <div className="btn-group-vertical">
+                  <a href="tel:+919801066182" className="btn call"><FaPhoneAlt /> Call Consultant</a>
+                  <a href="https://wa.me/919801066182" className="btn wa"><FaWhatsapp /> WhatsApp Now</a>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Students often face pressure from peers, trends, or external
-            expectations. Making informed decisions ensures that academic
-            choices are based on knowledge, planning, and long-term vision.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">Career Path Planning with SES</h2>
-          <p>
-            SES helps students explore multiple career options, understand
-            future opportunities, and select paths that match their interests
-            and capabilities. This structured planning reduces uncertainty and
-            confusion.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">Clarity for Long-Term Success</h2>
-          <p>
-            With proper guidance, students gain a clear direction for higher
-            studies and career development. SES ensures students move forward
-            with confidence and purpose.
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=counseling-3_hnqm5q&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains how Students often face pressure from peers, trends, or external
-            expectations.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            Informed decisions lead to successful careers. SES supports students
-            in choosing the right path with clarity, confidence, and long-term
-            vision.
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
-      .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        .blog-wrapper { background: #fff4ea; color: #2d3748; font-family: 'Poppins', sans-serif; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+        /* Hero */
+        .blog-header { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-background-container { position: absolute; inset: 0; }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay-gradient { 
+            position: absolute; inset: 0; 
+            background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(255,102,0,0.2) 60%, #fff4ea 100%); 
+        }
+        .hero-text-content { position: relative; z-index: 2; text-align: center; color: white; padding: 20px; }
+        .main-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 6vw, 3.2rem); font-weight: 900; line-height: 1.1; }
+        .accent-text { color: #ff6600; }
+        .meta-info-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
+        .meta-item { background: rgba(255,102,0,0.2); padding: 6px 16px; border-radius: 4px; font-size: 0.75rem; border: 1px solid #ff660055; font-weight: 600; }
 
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
-
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
-
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
+        /* Content Layout */
+        .blog-layout { 
+          max-width: 1250px; margin: -60px auto 0; 
+          display: grid; grid-template-columns: 1fr 360px; 
+          gap: 40px; padding: 0 20px 120px; 
         }
 
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
+        .blog-body { background: white; padding: 70px; border-radius: 40px; box-shadow: 0 40px 80px rgba(0,0,0,0.08); }
+        .intro-text { font-size: 1.3rem; line-height: 2.1; color: #4a5568; margin-bottom: 50px; font-weight: 300; }
+        .first-letter { float: left; font-size: 5rem; font-weight: 900; color: #1a202c; line-height: 1; margin-right: 15px; font-family: 'Orbitron'; }
+        
+        .section-para { font-size: 1.15rem; line-height: 1.9; color: #555; margin-bottom: 35px; }
 
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
+        .planning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 45px 0; }
+        .plan-item { background: #f8fafc; padding: 35px; border-radius: 20px; border-top: 4px solid #ff6600; }
+        .p-icon { font-size: 2.2rem; color: #ff6600; margin-bottom: 20px; }
+        .plan-item h4 { font-family: 'Orbitron'; font-size: 1rem; margin-bottom: 12px; }
+        .plan-item p { font-size: 0.9rem; color: #718096; margin: 0; }
 
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        .section-title { font-family: 'Orbitron', sans-serif; font-size: 1.6rem; color: #1a202c; margin: 60px 0 30px; }
+        .content-image-box { margin: 45px 0; border-radius: 25px; overflow: hidden; box-shadow: 0 25px 55px rgba(0,0,0,0.12); }
+        .content-image-box img { width: 100%; display: block; }
 
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
+        /* Dark Video Section */
+        .video-card-dark { background: #0f172a; padding: 50px; border-radius: 40px; color: white; margin-top: 70px; }
+        .v-label { color: #ff6600; font-weight: 800; font-family: 'Orbitron'; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .video-header h3 { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; margin-bottom: 15px; }
+        .video-header p { color: #94a3b8; margin-bottom: 35px; max-width: 600px; }
+        .iframe-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; }
+        .iframe-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
+        /* Sidebar Tracker */
+        .sticky-container { position: sticky; top: 120px; display: flex; flex-direction: column; gap: 35px; }
+        .sidebar-card { background: white; padding: 35px; border-radius: 35px; border: 1px solid #e2e8f0; }
+        .sidebar-label { font-family: 'Orbitron'; font-size: 0.9rem; color: #1a202c; margin-bottom: 25px; border-bottom: 2px solid #ff6600; display: inline-block; }
+        
+        .path-tracker { display: flex; flex-direction: column; gap: 20px; }
+        .path-step { display: flex; gap: 15px; align-items: center; color: #94a3b8; }
+        .path-step.completed { color: #ff6600; }
+        .path-step.active { color: #1a202c; font-weight: 700; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
+        .path-step p { font-size: 0.85rem; margin: 0; }
+        
+        .expert-gold { background: linear-gradient(135deg, #1e293b, #0f172a); color: white; text-align: center; }
+        .btn-group-vertical { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+        .btn { padding: 16px; border-radius: 12px; text-decoration: none; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 12px; transition: 0.3s; }
+        .btn.call { background: #ff6600; }
+        .btn.wa { background: #25d366; }
+        .btn:hover { transform: scale(1.03); }
 
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
-
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
-
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
-
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
-
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
-
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
-
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
-
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .blog-layout { grid-template-columns: 1fr; }
+          .blog-body { padding: 45px 30px; }
+          .planning-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </>

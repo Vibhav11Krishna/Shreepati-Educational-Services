@@ -1,383 +1,262 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaRegClock, 
+  FaRegCalendarAlt, 
+  FaArrowRight, 
+  FaChalkboardTeacher, 
+  FaBookOpen,
+  FaUserGraduate 
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner8.jpg";
 import collaborationImg from "../../assets/College3.jpg";
 import researchImg from "../../assets/College4.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import blog1Img from "../../assets/Academic.jpg";
+import blog2Img from "../../assets/Admission.png";
+import blog3Img from "../../assets/Admission.png";
+
 function Blog8() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">Setting Up Faculty & Courses</h1>
+      <div className="blog-wrapper">
+        {/* PREMIUM HERO SECTION */}
+        <header className="blog-header">
+          <div className="hero-background-container">
+            <img src={heroImg} alt="Faculty and Course Setup" className="hero-image" />
+            <div className="hero-overlay-gradient"></div>
           </div>
+          
+          <div className="hero-text-content">
+            <div className="meta-info-row">
+              <span className="meta-item"><FaRegCalendarAlt /> March 25, 2026</span>
+              <span className="meta-item"><FaRegClock /> 4 Min Read</span>
+            </div>
+            <h1 className="main-title">
+              Setting Up <span className="accent-text">Faculty & Courses</span> <br />
+              for Academic Excellence
+            </h1>
+          </div>
+        </header>
+
+        {/* MAIN LAYOUT */}
+        <div className="blog-layout">
+          <main className="blog-body">
+            <section className="content-segment">
+              <p className="intro-text">
+                <span className="first-letter">F</span>aculty expertise and curriculum design are the 
+                dual engines that drive an institution's reputation. A college is only as strong 
+                as its educators and the relevance of the knowledge it imparts. Proper planning at 
+                this stage ensures long-term accreditation success and superior student outcomes.
+              </p>
+            </section>
+
+            {/* SECTION 1 - FACULTY */}
+            <section className="article-section">
+              <h2 className="section-title">Faculty Recruitment & Management</h2>
+              <p className="section-para">
+                Hiring qualified educators goes beyond verifying degrees; it’s about finding 
+                mentors who align with your institution's vision. SES assists in 
+                defining faculty profiles, managing documentation, and maintaining 
+                optimal staffing ratios to ensure compliance with regulatory norms.
+              </p>
+              
+              <div className="component-grid">
+                <div className="comp-card">
+                  <FaChalkboardTeacher className="comp-icon" />
+                  <h4>Staffing Ratios</h4>
+                  <p>Ensuring compliance with teacher-student norms.</p>
+                </div>
+                <div className="comp-card">
+                  <FaUserGraduate className="comp-icon" />
+                  <h4>Profile Mapping</h4>
+                  <p>Aligning expertise with specific course modules.</p>
+                </div>
+              </div>
+
+              <div className="content-image-box">
+                <img src={collaborationImg} alt="Faculty Training Session" />
+              </div>
+            </section>
+
+            {/* SECTION 2 - COURSE DESIGN */}
+            <section className="article-section">
+              <h2 className="section-title">Course Design & Administration</h2>
+              <p className="section-para">
+                Modern curricula must be agile and aligned with university guidelines. 
+                SES helps institutions design academic calendars, internal assessment 
+                frameworks, and examination systems that are both rigorous and 
+                transparent.
+              </p>
+              <div className="content-image-box">
+                <img src={researchImg} alt="Curriculum Planning" />
+              </div>
+            </section>
+
+            {/* VIDEO SECTION */}
+            <section className="video-card">
+              <div className="video-info">
+                <FaBookOpen className="video-icon-svg" />
+                <h3>The Curriculum Backbone</h3>
+                <p>Learn how structured course alignment affects institutional growth and regulatory approvals.</p>
+              </div>
+              <div className="iframe-wrapper">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=Fcaulty-course-setup-guidnace_g1msjw&cloud_name=dqmkivr5i&fluid=true"
+                  title="Faculty and Course Guidance"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="conclusion-box">
+              <h2 className="section-title">Conclusion</h2>
+              <p className="section-para">
+                A robust academic foundation is built on elite faculty and structured learning. 
+                SES empowers your institution to build systems that attract top-tier talent 
+                and deliver the quality education students deserve.
+              </p>
+            </section>
+          </main>
+
+          {/* STICKY SIDEBAR */}
+          <aside className="blog-sidebar">
+            <div className="sticky-container">
+              <div className="sidebar-card insights">
+                <h3 className="sidebar-label">Related Insights</h3>
+                <div className="insight-links">
+                  {/* FIXED: Re-added opening tag and properly closed link */}
+                  <a href="/blogs/blog6" className="link-item">
+                    <img src={blog2Img} alt="Blog 6" />
+                    <div className="link-text">
+                      <h4>Affiliation Benefits</h4>
+                      <span>Read More <FaArrowRight /></span>
+                    </div>
+                  </a>
+                  <a href="/blogs/blog7" className="link-item">
+                    <img src={blog3Img} alt="Blog 7" />
+                    <div className="link-text">
+                      <h4>Starting a College</h4>
+                      <span>Read More <FaArrowRight /></span>
+                    </div>
+                  </a>
+                  <a href="/blogs/blog1" className="link-item">
+                    <img src={blog1Img} alt="Blog 1" />
+                    <div className="link-text">
+                      <h4>Learning Quality</h4>
+                      <span>Read More <FaArrowRight /></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div className="sidebar-card expert">
+                <div className="expert-avatar">
+                  <img src={blog1Img} alt="SES Academic Advisor" />
+                </div>
+                <h3>Optimize Your Faculty</h3>
+                <p>Get expert help in staffing and curriculum design.</p>
+                <div className="btn-group">
+                  <a href="tel:+919801066182" className="btn call"><FaPhoneAlt /> Call Now</a>
+                  <a href="https://wa.me/919801066182" className="btn wa"><FaWhatsapp /> WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Faculty and curriculum define the academic quality of any college.
-            Qualified teachers, well-designed courses, and balanced academic
-            administration create a strong learning environment. Poor planning
-            at this stage can affect accreditation, student outcomes, and
-            institutional reputation.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">Faculty Recruitment & Management</h2>
-          <p>
-            Hiring qualified and experienced faculty is essential to meet
-            regulatory norms and academic expectations. SES assists in
-            identifying required faculty profiles, documentation, and staffing
-            ratios. This ensures smooth inspections and long-term academic
-            stability.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">Course Design & Administration</h2>
-          <p>
-            Course structures must align with university and regulatory
-            guidelines. SES helps institutions design curriculum frameworks,
-            academic calendars, examination systems, and internal assessments.
-            This structured approach ensures smooth academic operations from the
-            first academic year.
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=Fcaulty-course-setup-guidnace_g1msjw&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains how Course structures must align with university and regulatory
-            guidelines.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            A strong faculty and well-designed courses are the backbone of a
-            successful college. SES ensures institutions build academic systems
-            that meet standards, attract students, and deliver quality
-            education.
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
-      .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        .blog-wrapper { background: #fff4ea; color: #333; font-family: 'Poppins', sans-serif; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+        /* Hero */
+        .blog-header { position: relative; height: 480px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-background-container { position: absolute; inset: 0; }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay-gradient { 
+            position: absolute; inset: 0; 
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, #fff4ea 100%); 
+        }
+        .hero-text-content { position: relative; z-index: 2; text-align: center; color: white; padding: 20px; }
+        .main-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; line-height: 1.2; }
+        .accent-text { color: #ff6600; }
+        .meta-info-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+        .meta-item { background: rgba(255,102,0,0.25); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); }
 
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
-
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
-
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
+        /* Layout */
+        .blog-layout { 
+          max-width: 1200px; 
+          margin: -50px auto 0; 
+          display: grid; 
+          grid-template-columns: 1fr 340px; 
+          gap: 30px; 
+          padding: 0 20px 80px; 
         }
 
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
+        /* Content Body */
+        .blog-body { background: white; padding: 45px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
+        .intro-text { font-size: 1.15rem; line-height: 1.8; color: #444; margin-bottom: 30px; text-align: justify; }
+        .first-letter { float: left; font-size: 3.5rem; font-weight: 900; color: #ff6600; line-height: 1; margin-right: 12px; font-family: 'Orbitron'; }
+        
+        .section-para { font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 25px; text-align: justify; }
 
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
+        .component-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        .comp-card { background: #fdf8f4; padding: 20px; border-radius: 15px; border-bottom: 4px solid #ff6600; transition: 0.3s; }
+        .comp-card:hover { transform: translateY(-5px); background: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .comp-icon { font-size: 1.8rem; color: #ff6600; margin-bottom: 12px; }
+        .comp-card h4 { margin: 0 0 8px; font-size: 0.95rem; font-weight: 700; }
+        .comp-card p { font-size: 0.8rem; margin: 0; color: #666; line-height: 1.4; }
 
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        .section-title { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: #111; margin: 40px 0 20px; display: flex; align-items: center; gap: 15px; }
+        .section-title::after { content: ''; height: 2px; flex: 1; background: #f0f0f0; }
 
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
+        .content-image-box { margin: 30px 0; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .content-image-box img { width: 100%; display: block; }
 
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
+        .video-card { background: #111; padding: 30px; border-radius: 20px; color: white; margin-top: 40px; }
+        .video-icon-svg { font-size: 2.5rem; color: #ff6600; margin-bottom: 15px; }
+        .video-info h3 { font-family: 'Orbitron', sans-serif; color: #ff6600; font-size: 1.2rem; margin-bottom: 10px; }
+        .iframe-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; margin-top: 20px; }
+        .iframe-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
+        .conclusion-box { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; }
 
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
+        /* Sidebar Styling */
+        .blog-sidebar { position: relative; }
+        .sticky-container { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 25px; }
+        .sidebar-card { background: white; padding: 25px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .sidebar-label { font-family: 'Orbitron'; font-size: 0.85rem; color: #ff6600; margin-bottom: 15px; text-transform: uppercase; }
+        
+        .insight-links { display: flex; flex-direction: column; gap: 15px; }
+        .link-item { display: flex; gap: 12px; text-decoration: none; color: inherit; align-items: center; transition: 0.3s; }
+        .link-item img { width: 50px; height: 50px; border-radius: 6px; object-fit: cover; }
+        .link-text h4 { font-size: 0.8rem; margin: 0; font-weight: 700; }
+        .link-text span { font-size: 0.65rem; color: #ff6600; display: flex; align-items: center; gap: 4px; font-weight: 600; }
+        
+        .expert { text-align: center; }
+        .expert-avatar { width: 70px; height: 70px; margin: 0 auto 12px; border: 2px solid #ff6600; border-radius: 50%; padding: 3px; }
+        .expert-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .btn-group { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+        .btn { padding: 10px; border-radius: 50px; text-decoration: none; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem; }
+        .btn.call { background: #ff6600; }
+        .btn.wa { background: #25d366; }
 
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
-
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
-
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
-
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
-
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
-
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .blog-layout { grid-template-columns: 1fr; }
+          .sticky-container { position: static; }
+          .blog-body { padding: 30px 20px; }
+          .component-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </>

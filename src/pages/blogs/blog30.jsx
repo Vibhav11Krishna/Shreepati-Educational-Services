@@ -1,380 +1,242 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaGavel, 
+  FaClipboardCheck, 
+  FaShieldAlt, 
+  FaChartPie,
+  FaRegClock, 
+  FaRegCalendarAlt 
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner30.jpg";
-import collaborationImg from "../../assets/Document5.jpg";
-import researchImg from "../../assets/Document6.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import compImg1 from "../../assets/Document5.jpg";
+import compImg2 from "../../assets/Document6.jpg";
+
 function Blog30() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">
-              Compilance & Organization & Operations
-            </h1>
+      <div className="blog-wrapper">
+        {/* COMPLIANCE-DRIVEN HERO */}
+        <header className="blog-header">
+          <div className="hero-base">
+            <img src={heroImg} alt="Institutional Compliance" />
+            <div className="hero-mask"></div>
           </div>
+          
+          <div className="hero-text-area">
+            <div className="badge">ACCREDITATION READY</div>
+            <h1 className="main-title">
+              Compliance, Organization <br />
+              <span className="accent">& Operations</span>
+            </h1>
+            <div className="meta-info">
+              <span><FaRegCalendarAlt /> Jan 18, 2026</span>
+              <span className="divider">|</span>
+              <span><FaRegClock /> 6 Min Read</span>
+            </div>
+          </div>
+        </header>
+
+        {/* MAIN ARTICLE GRID */}
+        <div className="main-grid">
+          <article className="article-body">
+            <section className="article-intro">
+              <p className="heavy-text">
+                <span className="first-letter">E</span>ducational institutions 
+                operate within a complex web of regulatory and accreditation 
+                requirements. Maintaining proper records isn't just a best 
+                practice—it is a legal necessity. Organized documentation is 
+                the single most important factor during inspections, audits, 
+                and accreditation reviews.
+              </p>
+            </section>
+
+            {/* SECTION 1 - STRUCTURED SYSTEMS */}
+            <section className="section-content">
+              <h2 className="section-h2">Structured Documentation Systems</h2>
+              <p className="text-p">
+                SES assists institutions in organizing documents according to 
+                strict regulatory guidelines. By aligning your physical and 
+                digital files with the specific checklists of governing bodies, 
+                we ensure absolute readiness for inspections and help you 
+                avoid the stress of last-minute compliance issues.
+              </p>
+              
+              <div className="audit-checklist">
+                <h3>Audit Readiness Checklist</h3>
+                <div className="check-grid">
+                  <div className="check-item">
+                    <FaClipboardCheck className="c-icon" />
+                    <span>Statutory Approvals</span>
+                  </div>
+                  <div className="check-item">
+                    <FaClipboardCheck className="c-icon" />
+                    <span>Faculty Records</span>
+                  </div>
+                  <div className="check-item">
+                    <FaClipboardCheck className="c-icon" />
+                    <span>Infrastructure Certs</span>
+                  </div>
+                  <div className="check-item">
+                    <FaClipboardCheck className="c-icon" />
+                    <span>Financial Audits</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="img-frame">
+                <img src={compImg1} alt="Regulatory Documentation" />
+              </div>
+            </section>
+
+            {/* SECTION 2 - STREAMLINED OPERATIONS */}
+            <section className="section-content">
+              <h2 className="section-h2">Streamlined Institutional Operations</h2>
+              <p className="text-p">
+                Beyond compliance, well-organized records support smoother 
+                day-to-day operations. When data is accessible and categorized, 
+                coordination between departments improves, and leadership can 
+                make informed decisions based on accurate insights. SES ensures 
+                your documentation systems are a boost to your workflow, not 
+                a burden.
+              </p>
+              <div className="img-frame">
+                <img src={compImg2} alt="Operational Workflow" />
+              </div>
+            </section>
+
+            {/* VIDEO SECTION */}
+            <section className="video-card-dark">
+              <div className="v-desc">
+                <FaGavel className="v-icon-top" />
+                <h3>Navigating Accreditation</h3>
+                <p>A deep dive into why regulatory alignment is the foundation of growth.</p>
+              </div>
+              <div className="v-container">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=data_-3_djlecw&cloud_name=dqmkivr5i&fluid=true"
+                  title="Compliance Video"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="final-summary">
+              <h2 className="section-h2">Conclusion</h2>
+              <p className="text-p">
+                Compliance and organization go hand in hand to protect the 
+                reputation and future of your institution. SES provides the 
+                expert guidance needed to maintain structured, compliant, and 
+                highly efficient documentation systems.
+              </p>
+            </section>
+          </article>
+
+          {/* SIDEBAR COMPONENT */}
+          <aside className="sticky-sidebar">
+            <div className="sidebar-group">
+              <div className="info-box accent-box">
+                <FaShieldAlt className="box-icon" />
+                <h3>Risk Mitigation</h3>
+                <p>Identify compliance gaps before the auditors do.</p>
+                <div className="level-indicator">
+                  <div className="level-bar" style={{width: '100%'}}></div>
+                </div>
+                <small>Compliance Level: Critical</small>
+              </div>
+
+              <div className="info-box contact-box">
+                <FaChartPie className="box-icon" />
+                <h3>Audit Consultation</h3>
+                <p>Is your institution ready for its next inspection? Talk to us.</p>
+                <div className="side-btns">
+                  <a href="tel:+919801066182" className="s-btn call"><FaPhoneAlt /> Call</a>
+                  <a href="https://wa.me/919801066182" className="s-btn wa"><FaWhatsapp /> WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Educational institutions must maintain proper records to meet
-            regulatory and accreditation requirements. Organized documentation
-            is essential during inspections, audits, and accreditation reviews.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">Structured Documentation Systems</h2>
-          <p>
-            SES assists institutions in organizing documents according to
-            regulatory guidelines. This ensures readiness for inspections and
-            avoids last-minute compliance issues.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">
-            Streamlined Institutional Operations
-          </h2>
-          <p>
-            Well-organized records support smoother operations, better
-            coordination, and informed decision-making. SES ensures
-            documentation systems align with institutional workflows.
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=data_-3_djlecw&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains how Educational institutions must maintain proper records to meet
-            regulatory and accreditation requirements.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            Compliance and organization go hand in hand. SES provides expert
-            guidance to help institutions maintain structured, compliant, and
-            efficient documentation systems.
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
-      .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        .blog-wrapper { background: #fff4ea; color: #1e293b; font-family: 'Poppins', sans-serif; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+        /* Hero Styling */
+        .blog-header { position: relative; height: 480px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-base { position: absolute; inset: 0; }
+        .hero-base img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-mask { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.6) 100%); }
+        .hero-text-area { position: relative; z-index: 5; text-align: center; color: white; }
+        .badge { background: #ff6600; padding: 6px 18px; border-radius: 4px; font-family: 'Orbitron'; font-size: 0.75rem; letter-spacing: 1.5px; margin-bottom: 25px; display: inline-block; }
+        .main-title { font-family: 'Orbitron'; font-size: clamp(1.6rem, 5vw, 2.8rem); line-height: 1.2; }
+        .accent { color: #ff6600; }
+        .meta-info { margin-top: 25px; font-size: 0.9rem; opacity: 0.8; font-weight: 300; }
+        .divider { margin: 0 15px; }
 
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+        /* Main Content Grid */
+        .main-grid { max-width: 1200px; margin: 70px auto; display: grid; grid-template-columns: 1fr 340px; gap: 45px; padding: 0 20px; }
+        .article-body { background: #ffffff; padding: 60px; border-radius: 35px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08); }
+        
+        .heavy-text { font-size: 1.2rem; line-height: 1.9; color: #334155; margin-bottom: 45px; }
+        .first-letter { float: left; font-size: 4.8rem; font-weight: 800; color: #ff6600; line-height: 0.8; margin-right: 12px; font-family: 'Orbitron'; }
+        
+        .section-h2 { font-family: 'Orbitron'; font-size: 1.4rem; color: #0f172a; margin: 55px 0 25px; border-left: 6px solid #ff6600; padding-left: 18px; }
+        .text-p { font-size: 1.1rem; line-height: 1.8; color: #475569; margin-bottom: 30px; }
 
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
+        /* Checklist Component */
+        .audit-checklist { background: #f8fafc; padding: 35px; border-radius: 20px; border: 1px solid #e2e8f0; margin: 40px 0; }
+        .audit-checklist h3 { font-family: 'Orbitron'; font-size: 0.9rem; margin-bottom: 25px; color: #1e293b; text-transform: uppercase; letter-spacing: 1px; }
+        .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .check-item { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 500; color: #64748b; }
+        .c-icon { color: #ff6600; font-size: 1.1rem; }
 
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
+        .img-frame { border-radius: 25px; overflow: hidden; margin: 45px 0; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .img-frame img { width: 100%; display: block; }
 
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
+        /* Video Dark Card */
+        .video-card-dark { background: #0f172a; padding: 45px; border-radius: 35px; color: white; margin-top: 65px; }
+        .v-icon-top { font-size: 2.5rem; color: #ff6600; margin-bottom: 20px; }
+        .v-desc h3 { font-family: 'Orbitron'; font-size: 1.5rem; margin-bottom: 12px; }
+        .v-desc p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 35px; }
+        .v-container { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; }
+        .v-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
+        /* Sidebar Widgets */
+        .sticky-sidebar { position: sticky; top: 110px; height: fit-content; }
+        .sidebar-group { display: flex; flex-direction: column; gap: 30px; }
+        .info-box { background: white; padding: 35px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .box-icon { font-size: 2.8rem; color: #ff6600; margin-bottom: 20px; }
+        .info-box h3 { font-family: 'Orbitron'; font-size: 1.1rem; margin-bottom: 15px; }
+        .info-box p { font-size: 0.85rem; color: #64748b; line-height: 1.6; }
+        
+        .level-indicator { background: #f1f5f9; height: 6px; border-radius: 10px; margin: 20px 0 10px; overflow: hidden; }
+        .level-bar { background: #ff6600; height: 100%; }
+        .accent-box { border-bottom: 6px solid #ff6600; }
 
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
+        .contact-box { background: #ff6600; color: white; text-align: center; }
+        .contact-box h3, .contact-box p { color: white; }
+        .contact-box .box-icon { color: white; opacity: 0.9; }
+        .side-btns { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
+        .s-btn { padding: 14px; border-radius: 12px; text-decoration: none; color: white; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(0,0,0,0.15); transition: 0.3s; }
+        .s-btn:hover { background: rgba(0,0,0,0.3); transform: translateY(-3px); }
 
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
-        }
-
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
-
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
-
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
-
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
-
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
-
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
-
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
-
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
-
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
-
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
-
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
-
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .main-grid { grid-template-columns: 1fr; }
+          .article-body { padding: 35px 25px; }
+          .check-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </>

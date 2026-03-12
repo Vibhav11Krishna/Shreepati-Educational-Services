@@ -1,382 +1,224 @@
 import React from "react";
 import Navbar from "../../mobile/components/Navbar";
 import Footer from "../../mobile/components/Footer";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { 
+  FaPhoneAlt, 
+  FaWhatsapp, 
+  FaDatabase, 
+  FaUserShield, 
+  FaFolderOpen, 
+  FaSearch, 
+  FaRegClock, 
+  FaRegCalendarAlt 
+} from "react-icons/fa";
+
 // Assets
 import heroImg from "../../assets/Banner28.jpg";
-import collaborationImg from "../../assets/Document1.jpg";
-import researchImg from "../../assets/Document2.jpg";
-import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Admission.png";
-import blog3 from "../../assets/Admission.png";
+import recordImg1 from "../../assets/Document1.jpg";
+import recordImg2 from "../../assets/Document2.jpg";
+
 function Blog28() {
   return (
     <>
       <Navbar />
 
-      {/* PAGE WRAPPER */}
-      <div className="blog-page">
-        {/* HERO SECTION */}
-        <div className="blog-hero">
-          <img src={heroImg} alt="Academic Collaboration" />
-          <div className="hero-overlay">
-            <h1 className="gradient-heading">Efficient Record Management</h1>
+      <div className="blog-wrapper">
+        {/* DATA-CENTRIC HERO */}
+        <header className="blog-header">
+          <div className="hero-bg">
+            <img src={heroImg} alt="Efficient Record Management" />
+            <div className="hero-overlay"></div>
           </div>
+          
+          <div className="hero-content">
+            <div className="tag">DATA SYSTEMS</div>
+            <h1 className="title">
+              Efficient Record <br />
+              <span className="highlight">Management Systems</span>
+            </h1>
+            <div className="meta">
+              <span><FaRegCalendarAlt /> Nov 12, 2026</span>
+              <span className="sep">|</span>
+              <span><FaRegClock /> 5 Min Read</span>
+            </div>
+          </div>
+        </header>
+
+        {/* MAIN CONTENT AREA */}
+        <div className="blog-container">
+          <main className="content-main">
+            <section className="intro">
+              <p className="lead-text">
+                <span className="drop-cap">E</span>ducational institutions generate 
+                vast volumes of academic, administrative, and regulatory data. 
+                Efficient record management is no longer optional—it is the 
+                backbone of institutional accuracy, security, and long-term 
+                operational success.
+              </p>
+            </section>
+
+            {/* SECTION 1 - ACADEMIC RECORDS */}
+            <section className="article-part">
+              <h2 className="sub-heading">Academic & Administrative Records</h2>
+              <p className="para">
+                From student admissions and examination data to staff payroll 
+                and institutional charters, SES helps organize all records 
+                systematically. A structured approach reduces manual errors, 
+                eliminates redundant paperwork, and ensures that critical 
+                documents are ready for audit at a moment's notice.
+              </p>
+              
+              <div className="features-grid">
+                <div className="f-card">
+                  <FaFolderOpen className="f-icon" />
+                  <h4>Centralized Filing</h4>
+                  <p>One source of truth for all institutional data.</p>
+                </div>
+                <div className="f-card">
+                  <FaSearch className="f-icon" />
+                  <h4>Instant Retrieval</h4>
+                  <p>Locate records in seconds, not hours.</p>
+                </div>
+              </div>
+
+              <div className="image-frame">
+                <img src={recordImg1} alt="Structured Documentation" />
+              </div>
+            </section>
+
+            {/* SECTION 2 - DATA SECURITY */}
+            <section className="article-part">
+              <h2 className="sub-heading">Secure & Organized Data Handling</h2>
+              <p className="para">
+                Data security is the cornerstone of trust. Proper record 
+                management ensures that sensitive information remains 
+                confidential while complying with privacy laws. SES guides 
+                institutions in implementing safe storage practices, role-based 
+                access, and encrypted digital archives.
+              </p>
+              <div className="image-frame">
+                <img src={recordImg2} alt="Secure Data Storage" />
+              </div>
+            </section>
+
+            {/* VIDEO SECTION */}
+            <section className="video-section">
+              <div className="v-info">
+                <FaDatabase className="v-ico" />
+                <h3>Digital Data Transformation</h3>
+                <p>Understanding the flow of data within a modern educational ecosystem.</p>
+              </div>
+              <div className="video-box">
+                <iframe
+                  src="https://player.cloudinary.com/embed/?public_id=DATA-1_cgmtcj&cloud_name=dqmkivr5i&fluid=true"
+                  title="Record Management Explanation"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+
+            <section className="summary">
+              <h2 className="sub-heading">Conclusion</h2>
+              <p className="para">
+                Efficient record management strengthens every institutional 
+                touchpoint. By partnering with SES, institutions can transition 
+                from chaotic filing to precise, secure, and well-organized 
+                digital data systems.
+              </p>
+            </section>
+          </main>
+
+          {/* SIDEBAR */}
+          <aside className="sidebar">
+            <div className="sticky-box">
+              <div className="card security-check">
+                <FaUserShield className="card-icon" />
+                <h3>Audit Readiness</h3>
+                <p>Is your data ready for the next regulatory audit?</p>
+                <ul className="check-list">
+                  <li>Digital Backups</li>
+                  <li>Access Controls</li>
+                  <li>SOP Compliance</li>
+                </ul>
+              </div>
+
+              <div className="card cta-sidebar">
+                <h3>System Setup</h3>
+                <p>Need a custom ERP or record management strategy?</p>
+                <div className="actions">
+                  <a href="tel:+919801066182" className="btn call"><FaPhoneAlt /> Call</a>
+                  <a href="https://wa.me/919801066182" className="btn wa"><FaWhatsapp /> WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* BLOG CONTENT */}
-        <article className="blog-article">
-          {/* INTRO */}
-          <p className="blog-intro">
-            Educational institutions generate large volumes of academic,
-            administrative, and regulatory data. Efficient record management
-            ensures that information is accurate, secure, and easily accessible
-            whenever required. SES helps institutions manage records in a
-            structured and reliable manner.
-          </p>
-
-          {/* SECTION 1 */}
-          <h2 className="gradient-heading">
-            Academic & Administrative Records
-          </h2>
-          <p>
-            From student admissions and examination data to staff records and
-            institutional documents, SES helps organize all records
-            systematically. This reduces errors, saves time, and improves
-            operational efficiency.
-          </p>
-
-          <div className="blog-image">
-            <img src={collaborationImg} alt="Industry Collaboration" />
-          </div>
-
-          {/* SECTION 2 */}
-          <h2 className="gradient-heading">Secure & Organized Data Handling</h2>
-          <p>
-            Proper record management also ensures data security and
-            confidentiality. SES guides institutions in maintaining safe storage
-            practices while enabling quick retrieval when needed.
-          </p>
-
-          <div className="blog-image">
-            <img src={researchImg} alt="Research Collaboration" />
-          </div>
-
-          {/* VIDEO SECTION */}
-          <h2 className="gradient-heading">Video Explanation</h2>
-
-          <div className="blog-video">
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=DATA-1_cgmtcj&cloud_name=dqmkivr5i&fluid=true"
-              title="Academic Collaboration Video"
-              allow="autoplay; fullscreen; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-
-          <p>
-            This video explains how Educational institutions generate large volumes of academic,
-            administrative, and regulatory data.
-          </p>
-
-          {/* CONCLUSION */}
-          <h2 className="gradient-heading">Conclusion</h2>
-          <p>
-            Efficient record management strengthens institutional operations.
-            SES ensures institutions maintain accurate, secure, and
-            well-organized data systems.
-          </p>
-        </article>
-
-<section className="expert-guidance-box">
-  <h3>Expert Guidance</h3>
-
-  <p>
-    Need expert guidance on college setup, collaborations, compliance, or institutional growth? Our consultants are here to help.
-  </p>
-
-  <div className="expert-actions">
-    <a href="tel:+919801066182" className="expert-btn call">
-      <FaPhoneAlt /> Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919801066182"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="expert-btn whatsapp"
-    >
-      <FaWhatsapp /> WhatsApp
-    </a>
-  </div>
-</section>
         <Footer />
       </div>
 
-      {/* STYLES */}
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Poppins:wght@300;400;600;700&display=swap');
 
-       .expert-guidance-box {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 40px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+        .blog-wrapper { background: #fff4ea; color: #2d3748; font-family: 'Poppins', sans-serif; }
 
-.expert-guidance-box h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6600;
-  margin-bottom: 14px;
-}
+        /* Hero */
+        .blog-header { position: relative; height: 450px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); }
+        .hero-content { position: relative; z-index: 2; text-align: center; color: white; }
+        .tag { background: #ff6600; display: inline-block; padding: 4px 12px; border-radius: 4px; font-family: 'Orbitron'; font-size: 0.7rem; margin-bottom: 15px; }
+        .title { font-family: 'Orbitron'; font-size: clamp(1.5rem, 5vw, 2.8rem); line-height: 1.2; }
+        .highlight { color: #ff6600; }
+        .meta { margin-top: 20px; font-size: 0.85rem; opacity: 0.8; }
+        .sep { margin: 0 10px; }
 
-.expert-guidance-box p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+        /* Layout */
+        .blog-container { max-width: 1200px; margin: 60px auto; display: grid; grid-template-columns: 1fr 340px; gap: 40px; padding: 0 20px; }
+        .content-main { background: white; padding: 60px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.05); }
+        .lead-text { font-size: 1.25rem; line-height: 2; color: #4a5568; margin-bottom: 40px; }
+        .drop-cap { float: left; font-size: 4.5rem; line-height: 0.8; font-weight: 800; color: #ff6600; margin-right: 10px; font-family: 'Orbitron'; }
 
-.expert-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+        .sub-heading { font-family: 'Orbitron'; font-size: 1.5rem; margin: 50px 0 25px; color: #1a202c; border-left: 5px solid #ff6600; padding-left: 15px; }
+        .para { font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 25px; }
 
-.expert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
+        /* Feature Cards */
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0; }
+        .f-card { background: #fef8f4; padding: 30px; border-radius: 20px; text-align: center; border: 1px solid #ffe8d6; }
+        .f-icon { font-size: 2rem; color: #ff6600; margin-bottom: 15px; }
+        .f-card h4 { font-family: 'Orbitron'; font-size: 0.9rem; margin-bottom: 10px; }
+        .f-card p { font-size: 0.8rem; opacity: 0.8; }
 
-.expert-btn.call {
-  background: linear-gradient(90deg, #ffb400, #ff6600);
-}
+        .image-frame { border-radius: 25px; overflow: hidden; margin: 40px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .image-frame img { width: 100%; display: block; }
 
-.expert-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
+        /* Video */
+        .video-section { background: #1a202c; padding: 40px; border-radius: 30px; color: white; margin-top: 60px; }
+        .v-ico { font-size: 2.5rem; color: #ffb400; margin-bottom: 20px; }
+        .v-info h3 { font-family: 'Orbitron'; font-size: 1.4rem; margin-bottom: 10px; }
+        .v-info p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 30px; }
+        .video-box { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; }
+        .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-.expert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
+        /* Sidebar */
+        .sticky-box { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 30px; }
+        .card { background: white; padding: 30px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #edf2f7; }
+        .card-icon { font-size: 2.5rem; color: #ff6600; margin-bottom: 20px; }
+        .card h3 { font-family: 'Orbitron'; font-size: 1.1rem; margin-bottom: 15px; }
+        .check-list { list-style: none; padding: 0; margin: 15px 0; }
+        .check-list li { font-size: 0.85rem; padding: 8px 0; border-bottom: 1px solid #f1f5f9; color: #64748b; }
+        
+        .cta-sidebar { background: #ff6600; color: white; border: none; text-align: center; }
+        .actions { display: flex; gap: 10px; margin-top: 20px; }
+        .btn { flex: 1; padding: 12px; border-radius: 10px; text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(0,0,0,0.2); transition: 0.3s; }
+        .btn:hover { background: rgba(0,0,0,0.4); }
 
-@media (max-width: 400px) {
-  .expert-guidance-box {
-    max-width: 92%;   /* ✅ prevents touching screen edges */
-    padding: 22px 20px;
-  }
-}
-
-      /* ===== EXPERT GUIDANCE ===== */
-.expert-guidance {
-  max-width: 820px;
-  margin: 90px auto;
-  padding: 45px 35px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #d32f2f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 22px;
-}
-
-.expert-text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.expert-cta {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn.call {
-  background: linear-gradient(90deg, #ff6600, #ff8c1a);
-}
-
-.cta-btn.whatsapp {
-  background: linear-gradient(90deg, #25d366, #1ebf5c);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-
-        html, body {
-          margin: 0;
-          padding: 0;
-          background: #fff4ea;
-        }
-
-        .blog-page {
-          background: #fff4ea;
-          font-family: 'Poppins', sans-serif;
-          color: #000;
-        }
-
-        /* HERO */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          overflow: hidden;
-        }
-
-        .blog-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-        }
-
-        .hero-overlay h1 {
-          font-size: 3.2rem;
-          max-width: 900px;
-        }
-
-        /* BLOG ARTICLE */
-        .blog-article {
-          max-width: 760px;
-          margin: 80px auto 0;
-          padding: 0 16px 80px;
-          text-align: justify;
-        }
-
-        .blog-intro {
-          font-size: 1.3rem;
-          line-height: 1.9;
-          margin-bottom: 50px;
-        }
-
-        .gradient-heading {
-          font-family: 'Orbitron', sans-serif;
-          background: linear-gradient(90deg, #ff6600, #d32f2f);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 800;
-          margin: 60px 0 20px;
-        }
-
-        .blog-article h2 {
-          font-size: 2rem;
-          margin-top: 60px;
-          margin-bottom: 20px;
-        }
-
-        .blog-article p {
-          font-size: 1.15rem;
-          line-height: 1.9;
-          margin-bottom: 28px;
-        }
-
-        /* IMAGES */
-        .blog-image {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-        }
-
-        .blog-image img {
-          width: 100%;
-          display: block;
-        }
-
-        /* VIDEO */
-        .blog-video {
-          margin: 40px 0;
-          border-radius: 18px;
-          overflow: hidden;
-          box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
-
-        .blog-video iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-          .blog-article {
-            padding: 0 12px 60px;
-            text-align: justify;
-          }
-
-          .blog-article h2 {
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
-          }
-
-          .blog-article p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-          }
-
-          .blog-article .blog-intro {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-
-          .blog-video iframe {
-            height: 200px;
-          }
-
-          .hero-overlay h1 {
-            font-size: 2rem;
-            padding: 10px;
-          }
+        @media (max-width: 992px) {
+          .blog-container { grid-template-columns: 1fr; }
+          .content-main { padding: 30px 20px; }
+          .features-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </>
