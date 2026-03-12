@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 function DekstopNavbar({ openLogin }) {
   // Added "knowledge" section
-  const sections = ["home", "about", "services", "blogs","projects", "partners", "knowledge", "contact"];
+  const sections = ["home", "about", "services", ,"projects","blogs", "partners", "knowledge", "contact"];
 
   return (
     <nav className="navbar">
