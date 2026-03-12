@@ -12,17 +12,17 @@ Shreepati Educational Services is a professional React-based web application pro
 ##  Interface Showcase
 
 ###   Landing Page
-![Desktop Overview](/shreepati-educational-services/src/assets/home.png)
+![Desktop Overview](src/assets/home.png)
 
 *A high-conversion landing page featuring smooth scroll animations and clear service navigation.*
 
 ###  Interactive Service Showcase
-![Service Checklist](/shreepati-educational-services/src/assets/services.png)
+![Service Checklist](src/assets/services.png)
 
 *A Dedicated page to showcase our services.*
 
 ###  Knowledge Videos Showcase
-![Service Checklist](/shreepati-educational-services/src/assets/knowledge.png)
+![Service Checklist](src/assets/knowledge.png)
 
 *A High conversion page for videos related to the educational consultancy.*
 
