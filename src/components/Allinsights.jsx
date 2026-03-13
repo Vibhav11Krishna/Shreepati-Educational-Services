@@ -3,24 +3,73 @@ import { Link } from "react-router-dom";
 import Footer from "../mobile/components/Footer";
 import Navbar from "../mobile/components/Navbar";
 // Image imports
+import banner from "../assets/bannerhub.jpg";
 import blog1 from "../assets/Academic.jpg";
 import blog2 from "../assets/Steps.jpg";
-import blog3 from "../assets/Collaboration1.jpg";
+import blog3 from "../assets/Regulatory.jpg";
+import blog4 from "../assets/University.jpg";
+import blog5 from "../assets/Mistakes.jpg";
+import blog6 from "../assets/Credibility.jpg";
+import blog7 from "../assets/Starting.jpg";
+import blog8 from "../assets/Faculty.jpg";
+import blog9 from "../assets/Requirements.jpg";
+import blog10 from "../assets/Estabilish.jpg";
+import blog11 from "../assets/Government.jpg";
+import blog12 from "../assets/Staffing.jpg";
+import blog13 from "../assets/Report.jpg";
+import blog14 from "../assets/Planning.jpg";
+import blog15 from "../assets/Support.jpg";
+import blog16 from "../assets/Abroad.jpg";
+import blog17 from "../assets/Selecting.jpg";
+import blog18 from "../assets/Visa.jpg";
+import blog19 from "../assets/Securing.jpg";
+import blog20 from "../assets/Guidance.jpg";
+import blog21 from "../assets/Saving.jpg";
+import blog22 from "../assets/Course.jpg";
+import blog23 from "../assets/Counseling.jpg";
+import blog24 from "../assets/Decisions.jpg";
+import blog25 from "../assets/Assistance.jpg";
+import blog26 from "../assets/Preparation.jpg";
+import blog27 from "../assets/Benefits.jpg";
+import blog28 from "../assets/Efficient.jpg";
+import blog29 from "../assets/Solutions.jpg";
+import blog30 from "../assets/Compilance.jpg";
 
 const Allinsights = () => {
   const [filter, setFilter] = useState("All");
 
   const allBlogs = [
-    { id: 1, title: "Collaboration Guidance", desc: "Form strong partnerships with universities, industry, and networks to enhance academic growth.", image: blog1, category: "Partnerships", link: "/collaboration", date: "March 12, 2026" },
-    { id: 2, title: "Affiliation Guidance", desc: "Complete support for obtaining affiliation from recognized boards and universities.", image: blog2, category: "Affiliation", link: "/affiliation", date: "March 10, 2026" },
-    { id: 3, title: "New Institutions Setup", desc: "Assist in establishing and getting recognition for new colleges or institutions.", image: blog3, category: "Institutional", link: "/new-institutions", date: "March 05, 2026" },
-    { id: 4, title: "New Schools Setup", desc: "Step-by-step guidance to establish schools with approvals and documentation.", image: blog1, category: "Schools", link: "/new-schools", date: "March 02, 2026" },
-    { id: 5, title: "DPR & Consultancy", desc: "Detailed project reports covering finance, academics, and infrastructure.", image: blog2, category: "Planning", link: "/dpr-consultancy", date: "Feb 28, 2026" },
-    { id: 6, title: "Overseas Admissions & Visa", desc: "Complete counseling and visa documentation for international studies.", image: blog3, category: "Global", link: "/overseas-admissions", date: "Feb 25, 2026" },
-    { id: 7, title: "Educational Loans & HR", desc: "Guidance for education loans and institutional HR management.", image: blog1, category: "Finance & HR", link: "/education-loans", date: "Feb 20, 2026" },
-    { id: 8, title: "Domestic Admission Counseling", desc: "Helping students choose the right colleges across India.", image: blog2, category: "Admissions", link: "/domestic-admissions", date: "Feb 15, 2026" },
-    { id: 9, title: "Accreditation Assistance", desc: "Support for NAAC, NBA, and international accreditations.", image: blog3, category: "Accreditation", link: "/accreditation", date: "Feb 10, 2026" },
-    { id: 10, title: "Data & Document Management", desc: "Secure and efficient academic & administrative data solutions.", image: blog1, category: "Digital", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 1, title: "Benefits of Academic Collaborations", desc: "How partnerships with universities and industry enhance learning and credibility.", image: blog1, category: "Collaboration", link: "/collaboration", date: "March 12, 2026" },
+    { id: 2, title: "Steps to build successful collaborations", desc: "Key steps institutions must take for effective , growing and long lasting partnership.", image: blog2, category: "Collaboration", link: "/affiliation", date: "March 10, 2026" },
+    { id: 3, title: "Regulatory Compliance in Collaborations", desc: "Real Examples of SES guided and suggested collaborations that created impact.", image: blog3, category: "Collaboration", link: "/new-institutions", date: "March 05, 2026" },
+    { id: 4, title: "How to get Affiliation from universities & Board", desc: "Step-by-step guidance to establish schools with approvals and documentation.", image: blog4, category: "Affiliation", link: "/new-schools", date: "March 02, 2026" },
+    { id: 5, title: "Common Affiliation Mistakes & How to Avoid Them", desc: "Avoid errors that can delay approval with SES expert guidance", image: blog5, category: "Affiliation", link: "/dpr-consultancy", date: "Feb 28, 2026" },
+    { id: 6, title: "Benefits of Board & University Affiliation", desc: "Why affiliation increases credibility and opportunities for institutions", image: blog6, category: "Affiliation", link: "/overseas-admissions", date: "Feb 25, 2026" },
+    { id: 7, title: "The Blueprint for Starting a New College", desc: "Key steps from planning to infrastructure and staff setup", image: blog7, category: "Institutions", link: "/education-loans", date: "Feb 20, 2026" },
+    { id: 8, title: "Setting Up Faculty & Courses for Academic Excellence", desc: "SES guidance on hiring, course design, and administration", image: blog8, category: "Institutions", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 9, title: "Regulatory Compliance Made Effortless", desc: "Meet all legal and academic requirements smoothly", image: blog9, category: "Institutions", link: "/accreditation", date: "Feb 10, 2026" },
+    { id: 10, title: "How to Start a School The SES Blueprint", desc: "Step by step guidance to estabilish a fully compliant school", image: blog10, category: "Schools", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 11, title: "Government Approvals Simplified for Schools", desc: "SES helps secure all necessary state or central approvals", image: blog11, category: "Schools", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 12, title: "Infrastructure & Staffing Building Excellence", desc: "Guidance on building classrooms and hiring qualified staff", image: blog12, category: "Schools", link: "/accreditation", date: "Feb 10, 2026" },
+    { id: 13, title: "The Strategic Power of Detailed Project Reports", desc: "Detailed Project Report helps plan finances, academics", image: blog13, category: "Reports", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 14, title: "Planning Educational Projects From Vision to Execution", desc: "How SES ensures smooth execution from concept to completion", image: blog14, category: "Reports", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 15, title: "Expert Consultancy Support & Institutional Growth", desc: "Avoid mistakes and get professional guidance for institutional Growth", image: blog15, category: "Reports", link: "/accreditation", date: "Feb 10, 2026" },
+    { id: 16, title: "How To Study Abroad Your Global Career Roadmap", desc: "Step by step guidance for International and admission visa processes", image: blog16, category: "Overseas", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 17, title: "Selecting The Right University A Strategic Choice", desc: "SES helps students pick programs aligned with their carrer goals", image: blog17, category: "Overseas", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 18, title: "Visa Support Made Easy Precision & Compliance", desc: "Expert Help for documentation, applications and approvals", image: blog18, category: "Overseas", link: "/accreditation", date: "Feb 10, 2026" },
+    { id: 19, title: "Securing Educational Loans Institutional Growth Funding", desc: "How SES helps institutions access funding efficiently", image: blog19, category: "Loans", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 20, title: "Staffing & HR Solutions Building Your Core Team", desc: "Expert guidance on faculty and administrative HR systems", image: blog20, category: "Loans", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 21, title: "Strategic Financial Planning For Sustainable Institutions", desc: "Plan Budgets and resources efficiently with SES consultancy", image: blog21, category: "Loans", link: "/accreditation", date: "Feb 10, 2026" },
+    { id: 22, title: "Choosing The Right Course For A Bright Future", desc: "SES guides students to select courses aligned with their carrer goals", image: blog22, category: "Domestic", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 23, title: "The Power Of Academic Counseling Beyond Just Advice", desc: "Personalized guidance to enhance academic success and confidence", image: blog23, category: "Domestic", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 24, title: "Informed Decisions & Right Career Paths", desc: "Helping students plan carrer paths with clarity and direction", image: blog24, category: "Domestic", link: "/accreditation", date: "Feb 10, 2026" },
+    { id: 25, title: "The Critical Importance Of Academic Accreditation", desc: "How national & international accreditation boosts credibility", image: blog25, category: "Accreditation", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 26, title: "Preparing for Accreditation Success", desc: "SES ensures all documentation and compilance are ready for inspection", image: blog26, category: "Accreditation", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 27, title: "The Strategic Benefits of Accreditation", desc: "Increase reputation, student enrollement and institutional growth", image: blog27, category: "Accreditation", link: "/accreditation", date: "Feb 10, 2026" },
+    { id: 28, title: "Efficient Record Management Systems", desc: "We helps institutions manage academic, administrative, data securely", image: blog28, category: "Data", link: "/data-management", date: "Feb 05, 2026" },
+    { id: 29, title: "Digital Solutions for Schools & Colleges", desc: "Use techonology to store, track, and retrieve the data records efficiently", image: blog29, category: "Data", link: "/domestic-admissions", date: "Feb 15, 2026" },
+    { id: 30, title: "Compliance, Organization & Operations", desc: "Maintain regulatory compilance while streamlining operations", image: blog30, category: "Data", link: "/accreditation", date: "Feb 10, 2026" },
+    
   ];
 
   const categories = ["All", ...new Set(allBlogs.map(blog => blog.category))];
@@ -108,7 +157,7 @@ const Allinsights = () => {
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: url(${blog1}) center/cover no-repeat;
+            background: url(${banner}) center/cover no-repeat;
             flex-shrink: 0;
             margin-bottom: 60px;
           }

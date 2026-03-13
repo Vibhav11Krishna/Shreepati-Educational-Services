@@ -1,17 +1,21 @@
 import React from "react";
 
 import blog1 from "../assets/Academic.jpg";
-import blog2 from "../assets/Steps.jpg";
-import blog3 from "../assets/Collaboration1.jpg";
+import blog2 from "../assets/University.jpg";
+import blog3 from "../assets/Starting.jpg";
+import blog4 from "../assets/Government.jpg";
+import blog5 from "../assets/Support.jpg";
+import blog6 from "../assets/Preparation.jpg";
+
 
 function Blogspage() {
   const blogs = [
-    { title: "Academic Growth", desc: "Form strong partnerships with universities to enhance academic growth.", image: blog1, service: "Strategic Partnerships", link: "/blog/academic", date: "March 12, 2026" },
-    { title: "Affiliation Guidance", desc: "Complete support for obtaining affiliation from recognized boards and universities.", image: blog2, service: "Board Affiliation", link: "/blog/affiliation", date: "March 10, 2026" },
-    { title: "Institutional Setup", desc: "Assist in establishing and getting recognition for new colleges or institutions.", image: blog3, service: "Campus Launch", link: "/blog/setup", date: "March 05, 2026" },
-    { title: "New Schools Setup", desc: "Step-by-step guidance to establish schools with approvals and documentation.", image: blog1, service: "Institutional Setup", link: "/blog/schools", date: "March 02, 2026" },
-    { title: "DPR & Consultancy", desc: "Detailed project reports covering finance, academics, and infrastructure.", image: blog2, service: "Project Planning", link: "/blog/dpr", date: "Feb 28, 2026" },
-    { title: "Overseas Admissions", desc: "Complete counseling and visa documentation for international studies.", image: blog3, service: "Global Education", link: "/blog/overseas", date: "Feb 25, 2026" }
+    { title: "Benefits of Academic Collaborations", desc: "How partnerships with universities and industry enhance learning and credibility.", image: blog1, service: "Collaboration", link: "../../blogs/blog1", date: "March 12, 2026" },
+    { title: "How to get Affiliation from universities & Board", desc: "Step by step guide to obtain affiliation from boards and universities", image: blog2, service: "Affiliation", link: "../../blogs/blog4", date: "March 10, 2026" },
+    { title: "The Blueprint Of Starting A New College", desc: "Key steps from planning to infrastructure and staff setup", image: blog3, service: "Institutions", link: "../../blogs/blog7", date: "March 05, 2026" },
+    { title: "Government Approvals Simplified for Schools", desc: "SES helps secure all necessary state or central approvals", image: blog4, service: "Schools", link: "../../blogs/blog11", date: "March 02, 2026" },
+    { title: "Expert Consultancy Support & Institutional Growth", desc: "Avoid mistakes and get professional guidance for institutional Growth", image: blog5, service: "Reports", link: "../../blogs/blog15", date: "Feb 28, 2026" },
+    { title: "Preparing for Accreditation Success", desc: "SES ensures all documentation and compilance are ready for inspection", image: blog6, service: "Accreditation", link: "../../blogs/blog26", date: "Feb 25, 2026" }
   ];
 
   const featuredBlogs = blogs.slice(0, 6);

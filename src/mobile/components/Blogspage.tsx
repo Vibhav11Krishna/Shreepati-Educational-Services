@@ -1,17 +1,21 @@
 import React from "react";
 
+// Blog Image Imports
 import blog1 from "../../assets/Academic.jpg";
-import blog2 from "../../assets/Steps.jpg";
-import blog3 from "../../assets/Collaboration1.jpg";
+import blog2 from "../../assets/University.jpg";
+import blog3 from "../../assets/Starting.jpg";
+import blog4 from "../../assets/Government.jpg";
+import blog5 from "../../assets/Support.jpg";
+import blog6 from "../../assets/Preparation.jpg";
 
 function Blogspage() {
   const blogs = [
-    { title: "Academic Growth", desc: "Form strong partnerships with universities to enhance academic growth.", image: blog1, service: "Strategic Partnerships", link: "/blog/academic", date: "March 12, 2026" },
-    { title: "Affiliation Guidance", desc: "Complete support for obtaining affiliation from recognized boards and universities.", image: blog2, service: "Board Affiliation", link: "/blog/affiliation", date: "March 10, 2026" },
-    { title: "Institutional Setup", desc: "Assist in establishing and getting recognition for new colleges or institutions.", image: blog3, service: "Campus Launch", link: "/blog/setup", date: "March 05, 2026" },
-    { title: "New Schools Setup", desc: "Step-by-step guidance to establish schools with approvals and documentation.", image: blog1, service: "Institutional Setup", link: "/blog/schools", date: "March 02, 2026" },
-    { title: "DPR & Consultancy", desc: "Detailed project reports covering finance, academics, and infrastructure.", image: blog2, service: "Project Planning", link: "/blog/dpr", date: "Feb 28, 2026" },
-    { title: "Overseas Admissions", desc: "Complete counseling and visa documentation for international studies.", image: blog3, service: "Global Education", link: "/blog/overseas", date: "Feb 25, 2026" }
+    { title: "Benefits of Academic Collaborations", desc: "How partnerships with universities and industry enhance learning and credibility.", image: blog1, service: "Collaboration", link: "../../blogs/blog1", date: "March 12, 2026" },
+    { title: "How to get Affiliation from universities & Board", desc: "Step by step guide to obtain affiliation from boards and universities", image: blog2, service: "Affiliation", link: "../../blogs/blog4", date: "March 10, 2026" },
+    { title: "The Blueprint Of Starting A New College", desc: "Key steps from planning to infrastructure and staff setup", image: blog3, service: "Institutions", link: "../../blogs/blog7", date: "March 05, 2026" },
+    { title: "Government Approvals Simplified for Schools", desc: "SES helps secure all necessary state or central approvals", image: blog4, service: "Schools", link: "../../blogs/blog11", date: "March 02, 2026" },
+    { title: "Expert Consultancy Support & Institutional Growth", desc: "Avoid mistakes and get professional guidance for institutional Growth", image: blog5, service: "Reports", link: "../../blogs/blog15", date: "Feb 28, 2026" },
+    { title: "Preparing for Accreditation Success", desc: "SES ensures all documentation and compilance are ready for inspection", image: blog6, service: "Accreditation", link: "../../blogs/blog26", date: "Feb 25, 2026" }
   ];
 
   const featuredBlogs = blogs.slice(0, 6);
@@ -33,6 +37,7 @@ function Blogspage() {
             <a href={blog.link} key={idx} className="modern-blog-card">
               <div className="card-image-wrapper">
                 <img src={blog.image} alt={blog.title} />
+                {/* SERVICE BADGE OVERLAY */}
                 <div className="category-overlay">
                   <span className="category-badge">{blog.service}</span>
                 </div>
@@ -51,13 +56,12 @@ function Blogspage() {
                 </div>
               </div>
               
-              {/* This div handles the orange/red glow border on hover */}
               <div className="card-hover-border"></div>
             </a>
           ))}
         </div>
 
-        {/* CENTERED CAPSULE BUTTON */}
+        {/* VIEW ALL BUTTON */}
         <div className="view-all-container">
           <a href="/Allinsights" className="all-blogs-capsule">
             <span>View All Insights</span>
@@ -70,7 +74,7 @@ function Blogspage() {
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Poppins:wght@300;400;500;600&display=swap');
 
         .blog-page-root {
-          background: #fdf6f0; 
+          background: #fef9f5; 
           padding: 80px 20px;
           font-family: 'Poppins', sans-serif;
         }
@@ -89,7 +93,7 @@ function Blogspage() {
         }
 
         .orange-text { color: #FF6600; }
-        .red-text { color: #D32F2F; }
+        .red-text { color: #FF6600; }
 
         .heading-line-accent {
           width: 100px;
@@ -111,7 +115,6 @@ function Blogspage() {
           margin-bottom: 60px;
         }
 
-        /* --- MODERN BLOG CARD --- */
         .modern-blog-card {
           position: relative;
           background: #ffffff;
@@ -126,22 +129,18 @@ function Blogspage() {
           z-index: 1;
         }
 
-        /* Hover: Lift and Shadow */
         .modern-blog-card:hover {
           transform: translateY(-10px);
           box-shadow: 0 20px 40px rgba(255, 102, 0, 0.15);
         }
 
-        /* Hover: The Orange/Red Glowing Border */
         .card-hover-border {
           position: absolute;
           inset: 0;
           border-radius: 24px;
-          padding: 2px; /* Border thickness */
+          padding: 2px;
           background: linear-gradient(135deg, #FF6600, #D32F2F);
-          -webkit-mask: 
-             linear-gradient(#fff 0 0) content-box, 
-             linear-gradient(#fff 0 0);
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
           opacity: 0;
@@ -149,11 +148,8 @@ function Blogspage() {
           z-index: 2;
         }
 
-        .modern-blog-card:hover .card-hover-border {
-          opacity: 1;
-        }
+        .modern-blog-card:hover .card-hover-border { opacity: 1; }
 
-        /* --- IMAGE EFFECTS --- */
         .card-image-wrapper {
           height: 230px;
           position: relative;
@@ -167,8 +163,14 @@ function Blogspage() {
           transition: transform 0.6s ease;
         }
 
-        .modern-blog-card:hover .card-image-wrapper img {
-          transform: scale(1.1);
+        .modern-blog-card:hover .card-image-wrapper img { transform: scale(1.1); }
+
+        /* --- SERVICE BADGE STYLING --- */
+        .category-overlay {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          z-index: 10;
         }
 
         .category-badge {
@@ -182,9 +184,9 @@ function Blogspage() {
           font-family: 'Orbitron', sans-serif;
           letter-spacing: 1px;
           box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+          display: inline-block;
         }
 
-        /* --- CONTENT EFFECTS --- */
         .card-content {
           padding: 25px;
           flex-grow: 1;
@@ -208,9 +210,7 @@ function Blogspage() {
           transition: color 0.3s ease;
         }
 
-        .modern-blog-card:hover .blog-title {
-          color: #FF6600;
-        }
+        .modern-blog-card:hover .blog-title { color: #FF6600; }
 
         .blog-desc {
           font-size: 0.95rem;
@@ -219,7 +219,6 @@ function Blogspage() {
           margin-bottom: 25px;
         }
 
-        /* --- FOOTER & ARROW --- */
         .card-footer {
           margin-top: auto;
           display: flex;
@@ -255,18 +254,15 @@ function Blogspage() {
           transition: transform 0.3s ease;
         }
 
-        /* Hover state for arrow */
         .modern-blog-card:hover .arrow-circle {
           background: linear-gradient(135deg, #FF6600, #D32F2F);
-          border-color: transparent;
           transform: rotate(-45deg);
         }
 
-        .modern-blog-card:hover .arrow-icon {
-          color: #fff;
-        }
+        .modern-blog-card:hover .arrow-icon { color: #fff; }
 
-        /* --- VIEW ALL BUTTON --- */
+        .view-all-container { text-align: center; }
+
         .all-blogs-capsule {
           display: inline-flex;
           align-items: center;
@@ -290,7 +286,6 @@ function Blogspage() {
           box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
         }
 
-        /* --- RESPONSIVE --- */
         @media (max-width: 1024px) {
           .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
         }
