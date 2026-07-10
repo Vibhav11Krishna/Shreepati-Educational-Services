@@ -232,8 +232,7 @@ function Contact() {
             Our Locations
           </h3>
           <p style={{ fontSize: "1rem", marginBottom: "12px" }}>
-            <FaMapMarkerAlt color="#FF6600" /> Shyam Market, opposite pillar
-            no:75, Raza Bazar, Patna, Bihar
+            <FaMapMarkerAlt color="#FF6600" /> Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
           </p>
           <p style={{ fontSize: "1rem", marginBottom: "12px" }}>
             <FaMapMarkerAlt color="#FF6600" /> Near RPS Law College, Malti Kunj

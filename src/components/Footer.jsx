@@ -112,8 +112,7 @@ function Footer() {
               color: "#ccc",
             }}
           >
-            <FaMapMarkerAlt /> Shyam Market, Opp. Pillar No:75, Raza Bazar,
-            Patna, Bihar - 801503
+            <FaMapMarkerAlt /> Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
           </p>
           <p
             style={{

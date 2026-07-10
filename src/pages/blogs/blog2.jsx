@@ -16,9 +16,9 @@ import {
 import heroImg from "../../assets/Banner2.jpg";
 import collaborationImg from "../../assets/Collaboration3.jpg";
 import researchImg from "../../assets/Collaboration4.jpg";
-import blog1Img from "../../assets/Academic.jpg"; // Asset for Blog 1 link
-import blog2Img from "../../assets/Steps.jpg";    // Avatar for sidebar
-import blog3Img from "../../assets/Banner3.jpg";  // Asset for Blog 3 link
+import blog1Img from "../../assets/Academic.jpg"; 
+import blog2Img from "../../assets/Steps.jpg";    
+import blog3Img from "../../assets/Banner3.jpg";  
 
 function Blog2() {
   return (
