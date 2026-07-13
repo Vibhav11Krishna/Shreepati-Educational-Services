@@ -232,7 +232,7 @@ function Contact() {
             Our Locations
           </h3>
           <p style={{ fontSize: "1rem", marginBottom: "12px" }}>
-            <FaMapMarkerAlt color="#FF6600" /> Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
+            <FaMapMarkerAlt color="#FF6600" /> Near JD Women's College, Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
           </p>
           <p style={{ fontSize: "1rem", marginBottom: "12px" }}>
             <FaMapMarkerAlt color="#FF6600" /> Near RPS Law College, Malti Kunj

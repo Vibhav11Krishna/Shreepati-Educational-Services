@@ -94,7 +94,7 @@ const Footer = () => {
               marginBottom: "10px",
             }}
           >
-            <FaMapMarkerAlt color="#FF6600" />Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
+            <FaMapMarkerAlt color="#FF6600" /> Near JD Womens College, Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
           </p>
           <p
             style={{
@@ -184,7 +184,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Divider Line */}
+    {/* Divider Line */}
       <div
         style={{
           height: "1px",
@@ -193,18 +193,56 @@ const Footer = () => {
         }}
       ></div>
 
-      {/* Copyright */}
-      <p
+      {/* Bottom Footer Section: Copyright Left, Legal Links Right */}
+      <div
         style={{
-          color: "#aaa",
-          fontSize: "0.85rem",
-          textAlign: "center",
-          margin: 0,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: "15px",
         }}
+        className="footer-bottom"
       >
-        &copy; {new Date().getFullYear()} Shreepati Educational Services. All
-        rights reserved.
-      </p>
+        {/* Copyright */}
+        <p style={{ color: "#aaa", fontSize: "0.85rem", margin: 0 }}>
+          &copy; {new Date().getFullYear()} Shreepati Educational Services. All rights reserved.
+        </p>
+
+        {/* Legal Links */}
+        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+          {[
+            { name: "Privacy Policy", link: "/#" },
+            { name: "Terms of Service", link: "/#" },
+            { name: "Cookies Policy", link: "/#" },
+          ].map((item) => (
+            <a
+              key={item.name}
+              href={item.link}
+              style={{
+                color: "#aaa",
+                textDecoration: "none",
+                fontSize: "0.85rem",
+                transition: "color 0.3s",
+              }}
+              onMouseEnter={(e) => (e.target.style.color = "#FF6600")}
+              onMouseLeave={(e) => (e.target.style.color = "#aaa")}
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Responsiveness for Bottom Section */}
+      <style>{`
+        @media (max-width: 600px) {
+          .footer-bottom {
+            flex-direction: column;
+            text-align: center;
+          }
+        }
+      `}</style>
     </footer>
   );
 };

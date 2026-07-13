@@ -112,7 +112,7 @@ function Footer() {
               color: "#ccc",
             }}
           >
-            <FaMapMarkerAlt /> Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
+            <FaMapMarkerAlt /> Near JD Womens College, Hari Niwas Apartement , G-01 , Nand Gaon, Patna, Bihar - 800014
           </p>
           <p
             style={{
@@ -210,16 +210,49 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom Line */}
+    {/* Bottom Line */}
       <hr
         style={{
           border: "1px solid #FF6600",
-          margin: "50px 0",
+          margin: "50px 0 30px",
           borderRadius: "3px",
           opacity: 0.3,
         }}
       />
-      <p style={{ textAlign: "center", color: "#aaa", fontSize: "0.95rem" }}>
+
+      {/* Legal Links & Copyright */}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "20px",
+          marginBottom: "30px",
+        }}
+      >
+        {[
+          { name: "Privacy Policy", link: "/#" },
+          { name: "Terms of Service", link: "/#" },
+          { name: "Cookies Policy", link: "/#" },
+        ].map((item, index) => (
+          <a
+            key={index}
+            href={item.link}
+            style={{
+              color: "#aaa",
+              textDecoration: "none",
+              fontSize: "0.9rem",
+              transition: "color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "#FF6600")}
+            onMouseOut={(e) => (e.target.style.color = "#aaa")}
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+
+      <p style={{ textAlign: "center", color: "#666", fontSize: "0.95rem" }}>
         &copy; {new Date().getFullYear()} Shreepati Educational Services. All
         Rights Reserved.
       </p>
