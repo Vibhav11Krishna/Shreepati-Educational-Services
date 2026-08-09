@@ -4,6 +4,7 @@ import expert from "../assets/expert.jpg";
 import campus from "../assets/campus.jpg";
 import digital from "../assets/digital.jpg";
 import vision from "../assets/vision.jpg";
+import BNRC from "../assets/BNRC.jpeg";
 
 const slides = [
   {
@@ -25,6 +26,11 @@ const slides = [
     image: vision,
     title: "From Vision to Reality",
     description: "We turn your educational vision into a fully operational institution, ensuring modern infrastructure, smooth administration, and sustainable growth."
+  },
+  {
+    image: BNRC,
+    title: "Registration Deadline Till 31st August 2026",
+    description: "Is your Nursing College or Institution looking for BNRC Registration? We are here to help you with the registration process and ensure your institution meets all the necessary requirements."
   }
 ];
 
@@ -55,8 +61,8 @@ function OfficeShowcase() {
             <div key={index} style={{ minWidth: "100%", position: "relative" }}>
               <img src={slide.image} alt={slide.title} style={{
                 width: "100%",
-                height: "600px",
-                objectFit: "cover",
+                height: "auto",
+                objectFit: "contain",
                 borderRadius: "20px",
               }} />
 

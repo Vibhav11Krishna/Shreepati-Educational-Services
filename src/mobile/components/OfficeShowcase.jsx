@@ -4,6 +4,7 @@ import expert from "../../assets/expert.jpg";
 import campus from "../../assets/campus.jpg";
 import digital from "../../assets/digital.jpg";
 import vision from "../../assets/vision.jpg";
+import BNRC from "../../assets/BNRC.jpeg";
 
 const slides = [
   {
@@ -25,7 +26,13 @@ const slides = [
     image: vision,
     title: "From Vision to Reality",
     
+  },
+  {
+    image: BNRC,
+    title: "Registration Till 31st August",
+    
   }
+
 ];
 
 const OfficeShowcase = () => {
@@ -113,8 +120,8 @@ const OfficeShowcase = () => {
 
         .slide-image {
           width: 100%;
-          height: 280px;
-          object-fit: cover;
+          height: auto;
+          object-fit: contain;
           border-radius: 18px;
         }
 
